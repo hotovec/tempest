@@ -5,6 +5,7 @@
 .pkgtools-target
 .targets
 .nvmrc
+.codekit-cache
 _build
 
 bower_components/
