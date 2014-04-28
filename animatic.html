@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>tempest</title>
+
+    <link rel="stylesheet" media="screen" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" media="screen" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+
+    <!-- font awesome-->
+    <link rel="stylesheet" media="screen" href="assets/font-awesome/css/font-awesome.min.css">
+
+    <!-- editable tags input-->
+    <link rel="stylesheet" href="bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+
+    <!-- off canavas -->
+    <link rel="stylesheet" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css">
+
+    <!-- page animations-->
+    <link rel="stylesheet" type="text/css" href="bower_components/page-transitions/css/component.css"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/page-transitions/css/animations.css"/>
+
+    <!-- custom overide compiled by codekit -->
+    <link rel="stylesheet" media="screen" href="css/main.css">
+
+    <script src="bower_components/page-transitions/js/modernizr.custom.js"></script>
+
+</head>
+<body>
+
+<div style="position: absolute; bottom:0; left: 0; width: 600px; height: 300px; z-index: 5000;">
+
+    <div class="ptgo" data-animation="22" data-direction="1" data-page="2">page2</div>
+    <div class="ptgo" data-animation="22" data-direction="1" data-page="3">page3</div>
+
+
+    <div id="dl-menu">
+        <ul class="dl-menu">
+            <li data-animation="1"><a href="#">Move to left/ from right</a></li>
+            <li data-animation="2"><a href="#">Move to right/ from left</a></li>
+            <li data-animation="3"><a href="#">Move to top/ from bottom</a></li>
+            <li data-animation="4"><a href="#">Move to bottom/ from top</a></li>
+        </ul>
+    </div>
+
+</div>
+
+
+
+<div id="pt-main" class="pt-perspective" >
+    <div class="pt-page pt-page-1"><h1>P1</h1></div>
+    <div class="pt-page pt-page-2"><h1>p2</h1></div>
+    <div class="pt-page pt-page-3"><h1> <div class="ptgo" data-animation="22" data-direction="-1">close page3</div></h1></div>
+    <div class="pt-page pt-page-4"><h1>p4</h1></div>
+    <div class="pt-page pt-page-5"><h1>p5</h1></div>
+    <div class="pt-page pt-page-6"><h1>p6</h1></div>
+</div>
+
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="bower_components/page-transitions/js/jquery.dlmenu.js"></script>
+<script src="bower_components/page-transitions/js/pagetransitions.js"></script>
+
+<script>
+    // enable tooltip everywher
+    $("[data-toggle=tooltip]").tooltip();
+
+    var currentPage = 1;
+    var lastPage = 1;
+    //PageTransitions.init();
+
+    $(".ptgo").on('click', function() {
+
+        var el = $(this);
+        var currentAnimation = el.data('animation');
+        var currentOpenPage = el.data('page') - 1 ; // fix zero start
+        var currentDir = el.data('direction');
+
+        if(currentDir == -1) {
+            currentAnimation --;
+            currentOpenPage = lastPage;
+        }
+
+        if(currentPage == currentOpenPage) {
+            return;
+        }
+
+        PageTransitions.nextPage({animation: currentAnimation, showPage:currentOpenPage});
+        console.log(">" + currentPage + "[" + lastPage + "] > " + currentOpenPage);
+        currentPage = currentOpenPage;
+    });
+
+
+
+
+</script>
+
+</body>
+</html>
