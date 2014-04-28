@@ -1,4 +1,4 @@
-<?php include("templates/html-header.php"); ?>
+<?php include("html-header.php"); ?>
 <?php include("templates/module-navbar.php"); ?>
 
 <!-- main container-->
@@ -22,6 +22,7 @@
     </div>
 
     <!-- content table - list -->
+
     <table class="table content-management_list">
         <thead>
         <tr>
@@ -37,14 +38,14 @@
         </tr>
         </thead>
         <tbody>
-        <?php for($i=1; $i<= 10; $i++) { ?>
+        <?php for($i=1; $i<= 8; $i++) { ?>
         <tr>
             <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
             <td><i class="fa fa-adjust"  data-toggle="tooltip" data-placement="top" title="not ready" ></i></td>
             <td><i class="fa fa-circle" data-toggle="tooltip" data-placement="top" title="published"></i></td>
             <td><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></td>
 
-            <td><a href="content-edit.php" title="">I’m Almost 24 And I Can’t Stop Buying Cute Things With ...</a></td>
+            <td><a href="content-edit.php" title=""><?php echo $i; ?> I’m Almost 24 And I Can’t Stop Buying Cute Things With ...</a></td>
             <td>Alle Heris</td>
 
             <td>Mar 06, 2014 18:02:02</td>
@@ -67,5 +68,10 @@
 <div class="offcanavas-menu-bottom offcanavas-menu offcanvas">bottom offside menu</div>
 <div class="offcanavas-menu-top offcanavas-menu offcanvas">top offside menu</div>
 
+<!-- global scripts-->
+<?php include("scripts.php"); ?>
+<!-- custom page scripts-->
 
-<?php include("templates/html-footer.php"); ?>
+
+
+<?php include("html-footer.php"); ?>
