@@ -11,4 +11,55 @@ body {
   bottom: 60%;
   top: 40%;
   text-align: center; }
+
+.navbar.navbar-main .navbar-form, .navbar.navbar-main .form-group {
+  width: 90%; }
+  .navbar.navbar-main .navbar-form input[type="text"], .navbar.navbar-main .form-group input[type="text"] {
+    width: 100%;
+    display: block; }
+
+.table.content-management_list td {
+  vertical-align: middle; }
+.table.content-management_list .thumbnail {
+  height: 60px;
+  margin: 0;
+  border: none;
+  -webkit-border-image: none;
+  -o-border-image: none;
+  border-image: none;
+  padding: 0;
+  border-radius: 0; }
+
+.content-management-presets .bootstrap-tagsinput {
+  width: 100%; }
+
+.offcanavas-menu {
+  position: fixed;
+  width: 300px;
+  background-color: darkgray;
+  z-index: 1000; }
+  .offcanavas-menu.offcanavas-menu-right {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: auto; }
+  .offcanavas-menu.offcanavas-menu-left {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: auto; }
+  .offcanavas-menu.offcanavas-menu-top {
+    height: 300px;
+    width: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: auto; }
+  .offcanavas-menu.offcanavas-menu-bottom {
+    height: 300px;
+    width: auto;
+    left: 0;
+    top: auto;
+    bottom: 0;
+    right: 0; }
 /*# sourceMappingURL=main.css.map */

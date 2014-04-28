@@ -1,0 +1,14 @@
+{
+    "name": "tempestadmin",
+    "version": "0.0.0",
+    "dependencies": {
+    },
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-cli": "",
+        "bower": "~1.3.2"
+    },
+    "engines": {
+        "node": ">=0.10.4"
+    }
+}
