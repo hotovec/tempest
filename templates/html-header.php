@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>tempest</title>
 
-    <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
-    <link rel="stylesheet" media="screen" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" media="screen" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" media="screen" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
 
     <!-- font awesome-->
     <link rel="stylesheet" media="screen" href="assets/font-awesome/css/font-awesome.min.css">
