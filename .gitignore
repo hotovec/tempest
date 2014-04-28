@@ -1,0 +1,8 @@
+.DS_Store
+.idea
+.tmp
+.sass-cache
+.pkgtools-target
+.targets
+.nvmrc
+_build
