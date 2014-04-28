@@ -54,7 +54,7 @@
     	</div>
     </div>
 
-
+    <!-- content table - list -->
     <table class="table content-management_list">
         <thead>
         <tr>

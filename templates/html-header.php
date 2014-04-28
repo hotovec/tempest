@@ -10,7 +10,7 @@
     <!-- font awesome-->
     <link rel="stylesheet" media="screen" href="assets/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
-    <link rel="stylesheet" href="../bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css"> <!-- off canavas -->
 
 
     <!-- custom overide compiled by codekit -->
