@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>tempest</title>
+
+    <link rel="stylesheet" media="screen" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" media="screen" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+
+    <!-- font awesome-->
+    <link rel="stylesheet" media="screen" href="assets/font-awesome/css/font-awesome.min.css">
+
+    <!-- editable tags input-->
+    <link rel="stylesheet" href="bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+
+    <!-- off canavas -->
+    <link rel="stylesheet" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css">
+
+    <!-- custom overide compiled by codekit -->
+    <link rel="stylesheet" media="screen" href="css/main.css">
+
+</head>
+<body>
+
+<div class="container">
+    <!-- page content start -->
+
+
+    <div class="panel panel-login">
+        <div class="panel-heading">
+            <h3 class="panel-title">Tempest composer</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    register or login using:
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div><a href="content-manage.php" target="_blank" title="g+">g+</a></div>
+                    <div><a href="content-manage.php" target="_blank" title="mail">mail</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- page content end -->
+</div>
+
+<script>
+    $("[data-toggle=tooltip]").tooltip();
+    $(".offcanavas-menu-left").offcanvas({ toggle: false, disableScrolling: true, canvas: 'body' });
+    $(".offcanavas-menu-right").offcanvas({ toggle: false, disableScrolling: false, canvas: 'body' });
+    $(".offcanavas-menu-bottom").offcanvas({ toggle: false, disableScrolling: false });
+</script>
+
+</body>
+</html>
