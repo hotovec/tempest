@@ -13,8 +13,8 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div><a href="manage-content.php" target="_blank" title="g+">g+</a></div>
-                    <div><a href="manage-content.php" target="_blank" title="mail">mail</a></div>
+                    <div><a href="content-manage.php" target="_blank" title="g+">g+</a></div>
+                    <div><a href="content-manage.php" target="_blank" title="mail">mail</a></div>
                 </div>
             </div>
         </div>

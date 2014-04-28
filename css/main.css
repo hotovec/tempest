@@ -1,3 +1,27 @@
+.m-offcanavas-menu {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase; }
+  .m-offcanavas-menu ul {
+    list-style-image: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    .m-offcanavas-menu ul li a {
+      display: block;
+      line-height: 1.2em;
+      padding: 1em; }
+  .m-offcanavas-menu .m-author {
+    background-color: #666;
+    color: #ccc;
+    margin: 20px 0;
+    line-height: 1em;
+    padding: 1.2em;
+    font-size: 20px; }
+
 body {
   background-color: #efefef; }
 
@@ -35,6 +59,7 @@ body {
 
 .offcanavas-menu {
   position: fixed;
+  overflow: hidden;
   width: 300px;
   background-color: darkgray;
   z-index: 1000; }

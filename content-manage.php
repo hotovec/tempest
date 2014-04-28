@@ -1,41 +1,8 @@
 <?php include("templates/html-header.php"); ?>
-<!-- offcanavas containers -->
-<div class="offcanavas-menu-left offcanavas-menu offcanvas">left offside menu</div>
-<div class="offcanavas-menu-right offcanavas-menu offcanvas">right offside menu</div>
-<div class="offcanavas-menu-bottom offcanavas-menu offcanvas">bottom offside menu</div>
-<div class="offcanavas-menu-top offcanavas-menu offcanvas">top offside menu</div>
-
+<?php include("templates/module-navbar.php"); ?>
 
 <!-- main container-->
 <div class="container">
-
-    <!-- navbar -->
-    <nav class="navbar navbar-main" role="navigation">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">XOV</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-                <form class="navbar-form navbar-right" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                </form>
-
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-
 
     <!-- tmp offcanavas menu buttons -->
     <div class="row">
@@ -77,9 +44,8 @@
             <td><i class="fa fa-circle" data-toggle="tooltip" data-placement="top" title="published"></i></td>
             <td><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></td>
 
-            <td>I’m Almost 24 And I Can’t Stop Buying Cute Things With ...</td>
-            <td>Alle Heris
-            </td>
+            <td><a href="content-edit.php" title="">I’m Almost 24 And I Can’t Stop Buying Cute Things With ...</a></td>
+            <td>Alle Heris</td>
 
             <td>Mar 06, 2014 18:02:02</td>
             <td><i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="featured"></i></td>
@@ -90,6 +56,16 @@
         </tbody>
     </table>
 
-
 </div>
+
+<!-- offcanavas containers -->
+<div class="offcanavas-menu-left offcanavas-menu offcanvas">
+    <?php include("templates/module-offcanavas-menu.php"); ?>
+</div>
+
+<div class="offcanavas-menu-right offcanavas-menu offcanvas">right offside menu</div>
+<div class="offcanavas-menu-bottom offcanavas-menu offcanvas">bottom offside menu</div>
+<div class="offcanavas-menu-top offcanavas-menu offcanvas">top offside menu</div>
+
+
 <?php include("templates/html-footer.php"); ?>
