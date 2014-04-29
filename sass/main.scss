@@ -130,5 +130,8 @@ body {
 .ptgo {
     padding: 10px;
     margin: 5px;
-    background-color: #fff;
+    cursor: pointer;
+    &:hover {
+        color: red;
+    }
 }

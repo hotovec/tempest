@@ -11,6 +11,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/assets\/app.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
+		"inputAbbreviatedPath": "\/assets\/app.js",
+		"outputAbbreviatedPath": "\/assets\/min\/app-ck.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"syntaxCheckerStyle": 0
+		},
 	"\/assets\/font-awesome\/css\/font-awesome.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -39,6 +50,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
+		},
+	"\/assets\/js\/jquery.tinyinc.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
+		"inputAbbreviatedPath": "\/assets\/js\/jquery.tinyinc.js",
+		"outputAbbreviatedPath": "\/assets\/js\/min\/jquery.tinyinc-ck.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"syntaxCheckerStyle": 0
 		},
 	"\/content-manage.html": {
 		"fileType": 8192,
@@ -104,6 +126,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/scripts.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/test.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/test.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -288,7 +319,7 @@
 			"flagValue": -1
 			},
 		"curly": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			},
 		"debug": {
@@ -436,7 +467,7 @@
 			"flagValue": -1
 			},
 		"nonew": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			},
 		"nonstandard": {

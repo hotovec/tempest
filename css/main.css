@@ -110,5 +110,7 @@ body {
 .ptgo {
   padding: 10px;
   margin: 5px;
-  background-color: #fff; }
+  cursor: pointer; }
+  .ptgo:hover {
+    color: red; }
 /*# sourceMappingURL=main.css.map */
