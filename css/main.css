@@ -54,8 +54,48 @@ body {
   padding: 0;
   border-radius: 0; }
 
-.content-management-presets .bootstrap-tagsinput {
-  width: 100%; }
+/* search tags */
+.search-tags {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  margin-top: 8px;
+  background-color: #fff; }
+
+.bootstrap-tagsinput {
+  width: auto;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.search-button {
+  position: absolute;
+  display: block;
+  top: 0;
+  height: 20px;
+  bottom: 0;
+  margin: auto;
+  right: 0;
+  width: auto;
+  min-width: 30px;
+  padding-right: 10px;
+  text-align: center; }
+
+/* end search tags */
+/*pillbox custom*/
+.pillbox #addPreset {
+  margin: 0;
+  display: inline-block;
+  float: right;
+  border-radius: 3px;
+  outline: none;
+  background-color: #003bb3;
+  color: #fff;
+  border: none;
+  margin: 2px;
+  font-size: 13px; }
 
 .offcanavas-menu {
   position: fixed;
@@ -88,24 +128,40 @@ body {
     bottom: 0;
     right: 0; }
 
-.modal.big {
+.modal.mm-full {
   background-color: white;
   width: 100%;
-  height: 100%; }
-  .modal.big .modal-dialog, .modal.big .modal-content {
+  height: 100%;
+  font-size: 30px;
+  font-family: georgia, serif;
+  color: #808080; }
+  .modal.mm-full .modal-header {
+    border: none; }
+  .modal.mm-full .modal-dialog, .modal.mm-full .modal-content {
     width: 100%;
     height: 100%;
     margin: 0;
     border-radius: 0;
     border: 0;
     padding: 0; }
-  .modal.big .modal-body {
+  .modal.mm-full .modal-body {
     height: 100%;
     width: 100%;
     padding: 0;
     margin: 0; }
-  .modal.big .modal-footer {
-    margin: 0; }
+  .modal.mm-full .modal-body-content {
+    max-width: 700px;
+    height: 50%;
+    margin: 0 auto; }
+  .modal.mm-full .modal-footer {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    bottom: 0; }
+  .modal.mm-full .modal--copy {
+    font-size: 20px;
+    color: #333; }
 
 .ptgo {
   padding: 10px;
@@ -113,4 +169,10 @@ body {
   cursor: pointer; }
   .ptgo:hover {
     color: red; }
+
+.random-color-1 {
+  color: #2f8b36; }
+
+.random-color-2 {
+  color: #9c0000; }
 /*# sourceMappingURL=main.css.map */

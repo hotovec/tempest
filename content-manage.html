@@ -13,243 +13,295 @@
     <!-- editable tags input-->
     <link rel="stylesheet" href="bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
 
+
     <!-- off canavas -->
     <link rel="stylesheet" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css">
 
-    <link rel="stylesheet" type="text/css" href="assets/js/page-transitions/css/component.css" />
-    <link rel="stylesheet" type="text/css" href="assets/js/page-transitions/css/animations.css" />
+    <link rel="stylesheet" type="text/css" href="assets/js/page-transitions/css/component.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/js/page-transitions/css/animations.css"/>
+
+    <!-- fuel ux components-->
+    <link rel="stylesheet" href="bower_components/fuelux/dist/css/fuelux.min.css"/>
+    <link rel="stylesheet" href="bower_components/fuelux/dist/css/fuelux-responsive.min.css"/>
+
 
     <!-- custom overide compiled by codekit -->
     <link rel="stylesheet" media="screen" href="css/main.css">
 
+    <script src="bower_components/requirejs/require.js"></script>
     <script src="assets/js/page-transitions/js/modernizr.custom.js"></script>
 
 </head>
 <body>
 
 <div class="container">
-
-    <!-- navbar -->
     <nav class="navbar navbar-main" role="navigation">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#" data-toggle="offcanvas" data-target=".offcanavas-menu-left"
-                   data-canvas="body">XOV</a> <!-- open left offcanvas menu-->
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-                <form class="navbar-form navbar-right" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                </form>
-
-            </div>
-            <!-- /.navbar-collapse -->
+        <a class="navbar-brand" href="#" data-toggle="offcanvas" data-target=".offcanavas-menu-left"
+           data-canvas="body" style="float: left; ">XOV</a>
+        <div class="search-tags">
+            <div class="search-button"><i class="fa fa-angle-down"></i> <i class="fa fa-search"></i></div>
+            <input class="search" type="text" name="" id="mytags" placeholder="presets"
+                   value="Articles,Products,Ready for Edit,Last Week" data-role="tagsinput">
         </div>
-        <!-- /.container-fluid -->
     </nav>
 </div>
 
 
-<div id="pt-main" class="pt-perspective" >
+<div class="container">
 
-    <div class="pt-page pt-page-1"></div>
-
-    <div id="content_list" class="pt-page pt-page-2">
-        <div class="container">
-
-            <!-- filters / tags -->
-            <div class="row content-management-presets">
-                <div class="col-sm-12">
-                    <input type="text" name="" id="mytags" placeholder="presets" value="Articles,Products,Ready for Edit,Last Week" data-role="tagsinput">
-                </div>
+    <!-- filters / tags -->
+    <div class="row content-management-presets">
+        <div class="col-sm-12 fuelux">
+            <div id="MyPillbox" class="pillbox">
+                <ul>
+                    <li data-value="foo">Item 1</li>
+                    <li class="status-success">Item 2</li>
+                    <li class="status-warning">Item 3</li>
+                    <li class="status-important">Item 4</li>
+                    <li class="status-info">Item 5</li>
+                    <li class="status-success">Item 6</li>
+                    <li>Item 7</li>
+                    <button id="addPreset">add filter <i class="fa fa-plus-circle"></i></button>
+                </ul>
             </div>
 
-            <!-- content table - list -->
-
-            <table class="table content-management_list">
-                <thead>
-                <tr>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th>title</th>
-                    <th>author</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
-                    <td><i class="fa fa-adjust"  data-toggle="tooltip" data-placement="top" title="not ready" ></i></td>
-                    <td><i class="fa fa-circle" data-toggle="tooltip" data-placement="top" title="published"></i></td>
-                    <td><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></td>
-
-                    <td><div class="ptgo" data-animation="21" data-direction="1" data-page="3">I’m Almost 24 And I Can’t Stop Buying Cute Things With ...</div></td>
-                    <td>Alle Heris</td>
-
-                    <td>Mar 06, 2014 18:02:02</td>
-                    <td><i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="featured"></i></td>
-                    <td><i class="fa fa-trash-o" data-toggle="tooltip" data-placement="top" title="DELETE"></i></td>
-
-                </tr>
-
-                <tr>
-                    <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
-                    <td><i class="fa fa-adjust"  data-toggle="tooltip" data-placement="top" title="not ready" ></i></td>
-                    <td><i class="fa fa-circle" data-toggle="tooltip" data-placement="top" title="published"></i></td>
-                    <td><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></td>
-
-                    <td><div class="ptgo" data-animation="21" data-direction="1" data-page="3">I’m Almost 24 And I Can’t Stop Buying Cute Things With ...</div></td>
-                    <td>Alle Heris</td>
-
-                    <td>Mar 06, 2014 18:02:02</td>
-                    <td><i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="featured"></i></td>
-                    <td><i class="fa fa-trash-o" data-toggle="tooltip" data-placement="top" title="DELETE"></i></td>
-
-                </tr>
-
-                <tr>
-                    <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
-                    <td><i class="fa fa-adjust"  data-toggle="tooltip" data-placement="top" title="not ready" ></i></td>
-                    <td><i class="fa fa-circle" data-toggle="tooltip" data-placement="top" title="published"></i></td>
-                    <td><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></td>
-
-                    <td><div class="ptgo" data-animation="21" data-direction="1" data-page="3">I’m Almost 24 And I Can’t Stop Buying Cute Things With ...</div></td>
-                    <td>Alle Heris</td>
-
-                    <td>Mar 06, 2014 18:02:02</td>
-                    <td><i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="featured"></i></td>
-                    <td><i class="fa fa-trash-o" data-toggle="tooltip" data-placement="top" title="DELETE"></i></td>
-
-                </tr>
-
-                <tr>
-                    <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
-                    <td><i class="fa fa-adjust"  data-toggle="tooltip" data-placement="top" title="not ready" ></i></td>
-                    <td><i class="fa fa-circle" data-toggle="tooltip" data-placement="top" title="published"></i></td>
-                    <td><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></td>
-
-                    <td><div class="ptgo" data-animation="21" data-direction="1" data-page="3">I’m Almost 24 And I Can’t Stop Buying Cute Things With ...</div></td>
-                    <td>Alle Heris</td>
-
-                    <td>Mar 06, 2014 18:02:02</td>
-                    <td><i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="featured"></i></td>
-                    <td><i class="fa fa-trash-o" data-toggle="tooltip" data-placement="top" title="DELETE"></i></td>
-
-                </tr>
-
-                <tr>
-                    <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
-                    <td><i class="fa fa-adjust"  data-toggle="tooltip" data-placement="top" title="not ready" ></i></td>
-                    <td><i class="fa fa-circle" data-toggle="tooltip" data-placement="top" title="published"></i></td>
-                    <td><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></td>
-
-                    <td><div class="ptgo" data-animation="21" data-direction="1" data-page="3">I’m Almost 24 And I Can’t Stop Buying Cute Things With ...</div></td>
-                    <td>Alle Heris</td>
-
-                    <td>Mar 06, 2014 18:02:02</td>
-                    <td><i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="featured"></i></td>
-                    <td><i class="fa fa-trash-o" data-toggle="tooltip" data-placement="top" title="DELETE"></i></td>
-
-                </tr>
-
-                <tr>
-                    <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
-                    <td><i class="fa fa-adjust"  data-toggle="tooltip" data-placement="top" title="not ready" ></i></td>
-                    <td><i class="fa fa-circle" data-toggle="tooltip" data-placement="top" title="published"></i></td>
-                    <td><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></td>
-
-                    <td><div class="ptgo" data-animation="21" data-direction="1" data-page="3">I’m Almost 24 And I Can’t Stop Buying Cute Things With ...</div></td>
-                    <td>Alle Heris</td>
-
-                    <td>Mar 06, 2014 18:02:02</td>
-                    <td><i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="featured"></i></td>
-                    <td><i class="fa fa-trash-o" data-toggle="tooltip" data-placement="top" title="DELETE"></i></td>
-
-                </tr>
-
-                </tbody>
-            </table>
 
         </div>
-        <!-- temp controls-->
     </div>
 
-    <div id="content_edit" class="pt-page pt-page-3">
-        <div class="ptgo" data-animation="21" data-direction="-1" data-page="2">close</div>
+    <!-- content table - list -->
 
-        <p class="inc:test.html">This text will be replaced with footer.html</p>
+    <table class="table content-management_list">
+        <thead>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>title</th>
+            <th>author</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
 
-    </div>
+        <tr>
+            <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
+            <td><i class="fa fa-adjust" data-toggle="tooltip" data-placement="top" title="not ready"></i></td>
+            <td><i class="fa fa-circle random-color" data-toggle="tooltip" data-placement="top" title="published"></i>
+            </td>
+            <td><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></td>
 
-    <div id=""class="pt-page pt-page-4">
-        empty page
-    </div>
+            <td>
+                <a href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a>
+            </td>
 
+            <td>Alle Heris</td>
+
+            <td>Mar 06, 2014 18:02:02</td>
+            <td><i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="featured"></i></td>
+            <td><i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-content-delete"></i></td>
+
+        </tr>
+
+        <tr>
+            <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
+            <td><i class="fa fa-adjust" data-toggle="tooltip" data-placement="top" title="not ready"></i></td>
+            <td><i class="fa fa-circle random-color" data-toggle="tooltip" data-placement="top" title="published"></i>
+            </td>
+            <td><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></td>
+
+            <td>
+                <a href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a>
+            </td>
+
+            <td>Alle Heris</td>
+
+            <td>Mar 06, 2014 18:02:02</td>
+            <td><i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="featured"></i></td>
+            <td><i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-content-delete"></i></td>
+
+        </tr>
+
+        <tr>
+            <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
+            <td><i class="fa fa-adjust" data-toggle="tooltip" data-placement="top" title="not ready"></i></td>
+            <td><i class="fa fa-circle random-color" data-toggle="tooltip" data-placement="top" title="published"></i>
+            </td>
+            <td><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></td>
+
+            <td>
+                <a href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a>
+            </td>
+
+            <td>Alle Heris</td>
+
+            <td>Mar 06, 2014 18:02:02</td>
+            <td><i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="featured"></i></td>
+            <td><i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-content-delete"></i></td>
+
+        </tr>
+
+        <tr>
+            <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
+            <td><i class="fa fa-adjust" data-toggle="tooltip" data-placement="top" title="not ready"></i></td>
+            <td><i class="fa fa-circle random-color" data-toggle="tooltip" data-placement="top" title="published"></i>
+            </td>
+            <td><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></td>
+
+            <td>
+                <a href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a>
+            </td>
+
+            <td>Alle Heris</td>
+
+            <td>Mar 06, 2014 18:02:02</td>
+            <td><i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="featured"></i></td>
+            <td><i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-content-delete"></i></td>
+
+        </tr>
+
+        <tr>
+            <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
+            <td><i class="fa fa-adjust" data-toggle="tooltip" data-placement="top" title="not ready"></i></td>
+            <td><i class="fa fa-circle random-color" data-toggle="tooltip" data-placement="top" title="published"></i>
+            </td>
+            <td><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></td>
+
+            <td>
+                <a href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a>
+            </td>
+
+            <td>Alle Heris</td>
+
+            <td>Mar 06, 2014 18:02:02</td>
+            <td><i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="featured"></i></td>
+            <td><i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-content-delete"></i></td>
+
+        </tr>
+
+        <tr>
+            <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
+            <td><i class="fa fa-adjust" data-toggle="tooltip" data-placement="top" title="not ready"></i></td>
+            <td><i class="fa fa-circle random-color" data-toggle="tooltip" data-placement="top" title="published"></i>
+            </td>
+            <td><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></td>
+
+            <td>
+                <a href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a>
+            </td>
+
+            <td>Alle Heris</td>
+
+            <td>Mar 06, 2014 18:02:02</td>
+            <td><i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="featured"></i></td>
+            <td><i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-content-delete"></i></td>
+
+        </tr>
+
+        <tr>
+            <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
+            <td><i class="fa fa-adjust" data-toggle="tooltip" data-placement="top" title="not ready"></i></td>
+            <td><i class="fa fa-circle random-color" data-toggle="tooltip" data-placement="top" title="published"></i>
+            </td>
+            <td><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></td>
+
+            <td>
+                <a href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a>
+            </td>
+
+            <td>Alle Heris</td>
+
+            <td>Mar 06, 2014 18:02:02</td>
+            <td><i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="featured"></i></td>
+            <td><i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-content-delete"></i></td>
+
+        </tr>
+
+
+        </tbody>
+    </table>
 
 </div>
-
-<div class="container" style="position: absolute; z-index: 10000; bottom: 0; left: 0">
-
-    <div class="row">
-        <a data-toggle="modal" href="#" data-target="#modal-contentEdit">Click me !</a>
-    </div>
-    <!-- tmp offcanavas menu buttons -->
-    <div class="row">
-        <div class="col-sm-8">
-            <div class="ptgo" data-animation="21" data-direction="1" data-page="2">content manage</div>
-            <div class="ptgo" data-animation="21" data-direction="1" data-page="3">content edit</div>
-            <div class="ptgo" data-animation="21" data-direction="1" data-page="4">page4</div>
-            <div class="ptgo" data-animation="21" data-direction="1" data-page="5">page5</div>
-            <button  type="submit" data-toggle="offcanvas" data-target=".offcanavas-menu-left" data-canvas="body">open offcanavas left</button>
-            <button  type="submit" data-toggle="offcanvas" data-target=".offcanavas-menu-top" data-canvas="body">open offcanavas top</button>
-            <button  type="submit" data-toggle="offcanvas" data-target=".offcanavas-menu-bottom" data-canvas="body">open offcanavas bottom</button>
-            <button class="right" type="submit" data-toggle="offcanvas" data-target=".offcanavas-menu-right" data-canvas="body">open offcanavas right</button>
-        </div>
-    </div>
-
-</div>
-
 
 
 <!-- modals -->
 
 
 <!-- Modal -->
-<div class="modal fade big" id="modal-contentEdit" tabindex="-1" role="dialog" aria-labelledby="modal-contentEdit" aria-hidden="true">
+<div class="modal mm-full" id="modal-content-delete" tabindex="-1" role="dialog" aria-labelledby="modal-content-delete"
+     aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Edit Article</h4>
 
-            </div>
             <div class="modal-body">
+                <form role="form">
 
-                <div class="modal-footer">
-                    <button type="submit" data-toggle="offcanvas" data-target=".offcanavas-menu-left" data-canvas="body">open offcanavas left</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+                    <div class="modal-body-content">
+
+                        <div class="modal--hed">Are you sure you want to DELETE this item? You cannot undo this
+                            action.
+                        </div>
+                        <div class="modal--copy">
+                            <div><i class="fa fa-shopping-cart"></i></div>
+                            <div>I Decree Your Thread Open! Anne-Marie</div>
+                            <div>
+                                <div><i class="fa fa-circle"></i>Draft</div>
+                                <div><i class="fa fa-circle"></i>Unpublished</div>
+                            </div>
+
+                            <div class="row modal--confirm">
+                                <div class="form-group">
+                                    <label for="iConfirm">If so, type DELETE in the field below.</label>
+                                    <input id="iConfirm" class="form-control" type="text"
+                                           placeholder="type DELETE here"/>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Delete</button>
+
+                </form>
             </div>
+
+
         </div>
 
     </div>
+</div>
+
+
+<!-- temp controls-->
+
+
+<div class="container" style="position: absolute; z-index: 10000; bottom: 0; left: 0">
+
+    <div class="row">
+        <a data-toggle="modal" href="#" data-target="#modal-content-delete">Click me !</a>
+    </div>
+    <!-- tmp offcanavas menu buttons -->
+    <div class="row">
+        <div class="col-sm-8">
+            <button type="submit" data-toggle="offcanvas" data-target=".offcanavas-menu-left" data-canvas="body">open
+                offcanavas left
+            </button>
+            <button type="submit" data-toggle="offcanvas" data-target=".offcanavas-menu-top" data-canvas="body">open
+                offcanavas top
+            </button>
+            <button type="submit" data-toggle="offcanvas" data-target=".offcanavas-menu-bottom" data-canvas="body">open
+                offcanavas bottom
+            </button>
+            <button class="right" type="submit" data-toggle="offcanvas" data-target=".offcanavas-menu-right"
+                    data-canvas="body">open offcanavas right
+            </button>
+        </div>
+    </div>
+
 </div>
 
 
@@ -259,14 +311,14 @@
 <div class="offcanavas-menu-left offcanavas-menu offcanvas">
     <div class="m-offcanavas-menu mm-side">
         <div class="m-author">Marci</div>
-        <ul class="" >
-            <li><a href="#"  title="Create content">Create content</a></li>
-            <li><a href="#"  title="Manage content">Manage content</a></li>
+        <ul class="">
+            <li><a href="#" title="Create content">Create content</a></li>
+            <li><a href="#" title="Manage content">Manage content</a></li>
             <li><a href="#" title="Manage vocabularies">Manage vocabularies</a></li>
-            <li><a href="#"  title="Site programming">Site programming</a></li>
-            <li><a href="#"  title="Manage Users">Manage Users</a></li>
-            <li><a href="#"  title="Switch site">Switch site</a></li>
-            <li><a href="#"  title="logout" class="actionLogout" >logout</a></li>
+            <li><a href="#" title="Site programming">Site programming</a></li>
+            <li><a href="#" title="Manage Users">Manage Users</a></li>
+            <li><a href="#" title="Switch site">Switch site</a></li>
+            <li><a href="#" title="logout" class="actionLogout">logout</a></li>
         </ul>
     </div>
 </div>
@@ -282,10 +334,7 @@
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js"></script>
 <script src="bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
-
-<script src="assets/js/page-transitions/js/jquery.dlmenu.js"></script>
-<script src="assets/js/page-transitions/js/pagetransitions.js"></script>
-
+<script src="bower_components/fuelux/dist/loader.min.js"></script>
 
 <script src="assets/app.js"></script>
 
