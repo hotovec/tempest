@@ -4,8 +4,15 @@ $(function () {
 
     // $('#modal-content-delete').modal('show');
 
-
-
+    // replace this by something advanced
+    $('#searchOptionsButton').click(function(event) {
+        var obj = $('.search-tags--options');
+        if(obj.hasClass('hide')) {
+            obj.removeClass('hide');
+        } else {
+            obj.addClass('hide');
+        }
+    });
 
     // enable tooltip everywher
     $("[data-toggle=tooltip]").tooltip();
