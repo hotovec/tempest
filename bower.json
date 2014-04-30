@@ -7,6 +7,6 @@
     "momentjs": "~2.6.0",
     "requirejs": "~2.1.11",
     "jasny-bootstrap": "~3.1.2",
-    "page-transitions": "*"
+    "bourbon": "3.2.1"
   }
 }
