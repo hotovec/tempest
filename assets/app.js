@@ -1,10 +1,14 @@
+
+
 $(function () {
 
     // $('#modal-content-delete').modal('show');
 
 
+
+
     // enable tooltip everywher
-   // $("[data-toggle=tooltip]").tooltip();
+    $("[data-toggle=tooltip]").tooltip();
 
     $('#addPreset').click(function () {
         var newItemCount = $('#MyPillbox ul li').length + 1;
