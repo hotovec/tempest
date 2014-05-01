@@ -1,0 +1,27 @@
+.pt-page p {
+  margin-bottom: 40px; }
+.pt-page .page-overlay {
+  position: absolute;
+  bottom: 0;
+  height: 500px;
+  background-color: #808080;
+  border: 1px solid #000; }
+  .pt-page .page-overlay.scrollable {
+    display: block;
+    visibility: visible;
+    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 2px solid pink; }
+
+.pt-page-1 {
+  background-color: #faa195; }
+
+.pt-page-2 {
+  background-color: transparent; }
+
+.pt-page-3 {
+  background-color: transparent; }
+  .pt-page-3 .page-overlay {
+    background-color: red; }
+/*# sourceMappingURL=modal.css.map */
