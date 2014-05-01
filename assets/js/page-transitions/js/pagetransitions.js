@@ -2,7 +2,6 @@ var PageTransitions = (function() {
 
 	var $main = $( '#pt-main' ),
 		$pages = $main.children( 'div.pt-page' ),
-		$iterate = $( '#iterateEffects' ),
 		animcursor = 1,
 		pagesCount = $pages.length,
 		current = 0,
@@ -15,8 +14,10 @@ var PageTransitions = (function() {
 			'msAnimation' : 'MSAnimationEnd',
 			'animation' : 'animationend'
 		},
+
 		// animation end event name
 		animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ],
+
 		// support css animations
 		support = Modernizr.cssanimations;
 	
@@ -29,26 +30,68 @@ var PageTransitions = (function() {
 
 		$pages.eq( current ).addClass( 'pt-page-current' );
 
-		$( '#dl-menu' ).dlmenu( {
-			animationClasses : { in : 'dl-animate-in-2', out : 'dl-animate-out-2' },
-			onLinkClick : function( el, ev ) {
-				ev.preventDefault();
-				nextPage( el.data( 'animation' ) );
-			}
-		} );
-
-		$iterate.on( 'click', function() {
-			if( isAnimating ) {
-				return false;
-			}
-			if( animcursor > 67 ) {
-				animcursor = 1;
-			}
-			nextPage( animcursor );
-			++animcursor;
-		} );
-
 	}
+
+    function test() {
+        console.log("test");
+    }
+
+    function closeCurrentPage() {
+        console.log("close current page");
+
+    }
+
+
+    function showSinglePage(options) {
+		//var animation = (options.animation) ? options.animation : options;
+
+        //if(options.showPage){
+        //    current = options.showPage;
+        //}
+
+        current = 1;
+
+        if( isAnimating ) {
+            return false;
+        }
+
+        isAnimating = true;
+
+        //var $nextPage = $pages.eq( current ).addClass( 'pt-page-current' ),
+        var $currPage = $(".pt-page-1").addClass( 'pt-page-current' ),
+            outClass = '', inClass = '';
+
+        console.log("ae name: "+ animEndEventName);
+
+        outClass = 'pt-page-moveToLeft';
+        inClass = 'pt-page-moveFromRight';
+
+        $currPage.addClass( inClass ).on( animEndEventName, function() {
+            $currPage.off( animEndEventName );
+            endCurrPage = true;
+            if( endCurrPage ) {
+                onSinglePageEndAnimation( $currPage );
+            }
+        } );
+
+
+
+        if( !support ) {
+            //onEndAnimation( $currPage, $nextPage );
+        }
+
+    }
+
+    function onSinglePageEndAnimation( $outpage ) {
+        console.log("End Open single Page");
+        endCurrPage = false;
+        endNextPage = false;
+        //resetPage( $outpage, $inpage );
+        isAnimating = false;
+    }
+
+
+
 
 	function nextPage(options ) {
 		var animation = (options.animation) ? options.animation : options;
@@ -378,7 +421,10 @@ var PageTransitions = (function() {
 
 	}
 
+
+
 	function onEndAnimation( $outpage, $inpage ) {
+        console.log("enf");
 		endCurrPage = false;
 		endNextPage = false;
 		resetPage( $outpage, $inpage );
@@ -394,6 +440,9 @@ var PageTransitions = (function() {
 
 	return { 
 		init : init,
+        test : test,
+        showSinglePage : showSinglePage,
+        closeCurrentPage : closeCurrentPage,
 		nextPage : nextPage,
 	};
 

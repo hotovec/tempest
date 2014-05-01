@@ -1,0 +1,40 @@
+@import "../bower_components/bourbon/dist/bourbon";
+
+.pt-page {
+    p {
+        margin-bottom: 40px;
+    }
+
+    .page-overlay {
+        position: absolute;
+        bottom: 0;
+        height: 500px;
+        background-color: #808080;
+        border: 1px solid #000;
+        &.scrollable {
+            display: block;
+            visibility: visible;
+            overflow: auto;
+            overflow-y: auto;
+            overflow-x: hidden;
+
+            border: 2px solid pink;
+            //-webkit-overflow-scrolling: ;
+        }
+    }
+
+}
+
+.pt-page-1 {
+    background-color: #faa195;
+}
+.pt-page-2 {
+    background-color: transparent;
+}
+.pt-page-3 {
+    background-color: transparent;
+
+    .page-overlay {
+        background-color: red;
+    }
+}
