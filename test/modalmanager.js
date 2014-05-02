@@ -39,7 +39,19 @@ $(function () {
     $(document).keyup(function(e) {
         // todo - check history if we can close
         // todo - check changes on layers and get warnings
-        if (e.keyCode == 27) { LayerTransitions.closeLastPage(); }   // esc
+        if (e.keyCode == 27) {
+            if(LayerTransitions.isOffcanavas()) { // esc
+                console.log("close offcanavas");
+                LayerTransitions.closeOffcanavas();
+            } else {
+
+                if(LayerTransitions.isOpenedAnyPage()) {
+                    console.log("close page");
+                    LayerTransitions.closeLastPage();
+                }
+
+            }
+        }
     });
 
     /// offcanavas

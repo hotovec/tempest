@@ -13,6 +13,7 @@ var LayerTransitions = (function() {
 		animcursor = 1,
 		pagesCount = $pages.length,
 		current = 0,
+        isOffcanavasEnabled = false,
 		isAnimating = false,
 		endCurrPage = false,
 		endNextPage = false,
@@ -46,21 +47,37 @@ var LayerTransitions = (function() {
 	}
 
     function showOffcanvas() {
+        isOffcanavasEnabled = true;
         console.log("show offcanavas");
         $offcanavasParent.addClass('oc-visible');
         $('.oc-overlay').click(function() {
             closeOffcanavas();
         })
+    }
 
+    function isOffcanavas() {
+        return isOffcanavasEnabled;
+    }
+
+    function isOpenedAnyPage() {
+        if(history.length > 0) {
+            return true;
+        }
+        return false
     }
 
     function closeOffcanavas() {
-        console.log("close offcanavas");
+        isOffcanavasEnabled = false;
         $offcanavasParent.removeClass('oc-visible');
-        //$('.oc-overlay').click = null;
+        $('.oc-overlay').click = null;
     }
 
     function closeLastPage() {
+
+        if(isOffcanavasEnabled == true) {
+            return;
+        }
+
         $pageToClose = history.pop();
         console.log("close current page" + $pageToClose + $pageToClose.outClass);
 
@@ -464,6 +481,8 @@ var LayerTransitions = (function() {
         getAnimationType : getAnimationType,
         showOffcanvas: showOffcanvas,
         closeOffcanavas: closeOffcanavas,
+        isOffcanavas: isOffcanavas,
+        isOpenedAnyPage: isOpenedAnyPage,
 	};
 
 })();
