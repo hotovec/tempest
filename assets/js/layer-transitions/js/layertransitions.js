@@ -176,6 +176,8 @@ var LayerTransitions = (function() {
                 inClass = 'pt-page-moveFromTop';
                 outClass = 'pt-page-moveToTop';
                 break;
+
+            // next transitions are not updated
             case 5:
                 outClass = 'pt-page-fade';
                 inClass = 'pt-page-moveFromRight pt-page-ontop';
