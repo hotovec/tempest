@@ -8,6 +8,7 @@
 var LayerTransitions = (function() {
 
 	var $main = $( '#pt-main' ),
+        $offcanavasParent = $( 'body' ),
 		$pages = $main.children( 'div.pt-page' ),
 		animcursor = 1,
 		pagesCount = $pages.length,
@@ -44,6 +45,20 @@ var LayerTransitions = (function() {
 
 	}
 
+    function showOffcanvas() {
+        console.log("show offcanavas");
+        $offcanavasParent.addClass('oc-visible');
+        $('.oc-overlay').click(function() {
+            closeOffcanavas();
+        })
+
+    }
+
+    function closeOffcanavas() {
+        console.log("close offcanavas");
+        $offcanavasParent.removeClass('oc-visible');
+        //$('.oc-overlay').click = null;
+    }
 
     function closeLastPage() {
         $pageToClose = history.pop();
@@ -447,6 +462,8 @@ var LayerTransitions = (function() {
         showSinglePage : showSinglePage,
         closeLastPage : closeLastPage,
         getAnimationType : getAnimationType,
+        showOffcanvas: showOffcanvas,
+        closeOffcanavas: closeOffcanavas,
 	};
 
 })();

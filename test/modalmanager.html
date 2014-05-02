@@ -20,12 +20,27 @@
     <script src="../assets/js/layer-transitions/js/modernizr.custom.js"></script>
 
 </head>
-<body>
+<body class="">
+
+<div class="oc-page">
+    <div class="oc-menu">
+        offcanvas menu
+    </div>
+    <div class="oc-overlay"></div>
+</div>
 
 
-<div id="pt-main" class="pt-perspective">
-    <div class="pt-page pt-page-0"><h1>P0</h1>
-        <button data-toggle="page-open" data-animation="1" data-page-target=".pt-page-1">Open modal full / not scroll</button>
+<div id="pt-main" class="pt-perspective ">
+
+    <div class="pt-page pt-page-0">
+
+
+        <h1>P0</h1>
+        <button data-toggle="offcanavas-open">Open offcanavas</button>
+
+
+        <button data-toggle="page-open" data-animation="1" data-page-target=".pt-page-1">Open modal full / not scroll
+        </button>
         <button data-toggle="page-open" data-animation="3" data-page-target=".pt-page-2">Open overlay (not scroll)
         </button>
         <button data-toggle="page-open" data-animation="2" data-page-target=".pt-page-3">Open modal (with scroll)
@@ -152,6 +167,7 @@
     </div>
 
     <div class="pt-page pt-page-1"><h1>p1 - Media Library</h1>
+        <button data-toggle="offcanavas-open">Open offcanavas</button>
         <button data-toggle="page-close">Close Media Lib</button>
         <button data-toggle="page-open" data-animation="3" data-page-target=".pt-page-3">Open Overlay</button>
         <button data-toggle="page-open" data-page-target=".pt-page-4">Open Next layer</button>
@@ -215,7 +231,6 @@
     </div>
 
 </div>
-
 
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>

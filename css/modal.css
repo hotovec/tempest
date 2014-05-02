@@ -1,3 +1,7 @@
+.pt-perspective {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+
 .pt-page p {
   margin-bottom: 40px; }
 .pt-page .page-overlay {
@@ -48,4 +52,47 @@
 
 .pt-page-7 {
   background-color: coral; }
+
+.oc-page {
+  pointer-events: none;
+  visibility: hidden;
+  position: absolute;
+  height: auto;
+  width: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  -webkit-transform: translateX(-300px);
+  -ms-transform: translateX(-300px);
+  transform: translateX(-300px);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+  .oc-page .oc-menu {
+    height: auto;
+    width: 300px;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: yellowgreen;
+    z-index: 100; }
+  .oc-page .oc-overlay {
+    width: 100%;
+    height: 100%; }
+
+.oc-visible .oc-page {
+  visibility: visible;
+  pointer-events: auto;
+  -webkit-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+.oc-visible .pt-perspective {
+  -webkit-transform: translateX(300px);
+  -ms-transform: translateX(300px);
+  transform: translateX(300px);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
 /*# sourceMappingURL=modal.css.map */

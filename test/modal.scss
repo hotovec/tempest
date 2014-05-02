@@ -1,11 +1,16 @@
 @import "../bower_components/bourbon/dist/bourbon";
 
+.pt-perspective {
+    @include transition(all 0.2s); // offcanavas
+
+}
+
 .pt-page {
+
+
     p {
         margin-bottom: 40px;
     }
-
-
 
     .page-overlay {
         position: absolute;
@@ -13,8 +18,6 @@
         height: 50%;
         background-color: #808080;
         border: 1px solid #000;
-
-
 
         &.scrollable {
             display: block;
@@ -29,11 +32,9 @@
     }
     button.fixed {
         position: fixed;
-        bottom:50%;
+        bottom: 50%;
         //bottom: 0;
     }
-
-
 
 }
 
@@ -41,38 +42,97 @@
     overflow: auto;
 }
 
-.pt-page-1 { // fullscreen modal - not scrollable
+.pt-page-1 {
+    // fullscreen modal - not scrollable
     background-color: #eef;
 }
-.pt-page-2 { // overlay not scrollable with interactive BG
+
+.pt-page-2 {
+    // overlay not scrollable with interactive BG
 
     background-color: transparent;
     height: 500px;
-    bottom:0;
-    top:auto;
+    bottom: 0;
+    top: auto;
     overflow: auto;
     .page-overlay {
         overflow: hidden;
     }
 }
-.pt-page-3 { // modal with not with no bg interaction
+
+.pt-page-3 {
+    // modal with not with no bg interaction
     background-color: transparent;
 
     .page-overlay {
-        background-color: rgba(255,0,0,.5);
+        background-color: rgba(255, 0, 0, .5);
     }
 }
 
 .pt-page-4 {
     background-color: pink;
 }
+
 .pt-page-5 {
     background-color: darkseagreen;
 }
+
 .pt-page-6 {
     background-color: palevioletred;
 }
+
 .pt-page-7 {
     background-color: coral;
 }
 
+// ------ offcanavas
+
+.oc-page {
+
+    pointer-events:none;
+    visibility: hidden;
+
+    position: absolute;
+    height: auto;
+    width: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 1000;
+
+    transform: translateX(-300px);
+
+    .oc-menu {
+        height: auto;
+        width: 300px;
+        top: 0;
+        bottom: 0;
+
+        position: fixed;
+        background-color: yellowgreen;
+        z-index: 100;
+    }
+
+    .oc-overlay {
+        width: 100%;
+        height: 100%;
+    }
+
+    @include transition(all 0.2s);
+}
+
+.oc-visible {
+    .oc-page {
+        visibility: visible;
+        pointer-events:auto;
+        transform: translateX(0px);
+        @include transition(all 0.2s);
+    }
+
+    .pt-perspective {
+        transform: translateX(300px);
+        @include transition(all 0.2s);
+    }
+}

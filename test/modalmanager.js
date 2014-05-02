@@ -42,5 +42,12 @@ $(function () {
         if (e.keyCode == 27) { LayerTransitions.closeLastPage(); }   // esc
     });
 
+    /// offcanavas
+
+    $("[data-toggle='offcanavas-open']").click(function() {
+      LayerTransitions.showOffcanvas();
+    });
+
+
 
 });
