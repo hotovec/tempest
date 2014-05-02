@@ -29,6 +29,8 @@ html, body { height: 100%; }
 }
 
 .pt-page-current,
+.pt-page-open,
+.pt-page-main,
 .no-js .pt-page {
 	visibility: visible;
 	z-index: 1;

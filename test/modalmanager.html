@@ -10,52 +10,216 @@
     <!-- off canavas -->
     <link rel="stylesheet" href="../bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css">
 
-    <link rel="stylesheet" type="text/css" href="../assets/js/page-transitions/css/component.css"/>
-    <link rel="stylesheet" type="text/css" href="../assets/js/page-transitions/css/animations.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/js/layer-transitions/css/component.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/js/layer-transitions/css/animations.css"/>
 
 
     <!-- custom overide compiled by codekit -->
     <link rel="stylesheet" media="screen" href="../css/modal.css">
 
-    <script src="../assets/js/page-transitions/js/modernizr.custom.js"></script>
+    <script src="../assets/js/layer-transitions/js/modernizr.custom.js"></script>
 
 </head>
 <body>
 
 
 <div id="pt-main" class="pt-perspective">
-    <div class="pt-page pt-page-0" ><h1>P0</h1>
-        <button id="actShowMedialib">Open Media Lib</button>
-        <button id="actShowOverlay">Open Overlay</button>
-        <button id="actShowScrollableOverlay">Open Scrollable Overlay</button>
-        <button id="actShowPage">Show Page 1</button>
+    <div class="pt-page pt-page-0"><h1>P0</h1>
+        <button data-toggle="page-open" data-animation="1" data-page-target=".pt-page-1">Open modal full / not scroll</button>
+        <button data-toggle="page-open" data-animation="3" data-page-target=".pt-page-2">Open overlay (not scroll)
+        </button>
+        <button data-toggle="page-open" data-animation="2" data-page-target=".pt-page-3">Open modal (with scroll)
+        </button>
+        <button data-toggle="page-open" data-animation="1" data-page-target=".pt-page-1">Show Page 1</button>
+
+        <p><strong>not all transitions are prepared to use</strong></p>
+
+        <div>
+            <button data-toggle="page-open" data-animation="1" data-page-target=".pt-page-1">Anim 1</button>
+            <button data-toggle="page-open" data-animation="2" data-page-target=".pt-page-1">Anim 2</button>
+            <button data-toggle="page-open" data-animation="3" data-page-target=".pt-page-1">Anim 3</button>
+            <button data-toggle="page-open" data-animation="4" data-page-target=".pt-page-1">Anim 4</button>
+            <button data-toggle="page-open" data-animation="5" data-page-target=".pt-page-1">Anim 5</button>
+            <button data-toggle="page-open" data-animation="6" data-page-target=".pt-page-1">Anim 6</button>
+            <button data-toggle="page-open" data-animation="7" data-page-target=".pt-page-1">Anim 7</button>
+            <button data-toggle="page-open" data-animation="8" data-page-target=".pt-page-1">Anim 8</button>
+            <button data-toggle="page-open" data-animation="9" data-page-target=".pt-page-1">Anim 9</button>
+            <button data-toggle="page-open" data-animation="10" data-page-target=".pt-page-1">Anim 10</button>
+            <button data-toggle="page-open" data-animation="11" data-page-target=".pt-page-1">Anim 11</button>
+            <button data-toggle="page-open" data-animation="12" data-page-target=".pt-page-1">Anim 12</button>
+            <button data-toggle="page-open" data-animation="13" data-page-target=".pt-page-1">Anim 13</button>
+            <button data-toggle="page-open" data-animation="14" data-page-target=".pt-page-1">Anim 14</button>
+            <button data-toggle="page-open" data-animation="15" data-page-target=".pt-page-1">Anim 15</button>
+            <button data-toggle="page-open" data-animation="16" data-page-target=".pt-page-1">Anim 16</button>
+            <button data-toggle="page-open" data-animation="17" data-page-target=".pt-page-1">Anim 17</button>
+            <button data-toggle="page-open" data-animation="18" data-page-target=".pt-page-1">Anim 18</button>
+            <button data-toggle="page-open" data-animation="19" data-page-target=".pt-page-1">Anim 19</button>
+            <button data-toggle="page-open" data-animation="20" data-page-target=".pt-page-1">Anim 20</button>
+            <button data-toggle="page-open" data-animation="21" data-page-target=".pt-page-1">Anim 21</button>
+            <button data-toggle="page-open" data-animation="22" data-page-target=".pt-page-1">Anim 22</button>
+            <button data-toggle="page-open" data-animation="23" data-page-target=".pt-page-1">Anim 23</button>
+            <button data-toggle="page-open" data-animation="24" data-page-target=".pt-page-1">Anim 24</button>
+            <button data-toggle="page-open" data-animation="25" data-page-target=".pt-page-1">Anim 25</button>
+            <button data-toggle="page-open" data-animation="26" data-page-target=".pt-page-1">Anim 26</button>
+            <button data-toggle="page-open" data-animation="27" data-page-target=".pt-page-1">Anim 27</button>
+            <button data-toggle="page-open" data-animation="28" data-page-target=".pt-page-1">Anim 28</button>
+            <button data-toggle="page-open" data-animation="29" data-page-target=".pt-page-1">Anim 29</button>
+            <button data-toggle="page-open" data-animation="30" data-page-target=".pt-page-1">Anim 30</button>
+            <button data-toggle="page-open" data-animation="31" data-page-target=".pt-page-1">Anim 31</button>
+            <button data-toggle="page-open" data-animation="32" data-page-target=".pt-page-1">Anim 32</button>
+            <button data-toggle="page-open" data-animation="33" data-page-target=".pt-page-1">Anim 33</button>
+            <button data-toggle="page-open" data-animation="34" data-page-target=".pt-page-1">Anim 34</button>
+            <button data-toggle="page-open" data-animation="35" data-page-target=".pt-page-1">Anim 35</button>
+            <button data-toggle="page-open" data-animation="36" data-page-target=".pt-page-1">Anim 36</button>
+            <button data-toggle="page-open" data-animation="37" data-page-target=".pt-page-1">Anim 37</button>
+            <button data-toggle="page-open" data-animation="38" data-page-target=".pt-page-1">Anim 38</button>
+            <button data-toggle="page-open" data-animation="39" data-page-target=".pt-page-1">Anim 39</button>
+            <button data-toggle="page-open" data-animation="40" data-page-target=".pt-page-1">Anim 40</button>
+            <button data-toggle="page-open" data-animation="41" data-page-target=".pt-page-1">Anim 41</button>
+            <button data-toggle="page-open" data-animation="42" data-page-target=".pt-page-1">Anim 42</button>
+            <button data-toggle="page-open" data-animation="43" data-page-target=".pt-page-1">Anim 43</button>
+            <button data-toggle="page-open" data-animation="44" data-page-target=".pt-page-1">Anim 44</button>
+            <button data-toggle="page-open" data-animation="45" data-page-target=".pt-page-1">Anim 45</button>
+            <button data-toggle="page-open" data-animation="46" data-page-target=".pt-page-1">Anim 46</button>
+            <button data-toggle="page-open" data-animation="47" data-page-target=".pt-page-1">Anim 47</button>
+            <button data-toggle="page-open" data-animation="48" data-page-target=".pt-page-1">Anim 48</button>
+            <button data-toggle="page-open" data-animation="49" data-page-target=".pt-page-1">Anim 49</button>
+            <button data-toggle="page-open" data-animation="50" data-page-target=".pt-page-1">Anim 50</button>
+            <button data-toggle="page-open" data-animation="51" data-page-target=".pt-page-1">Anim 51</button>
+            <button data-toggle="page-open" data-animation="52" data-page-target=".pt-page-1">Anim 52</button>
+            <button data-toggle="page-open" data-animation="53" data-page-target=".pt-page-1">Anim 53</button>
+            <button data-toggle="page-open" data-animation="54" data-page-target=".pt-page-1">Anim 54</button>
+            <button data-toggle="page-open" data-animation="55" data-page-target=".pt-page-1">Anim 55</button>
+            <button data-toggle="page-open" data-animation="56" data-page-target=".pt-page-1">Anim 56</button>
+            <button data-toggle="page-open" data-animation="57" data-page-target=".pt-page-1">Anim 57</button>
+            <button data-toggle="page-open" data-animation="58" data-page-target=".pt-page-1">Anim 58</button>
+            <button data-toggle="page-open" data-animation="59" data-page-target=".pt-page-1">Anim 59</button>
+            <button data-toggle="page-open" data-animation="60" data-page-target=".pt-page-1">Anim 60</button>
+            <button data-toggle="page-open" data-animation="61" data-page-target=".pt-page-1">Anim 61</button>
+            <button data-toggle="page-open" data-animation="62" data-page-target=".pt-page-1">Anim 62</button>
+            <button data-toggle="page-open" data-animation="63" data-page-target=".pt-page-1">Anim 63</button>
+            <button data-toggle="page-open" data-animation="64" data-page-target=".pt-page-1">Anim 64</button>
+            <button data-toggle="page-open" data-animation="65" data-page-target=".pt-page-1">Anim 65</button>
+            <button data-toggle="page-open" data-animation="66" data-page-target=".pt-page-1">Anim 66</button>
+            <button data-toggle="page-open" data-animation="67" data-page-target=".pt-page-1">Anim 67</button>
+        </div>
+
+        <p><strong>not all transitions are prepared to use</strong></p>
+
+
+        <div>
+            <h3>Modal</h3>
+
+            <p>Modal is fullscreen or partial screen container which block the background interaction</p>
+
+            <h3>Overlay</h3>
+
+            <p>Overlay is partial screen container which doesn't block the background interaction</p>
+
+            <h3>Modal and Overlay content scrolling</h3>
+
+            <p>You can have scrolling enabled or disabled for any kind of type</p>
+
+            <p>it is contoled by css classes: is-scrollable, not-scrollable</p>
+
+            <h3>Layering</h3>
+
+            <p>Z Order of modals and overlays is driven by markup. If you need different order you need rearrange
+                markup</p>
+
+            <h3>Closing</h3>
+
+            <p>to close element by history use: data-toggle="page-close"</p>
+
+            <p>it is closing elements in order they were opened. You can press ESC to close container.</p>
+
+            <h3>Animation</h3>
+
+            <p>animation is controlled by: data-animation="1", number is number of the animation. every element can use
+                different animation</p>
+
+        </div>
+
+        <button data-toggle="page-open" data-page-target=".pt-page-1">Open modal full / not scroll</button>
+        <button data-toggle="page-open" data-animation="3" data-page-target=".pt-page-2">Open overlay (not scroll)
+        </button>
+        <button data-toggle="page-open" data-animation="2" data-page-target=".pt-page-3">Open modal (with scroll)
+        </button>
+        <button data-toggle="page-open" data-animation="1" data-page-target=".pt-page-1">Show Page 1</button>
+
+
         <div data-lorem="20p"></div>
     </div>
 
     <div class="pt-page pt-page-1"><h1>p1 - Media Library</h1>
-        <button id="actCloseMedialib">Close Media Lib</button>
+        <button data-toggle="page-close">Close Media Lib</button>
+        <button data-toggle="page-open" data-animation="3" data-page-target=".pt-page-3">Open Overlay</button>
+        <button data-toggle="page-open" data-page-target=".pt-page-4">Open Next layer</button>
         <div data-lorem="20p"></div>
     </div>
 
+
+    <div class="pt-page pt-page-4">
+        <button data-toggle="page-close">Close</button>
+        <button data-toggle="page-open" data-animation="41" data-page-target=".pt-page-5">Open Next layer</button>
+        <div class="scrollable">
+            <h1>p4 - overlay scrollable</h1>
+
+            <div data-lorem="20p"></div>
+        </div>
+    </div>
+    <div class="pt-page pt-page-5">
+        <button data-toggle="page-close">Close</button>
+        <button data-toggle="page-open" data-animation="18" data-page-target=".pt-page-6">Open Next layer</button>
+        <button data-toggle="page-open" data-animation="3" data-page-target=".pt-page-3">Open Overlay</button>
+        <div class="scrollable">
+            <h1>p5 - overlay scrollable</h1>
+
+            <div data-lorem="20p"></div>
+        </div>
+    </div>
+    <div class="pt-page pt-page-6">
+        <button data-toggle="page-close">Close</button>
+        <button data-toggle="page-open" data-animation="32" data-page-target=".pt-page-7">Open Next layer</button>
+        <div class="scrollable">
+            <h1>p6 - overlay scrollable</h1>
+
+            <div data-lorem="20p"></div>
+        </div>
+    </div>
+    <div class="pt-page pt-page-7">
+        <button data-toggle="page-close">Close</button>
+        <div class="scrollable">
+            <h1>p7 - overlay scrollable</h1>
+
+            <div data-lorem="20p"></div>
+        </div>
+    </div>
+
     <div class="pt-page pt-page-2 ">
+        <button class="fixed" data-toggle="page-close">Close</button>
         <div class="page-overlay">
             <h1>p2 - overlay</h1>
+
             <div data-lorem="20p"></div>
         </div>
     </div>
 
     <div class="pt-page pt-page-3">
+        <button class="fixed" data-toggle="page-close">Close</button>
         <div class="page-overlay scrollable">
             <h1>p2 - overlay scrollable</h1>
+
             <div data-lorem="20p"></div>
         </div>
     </div>
+
 </div>
 
 
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../assets/js/page-transitions/js/pagetransitions.js"></script>
+<script src="../assets/js/layer-transitions/js/layertransitions.js"></script>
 <script src="../assets/js/lorem/lorem.js"></script>
 <script src="modalmanager.js"></script>
 

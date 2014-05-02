@@ -3,43 +3,44 @@
  */
 
 $(function () {
+
     console.log("init");
 
+    /*tOut = '';
+    for ( var i =1 ; i<=67; i++) {
+        tOut = tOut + '<button data-toggle="page-open" data-animation="' + i +'" data-page-target=".pt-page-1">Anim ' +i+ '</button>';
+    }
+    console.log(tOut);*/
 
 
-    $('#actShowOverlay').click(function() {
-        $('.pt-page-2').addClass('pt-page-current');
-        $('.pt-page-2').addClass('pt-page-moveFromBottom');
-        //$('.pt-page-2').css('overflow','auto');
+    // init Layer transitions
+
+    // asign layer transitions to elements
+    $("[data-toggle='page-open']").click(function () {
+        var el = $(this);
+        var targetPage = null;
+        if (targetPage = el.data('page-target')) {
+
+            var animationType = 1; // default
+            if (animationType = el.data("animation")) {
+                console.log("custom anim:" + animationType)
+            }
+            LayerTransitions.showSinglePage(animationType, targetPage);
+        }
     });
 
-    $('#actShowScrollableOverlay').click(function() {
-        $('.pt-page-3').addClass('pt-page-current');
-        $('.pt-page-3').addClass('pt-page-moveFromBottom');
+    // assign close layer to elements
+    $("[data-toggle='page-close']").click(function () {
+        var el = $(this);
+        LayerTransitions.closeLastPage();
     });
 
-
-    // open
-    $('#actShowPage').click(function() {
-        PageTransitions.showSinglePage();
-        //PageTransitions.test();
-
-    });
-    // close
-    $('#actCloseMedialib').click(function() {
-        PageTransitions.closeCurrentPage();
-        //$('.pt-page-1').addClass('pt-page-moveToBottom');
-        //$('.pt-page-1').removeClass('pt-page-current');
+    // assign ESC to close elements
+    $(document).keyup(function(e) {
+        // todo - check history if we can close
+        // todo - check changes on layers and get warnings
+        if (e.keyCode == 27) { LayerTransitions.closeLastPage(); }   // esc
     });
 
-
-
-
-
-
-    //$('.pt-page-1').addClass('pt-page-delay100');
-    //$('.pt-page-1').addClass('pt-page-moveToBottom');
-
-    //$('body').css('overflow','hidden');
 
 });

@@ -975,7 +975,7 @@
 	"sassUseLibsass": 0,
 	"shouldRunAutoprefixer": 0,
 	"shouldRunBless": 0,
-	"skippedItemsString": "_logs, .hg, _cache, log, \/bower_components, logs, cache, \/assets\/js\/page-transitions, \/node_modules, .git, \/assets\/js\/lorem, .svn",
+	"skippedItemsString": "_logs, .hg, _cache, log, \/bower_components, logs, cache, \/assets\/js\/page-transitions, \/node_modules, .git, \/assets\/js\/lorem, .svn, \/assets\/js\/layer-transitions",
 	"slimAutoOutputPathRelativePath": "",
 	"slimAutoOutputPathReplace1": "",
 	"slimAutoOutputPathReplace2": "",

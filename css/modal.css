@@ -3,7 +3,7 @@
 .pt-page .page-overlay {
   position: absolute;
   bottom: 0;
-  height: 500px;
+  height: 50%;
   background-color: #808080;
   border: 1px solid #000; }
   .pt-page .page-overlay.scrollable {
@@ -13,15 +13,39 @@
     overflow-y: auto;
     overflow-x: hidden;
     border: 2px solid pink; }
+.pt-page button.fixed {
+  position: fixed;
+  bottom: 50%; }
+
+.pt-page-0 {
+  overflow: auto; }
 
 .pt-page-1 {
-  background-color: #faa195; }
+  background-color: #eef; }
 
 .pt-page-2 {
-  background-color: transparent; }
+  background-color: transparent;
+  height: 500px;
+  bottom: 0;
+  top: auto;
+  overflow: auto; }
+  .pt-page-2 .page-overlay {
+    overflow: hidden; }
 
 .pt-page-3 {
   background-color: transparent; }
   .pt-page-3 .page-overlay {
-    background-color: red; }
+    background-color: rgba(255, 0, 0, 0.5); }
+
+.pt-page-4 {
+  background-color: pink; }
+
+.pt-page-5 {
+  background-color: darkseagreen; }
+
+.pt-page-6 {
+  background-color: palevioletred; }
+
+.pt-page-7 {
+  background-color: coral; }
 /*# sourceMappingURL=modal.css.map */
