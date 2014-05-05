@@ -141,9 +141,15 @@ var LayerTransitions = (function() {
     // open single page / modal
     function showSinglePage(animation, $targetPage) {
 
+
+
         if( isAnimating ) {
             console.log("is animating");
             return false;
+        }
+
+        if(isOffcanavasEnabled) {
+            closeOffcanavas();
         }
 
         isAnimating = true;
