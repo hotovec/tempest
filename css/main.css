@@ -176,6 +176,26 @@
     font-family: 'helvetica neue', Helvetica, Arial;
     font-size: 13px; }
 
+.m-image-picker {
+  width: 100%;
+  min-height: 320px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  max-height: 800px;
+  overflow: scroll; }
+  .m-image-picker img {
+    margin: 20px;
+    float: left;
+    cursor: pointer; }
+
+.m-modal.modal-media-library {
+  width: 900px;
+  overflow: hidden; }
+  .m-modal.modal-media-library .modal-body-content {
+    width: auto; }
+  .m-modal.modal-media-library .modal-footer {
+    background-color: #fff; }
+
 .m-modal.mm-full {
   background-color: white;
   width: 100%;

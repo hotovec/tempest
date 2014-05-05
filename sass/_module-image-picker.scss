@@ -1,0 +1,15 @@
+.m-image-picker {
+    width: 100%;
+    min-height: 320px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+
+    max-height: 800px;
+    overflow: scroll;
+
+    img {
+        margin: 20px;
+        float: left;
+        cursor: pointer;
+    }
+}

@@ -1,6 +1,21 @@
 
 .m-modal {}
 
+.m-modal.modal-media-library {
+    width: 900px;
+    overflow: hidden;
+
+
+    .modal-body-content {
+        width: auto;
+        //display: none;
+    }
+
+    .modal-footer {
+        background-color: #fff;
+    }
+}
+
 .m-modal.mm-full {
 
     background-color: white;

@@ -133,6 +133,7 @@
                 </div>
                 <div class="promo-title col-xs-9 col-sm-7">
                     image
+                    <button type="submit" data-layer="open" data-animation="2" data-layer-target=".modal-media-library"> Select image</button>
                 </div>
             </div>
 
@@ -303,7 +304,7 @@
         </div>
         <!-- end of layer content-->
     </div>
-    <div class="pt-layer pt-layer-5 m-modal mm-full modal-published">
+    <div class="pt-layer m-modal mm-full modal-published">
         <!-- layer content-->
         <div class="modal-body">
             <form role="form">
@@ -326,56 +327,54 @@
         </div>
         <!-- end of layer content-->
     </div>
-<div class="pt-layer pt-layer-6 m-modal mm-full modal-content-create">
+<div class="pt-layer m-modal mm-full modal-content-create">
+    <!-- layer content-->
+    <div class="modal-body">
+            <div class="modal-body-content center">
+                <div class="inc:inc-modal-create-content.html">Create content modal</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-cancel" data-layer="dimmis-all">cancel</button>
+            </div>
+    </div>
+    <!-- end of layer content-->
+</div>
+<div class="pt-layer pt-layer-7 m-modal mm-full modal-media-library">
     <!-- layer content-->
     <div class="modal-body">
         <form role="form">
 
             <div class="modal-body-content center">
-                <div class="modal--hed">What would you like to create?</div>
-                <div class="m-content-add-grid">
-                    <div class="m-content-add-cell">
-                        <i class="fa fa-file-text"></i><h1>Article</h1>
-                    </div>
-                    <div class="m-content-add-cell">
-                        <i class="fa fa-shopping-cart"></i><h1>Product</h1>
-                    </div>
-                    <div class="m-content-add-cell">
-                        <i class="fa fa-key"></i><h1>Vocabulary</h1>
-                    </div>
-                    <div class="m-content-add-cell">
-                        <i class="fa fa-user"></i><h1>Author Profile</h1>
-                    </div>
-                    <div class="m-content-add-cell">
-                        <i class="fa fa-male"></i><h1>Person</h1>
-                    </div>
-                    <div class="m-content-add-cell">
-                        <i class="fa fa-file"></i><h1>Basic Page</h1>
-                    </div>
+                <div class="modal--hed">Media library</div>
 
-                    <div class="m-content-add-cell">
-                        <i class="fa fa-bar-chart-o"></i><h1>Data</h1>
-                    </div>
-
-                    <div class="m-content-add-cell">
-                        <i class="fa fa-link"></i><h1>Int/Ext link</h1>
-                    </div>
-
-                    <div class="m-content-add-cell">
-                        <i class="fa fa-tag"></i><h1>Rich term</h1>
-                    </div>
-
-
+                <div class="row">
+                    <input class="search" type="text" name="" id="mytags" placeholder="filter"
+                           value="fashion,red," data-role="tagsinput">
                 </div>
 
-
-
-
+                <div class="m-image-picker">
+                    <img data-layer="dimmis" src="assets/images/tmp-images/img-01.jpg" alt=""/>
+                    <img data-layer="dimmis" src="assets/images/tmp-images/img-02.jpg" alt=""/>
+                    <img data-layer="dimmis" src="assets/images/tmp-images/img-03.jpg" alt=""/>
+                    <img data-layer="dimmis" src="assets/images/tmp-images/img-04.jpg" alt=""/>
+                    <img data-layer="dimmis" src="assets/images/tmp-images/img-05.jpg" alt=""/>
+                    <img data-layer="dimmis" src="assets/images/tmp-images/img-06.jpg" alt=""/>
+                    <img data-layer="dimmis" src="assets/images/tmp-images/img-07.jpg" alt=""/>
+                    <img data-layer="dimmis" src="assets/images/tmp-images/img-08.jpg" alt=""/>
+                    <img data-layer="dimmis" src="assets/images/tmp-images/img-09.jpg" alt=""/>
+                    <img data-layer="dimmis" src="assets/images/tmp-images/img-10.jpg" alt=""/>
+                    <img data-layer="dimmis" src="assets/images/tmp-images/img-11.jpg" alt=""/>
+                    <img data-layer="dimmis" src="assets/images/tmp-images/img-12.jpg" alt=""/>
+                    <img data-layer="dimmis" src="assets/images/tmp-images/img-13.jpg" alt=""/>
+                    <img data-layer="dimmis" src="assets/images/tmp-images/img-14.jpg" alt=""/>
+                    <img data-layer="dimmis" src="assets/images/tmp-images/img-15.jpg" alt=""/>
+                    <img data-layer="dimmis" src="assets/images/tmp-images/img-16.jpg" alt=""/>
+                </div>
 
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-cancel" data-layer="dimmis-all">cancel</button>
+                <button type="button" class="btn btn-cancel" data-layer="dimmis">close</button>
 
             </div>
 
@@ -407,7 +406,7 @@
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js"></script>
-
+<script src="assets/js/jquery.tinyinc.js"></script>
 <script src="assets/js/layer-transitions/js/layertransitions.js"></script>
 <script src="assets/js/layer-transitions/js/layer-manager.js"></script>
 
@@ -417,9 +416,8 @@
 
 <script>
     $(function () {
-      //  LayerTransitions.showSinglePage(1, '.pt-layer-4');
+       // LayerTransitions.showSinglePage(2, '.modal-media-library');
     });
-
 </script>
 
 </body>
