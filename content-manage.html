@@ -13,409 +13,432 @@
     <!-- editable tags input-->
     <link rel="stylesheet" href="bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
 
-
-    <!-- off canavas -->
-    <link rel="stylesheet" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css">
-
-    <link rel="stylesheet" type="text/css" href="assets/js/page-transitions/css/component.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/js/page-transitions/css/animations.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/js/layer-transitions/css/component.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/js/layer-transitions/css/animations.css"/>
 
 
     <!-- custom overide compiled by codekit -->
     <link rel="stylesheet" media="screen" href="css/main.css">
 
     <script src="bower_components/requirejs/require.js"></script>
-    <script src="assets/js/page-transitions/js/modernizr.custom.js"></script>
+    <script src="assets/js/layer-transitions/js/modernizr.custom.js"></script>
 
 </head>
 <body>
 
+<!-- main pages -->
+<div id="pt-main" class="pt-perspective">
+    <div class="pt-page pt-page-0">
+        <!-- navbar -->
+        <div class="container">
+            <nav class="navbar navbar-main" role="navigation">
 
+                <a class="navbar-brand" href="#" data-toggle="offcanavas-open" style="float: left; ">XOV</a>
 
-<div class="container">
-    <nav class="navbar navbar-main" role="navigation">
-
-        <a class="navbar-brand" href="#" data-toggle="offcanvas" data-target=".offcanavas-menu-left"
-           data-canvas="body" style="float: left; ">XOV</a>
-        <div class="search-tags">
-            <div class="search-field">
-            <div id="searchOptionsButton" class="search-button"><i class="fa fa-angle-down"></i> <i class="fa fa-search"></i></div>
-            <input class="search" type="text" name="" id="mytags" placeholder="presets"
-                   value="Articles,Products,Ready for Edit,Last Week" data-role="tagsinput">
-            </div>
-            <div class="search-tags--options hide">
-
-                <div class="row">
-                	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                		<div><i class="fa fa-star"></i> starred</div>
-                	</div>
-                </div>
-                <div class="row">
-                	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                        <h4>content type</h4>
-                        <div><i class="fa fa-file-text-o"></i> article</div>
-                        <div><i class="fa fa-shopping-cart"></i> product</div>
-                        <div><i class="fa fa-user-md"></i> author profile</div>
-                        <div><i class="fa fa-user"></i> person</div>
-                        <div><i class="fa fa-file"></i> basic page</div>
-                        <div><i class="fa fa-bar-chart-o"></i> data</div>
-                        <div><i class="fa fa-link"></i> link</div>
-                        <div><i class="fa fa-tag"></i> rich term</div>
-                	</div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                        <h4>Authoring status</h4>
-                        <div><i class="fa fa-circle-o"></i> draft</div>
-                        <div><i class="fa fa-adjust"></i> ready for edit</div>
-                        <div><i class="fa fa-circle"></i> complete</div>
+                <div class="search-tags">
+                    <div class="search-field">
+                        <div id="searchOptionsButton" class="search-button"><i class="fa fa-angle-down"></i> <i
+                                class="fa fa-search"></i></div>
+                        <input class="search" type="text" name="" id="mytags" placeholder="presets"
+                               value="Articles,Products,Ready for Edit,Last Week" data-role="tagsinput">
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                        <h4>Publication status</h4>
-                        <div><i class="fa fa-circle color-unpublished"></i> unpublished</div>
-                        <div><i class="fa fa-circle color-scheduled"></i> scheduled</div>
-                        <div><i class="fa fa-circle color-published"></i> published</div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                        <h4>Date range</h4>
-
-                        <div class="input-group">
-                            <input type="text" class="form-control">
-                            <div class="input-group-btn">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar"></i></button>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="#">add calednar here</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Separated link</a></li>
-                                </ul>
-                            </div><!-- /btn-group -->
-                        </div><!-- /input-group -->
-
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </nav>
-</div>
-
-
-<div class="container">
-
-    <!-- filters / tags -->
-    <div class="row content-management-presets">
-        <div class="col-sm-12">
-            <div id="filter-pillbox" class="pillbox">
-                <button type="button" class="btn btn-default">Default <i class="fa fa-times-circle"></i></button>
-                <button type="button" class="btn btn-success">Success <i class="fa fa-times-circle"></i></button>
-                <button type="button" class="btn btn-info">Info <i class="fa fa-times-circle"></i></button>
-                <button type="button" class="btn btn-warning">Warning <i class="fa fa-times-circle"></i></button>
-                <button type="button" class="btn btn-danger">Danger <i class="fa fa-times-circle"></i></button>
-                <!-- add new filter button-->
-                <button type="button" class="btn btn-primary">Add new filter <i class="fa fa-plus-circle"></i></button>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-- content table - list -->
-
-    <table class="table content-management_list">
-        <thead>
-        <tr>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th>title</th>
-            <th>author</th>
-            <th></th>
-            <th></th>
-            <th></th>
-        </tr>
-        </thead>
-        <tbody>
-
-        <tr>
-            <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
-            <td><i class="fa fa-circle-o" data-toggle="tooltip" data-placement="top" title="not ready"></i></td>
-            <td><i class="fa fa-circle random-color-2" data-toggle="tooltip" data-placement="top" title="private"></i>
-            </td>
-            <td><span data-toggle="tooltip" data-placement="bottom" data-html="true" title="original: 2566px x 1900px</br>author: Ansel Adams</br> shutterstock, 10x used "><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></span></td>
-
-            <td>
-                <span data-toggle="tooltip" data-placement="bottom" data-html="true" title="<span style='color: yellow;'>Price: 99USD</span><br> this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract"><a href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a><span>
-            </td>
-
-            <td><span data-toggle="tooltip" data-placement="bottom" data-html="true" title="@Herris<br>+420 602 372 591<br>heris@saymedia.com">Alle Heris</span></td>
-
-            <td>Mar 06, 2014 18:02:02</td>
-            <td><i class="fa fa-star-o" data-toggle="tooltip" data-placement="top" title="set as featured"></i></td>
-            <td><span data-toggle="tooltip" data-placement="top" title="delete"><i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-content-delete"></i></span></td>
-
-        </tr>
-
-        <tr>
-            <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
-            <td><i class="fa fa-adjust" data-toggle="tooltip" data-placement="top" title="in proggres"></i></td>
-            <td><i class="fa fa-circle random-color-2" data-toggle="tooltip" data-placement="top" title="private"></i>
-            </td>
-            <td><span data-toggle="tooltip" data-placement="bottom" data-html="true" title="original: 2566px x 1900px</br>author: Ansel Adams</br> shutterstock, 10x used "><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></span></td>
-
-            <td>
-                <span data-toggle="tooltip" data-placement="bottom" title="this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract"><a href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a><span>
-            </td>
-
-            <td><span data-toggle="tooltip" data-placement="bottom" data-html="true" title="@Herris<br>+420 602 372 591<br>heris@saymedia.com">Alle Heris</span></td>
-
-            <td>Mar 06, 2014 18:02:02</td>
-            <td><i class="fa fa-star-o" data-toggle="tooltip" data-placement="top" title="set as featured"></i></td>
-            <td><span data-toggle="tooltip" data-placement="top" title="delete"><i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-content-delete"></i></span></td>
-
-        </tr>
-
-        <tr>
-            <td><i class="fa fa-file-text-o " data-toggle="tooltip" data-placement="top" title="article"></i></td>
-            <td><i class="fa fa-check-circle" data-toggle="tooltip" data-placement="top" title="ready"></i></td>
-            <td><i class="fa fa-circle random-color-1" data-toggle="tooltip" data-placement="top" title="published"></i>
-            </td>
-            <td><span data-toggle="tooltip" data-placement="bottom" data-html="true" title="original: 2566px x 1900px</br>author: Ansel Adams</br> shutterstock, 10x used "><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></span></td>
-
-            <td>
-                <span data-toggle="tooltip" data-placement="bottom" title="this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract"><a href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a><span>
-            </td>
-
-            <td><span data-toggle="tooltip" data-placement="bottom" data-html="true" title="@Herris<br>+420 602 372 591<br>heris@saymedia.com">Alle Heris</span></td>
-
-            <td>Mar 06, 2014 18:02:02</td>
-            <td><i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="featured from: 2014-05-03"></i></td>
-            <td><span data-toggle="tooltip" data-placement="top" title="delete"><i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-content-delete"></i></span></td>
-
-        </tr>
-
-        <tr>
-            <td><i class="fa fa-user " data-toggle="tooltip" data-placement="top" title="person"></i></td>
-            <td><i class="fa fa-check-circle" data-toggle="tooltip" data-placement="top" title="ready"></i></td>
-            <td><i class="fa fa-circle random-color-1" data-toggle="tooltip" data-placement="top" title="published"></i>
-            </td>
-            <td><span data-toggle="tooltip" data-placement="bottom" data-html="true" title="original: 2566px x 1900px</br>author: Ansel Adams</br> shutterstock, 10x used "><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></span></td>
-
-            <td>
-                <span data-toggle="tooltip" data-placement="bottom" title="this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract"><a href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a><span>
-            </td>
-
-            <td><span data-toggle="tooltip" data-placement="bottom" data-html="true" title="@Herris<br>+420 602 372 591<br>heris@saymedia.com">Alle Heris</span></td>
-
-            <td>Mar 06, 2014 18:02:02</td>
-            <td><i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="featured from: 2014-05-03"></i></td>
-            <td><span data-toggle="tooltip" data-placement="top" title="delete"><i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-content-delete"></i></span></td>
-
-        </tr>
-
-        <tr>
-            <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
-            <td><i class="fa fa-adjust" data-toggle="tooltip" data-placement="top" title="in proggres"></i></td>
-            <td><i class="fa fa-circle random-color-2" data-toggle="tooltip" data-placement="top" title="private"></i>
-            </td>
-            <td><span data-toggle="tooltip" data-placement="bottom" data-html="true" title="original: 2566px x 1900px</br>author: Ansel Adams</br> shutterstock, 10x used "><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></span></td>
-
-            <td>
-                <span data-toggle="tooltip" data-placement="bottom" title="this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract"><a href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a><span>
-            </td>
-
-            <td><span data-toggle="tooltip" data-placement="bottom" data-html="true" title="@Herris<br>+420 602 372 591<br>heris@saymedia.com">Alle Heris</span></td>
-
-            <td>Mar 06, 2014 18:02:02</td>
-            <td><i class="fa fa-star-o" data-toggle="tooltip" data-placement="top" title="set as featured"></i></td>
-            <td><span data-toggle="tooltip" data-placement="top" title="delete"><i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-content-delete"></i></span></td>
-
-        </tr>
-
-        <tr>
-            <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
-            <td><i class="fa fa-circle-o" data-toggle="tooltip" data-placement="top" title="not ready"></i></td>
-            <td><i class="fa fa-circle random-color-2" data-toggle="tooltip" data-placement="top" title="private"></i>
-            </td>
-            <td><span data-toggle="tooltip" data-placement="bottom" data-html="true" title="original: 2566px x 1900px</br>author: Ansel Adams</br> shutterstock, 10x used "><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></span></td>
-
-            <td>
-                <span data-toggle="tooltip" data-placement="bottom" data-html="true" title="<span style='color: yellow;'>Price: 99USD</span><br> this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract"><a href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a><span>
-            </td>
-
-            <td><span data-toggle="tooltip" data-placement="bottom" data-html="true" title="@Herris<br>+420 602 372 591<br>heris@saymedia.com">Alle Heris</span></td>
-
-            <td>Mar 06, 2014 18:02:02</td>
-            <td><i class="fa fa-star-o" data-toggle="tooltip" data-placement="top" title="set as featured"></i></td>
-            <td><span data-toggle="tooltip" data-placement="top" title="delete"><i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-content-delete"></i></span></td>
-
-        </tr>
-
-        <tr>
-            <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
-            <td><i class="fa fa-adjust" data-toggle="tooltip" data-placement="top" title="in proggres"></i></td>
-            <td><i class="fa fa-circle random-color-2" data-toggle="tooltip" data-placement="top" title="private"></i>
-            </td>
-            <td><span data-toggle="tooltip" data-placement="bottom" data-html="true" title="original: 2566px x 1900px</br>author: Ansel Adams</br> shutterstock, 10x used "><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></span></td>
-
-            <td>
-                <span data-toggle="tooltip" data-placement="bottom" title="this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract"><a href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a><span>
-            </td>
-
-            <td><span data-toggle="tooltip" data-placement="bottom" data-html="true" title="@Herris<br>+420 602 372 591<br>heris@saymedia.com">Alle Heris</span></td>
-
-            <td>Mar 06, 2014 18:02:02</td>
-            <td><i class="fa fa-star-o" data-toggle="tooltip" data-placement="top" title="set as featured"></i></td>
-            <td><span data-toggle="tooltip" data-placement="top" title="delete"><i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-content-delete"></i></span></td>
-
-        </tr>
-
-        <tr>
-            <td><i class="fa fa-file-text-o " data-toggle="tooltip" data-placement="top" title="article"></i></td>
-            <td><i class="fa fa-check-circle" data-toggle="tooltip" data-placement="top" title="ready"></i></td>
-            <td><i class="fa fa-circle random-color-1" data-toggle="tooltip" data-placement="top" title="published"></i>
-            </td>
-            <td><span data-toggle="tooltip" data-placement="bottom" data-html="true" title="original: 2566px x 1900px</br>author: Ansel Adams</br> shutterstock, 10x used "><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></span></td>
-
-            <td>
-                <span data-toggle="tooltip" data-placement="bottom" title="this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract"><a href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a><span>
-            </td>
-
-            <td><span data-toggle="tooltip" data-placement="bottom" data-html="true" title="@Herris<br>+420 602 372 591<br>heris@saymedia.com">Alle Heris</span></td>
-
-            <td>Mar 06, 2014 18:02:02</td>
-            <td><i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="featured from: 2014-05-03"></i></td>
-            <td><span data-toggle="tooltip" data-placement="top" title="delete"><i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-content-delete"></i></span></td>
-
-        </tr>
-
-        <tr>
-            <td><i class="fa fa-user " data-toggle="tooltip" data-placement="top" title="person"></i></td>
-            <td><i class="fa fa-check-circle" data-toggle="tooltip" data-placement="top" title="ready"></i></td>
-            <td><i class="fa fa-circle random-color-1" data-toggle="tooltip" data-placement="top" title="published"></i>
-            </td>
-            <td><span data-toggle="tooltip" data-placement="bottom" data-html="true" title="original: 2566px x 1900px</br>author: Ansel Adams</br> shutterstock, 10x used "><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></span></td>
-
-            <td>
-                <span data-toggle="tooltip" data-placement="bottom" title="this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract"><a href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a><span>
-            </td>
-
-            <td><span data-toggle="tooltip" data-placement="bottom" data-html="true" title="@Herris<br>+420 602 372 591<br>heris@saymedia.com">Alle Heris</span></td>
-
-            <td>Mar 06, 2014 18:02:02</td>
-            <td><i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="featured from: 2014-05-03"></i></td>
-            <td><span data-toggle="tooltip" data-placement="top" title="delete"><i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-content-delete"></i></span></td>
-
-        </tr>
-
-        <tr>
-            <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
-            <td><i class="fa fa-adjust" data-toggle="tooltip" data-placement="top" title="in proggres"></i></td>
-            <td><i class="fa fa-circle random-color-2" data-toggle="tooltip" data-placement="top" title="private"></i>
-            </td>
-            <td><span data-toggle="tooltip" data-placement="bottom" data-html="true" title="original: 2566px x 1900px</br>author: Ansel Adams</br> shutterstock, 10x used "><img class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></span></td>
-
-            <td>
-                <span data-toggle="tooltip" data-placement="bottom" title="this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract"><a href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a><span>
-            </td>
-
-            <td><span data-toggle="tooltip" data-placement="bottom" data-html="true" title="@Herris<br>+420 602 372 591<br>heris@saymedia.com">Alle Heris</span></td>
-
-            <td>Mar 06, 2014 18:02:02</td>
-            <td><i class="fa fa-star-o" data-toggle="tooltip" data-placement="top" title="set as featured"></i></td>
-            <td><span data-toggle="tooltip" data-placement="top" title="delete"><i class="fa fa-trash-o" data-toggle="modal" data-target="#modal-content-delete"></i></span></td>
-
-        </tr>
-
-        </tbody>
-    </table>
-
-</div>
-
-
-<!-- modals -->
-
-
-<!-- Modal -->
-<div class="modal fade mm-full" id="modal-content-delete" tabindex="-1" role="dialog" aria-labelledby="modal-content-delete"
-     aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-
-            <div class="modal-body">
-                <form role="form">
-
-                    <div class="modal-body-content">
-
-                        <div class="modal--hed">Are you sure you want to DELETE this item? You cannot undo this
-                            action.
-                        </div>
-                        <div class="modal--copy">
-                            <div><i class="fa fa-shopping-cart"></i></div>
-                            <div>I Decree Your Thread Open! Anne-Marie</div>
-                            <div>
-                                <div><i class="fa fa-circle"></i>Draft</div>
-                                <div><i class="fa fa-circle"></i>Unpublished</div>
+                    <div class="search-tags--options hide">
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div><i class="fa fa-star"></i> starred</div>
                             </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <h4>content type</h4>
 
-                            <div class="row modal--confirm">
-                                <div class="form-group">
-                                    <label for="iConfirm">If so, type DELETE in the field below.</label>
-                                    <input id="iConfirm" class="form-control" type="text"
-                                           placeholder="type DELETE here"/>
+                                <div><i class="fa fa-file-text-o"></i> article</div>
+                                <div><i class="fa fa-shopping-cart"></i> product</div>
+                                <div><i class="fa fa-user-md"></i> author profile</div>
+                                <div><i class="fa fa-user"></i> person</div>
+                                <div><i class="fa fa-file"></i> basic page</div>
+                                <div><i class="fa fa-bar-chart-o"></i> data</div>
+                                <div><i class="fa fa-link"></i> link</div>
+                                <div><i class="fa fa-tag"></i> rich term</div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <h4>Authoring status</h4>
+
+                                <div><i class="fa fa-circle-o"></i> draft</div>
+                                <div><i class="fa fa-adjust"></i> ready for edit</div>
+                                <div><i class="fa fa-circle"></i> complete</div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <h4>Publication status</h4>
+
+                                <div><i class="fa fa-circle color-unpublished"></i> unpublished</div>
+                                <div><i class="fa fa-circle color-scheduled"></i> scheduled</div>
+                                <div><i class="fa fa-circle color-published"></i> published</div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <h4>Date range</h4>
+
+                                <div class="input-group">
+                                    <input type="text" class="form-control">
+
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i
+                                                class="fa fa-calendar"></i></button>
+                                        <ul class="dropdown-menu pull-right">
+                                            <li><a href="#">add calednar here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- /btn-group -->
                                 </div>
+                                <!-- /input-group -->
+
                             </div>
+
                         </div>
 
                     </div>
+                </div>
+            </nav>
+        </div>
+        <!-- navbar end-->
 
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Delete</button>
-
-                </form>
+        <!-- page 0 content -->
+        <div class="container">
+        <!-- filters / tags -->
+            <div class="row content-management-presets">
+                <div class="col-sm-12">
+                    <div id="filter-pillbox" class="pillbox">
+                        <button type="button" class="btn btn-default">Default <i class="fa fa-times-circle"></i></button>
+                        <button type="button" class="btn btn-success">Success <i class="fa fa-times-circle"></i></button>
+                        <button type="button" class="btn btn-info">Info <i class="fa fa-times-circle"></i></button>
+                        <button type="button" class="btn btn-warning">Warning <i class="fa fa-times-circle"></i></button>
+                        <button type="button" class="btn btn-danger">Danger <i class="fa fa-times-circle"></i></button>
+                        <!-- add new filter button-->
+                        <button type="button" class="btn btn-primary">Add new filter <i class="fa fa-plus-circle"></i></button>
+                    </div>
+                </div>
             </div>
 
 
-        </div>
+        <!-- content table - list -->
 
+            <table class="table content-management_list">
+            <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>title</th>
+                <th>author</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr>
+                <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
+                <td><i class="fa fa-circle-o" data-toggle="tooltip" data-placement="top" title="not ready"></i></td>
+                <td><i class="fa fa-circle random-color-2" data-toggle="tooltip" data-placement="top" title="private"></i>
+                </td>
+                <td><span data-toggle="tooltip" data-placement="bottom" data-html="true"
+                          title="original: 2566px x 1900px</br>author: Ansel Adams</br> shutterstock, 10x used "><img
+                        class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></span></td>
+
+                <td>
+                            <span data-toggle="tooltip" data-placement="bottom" data-html="true"
+                                  title="<span style='color: yellow;'>Price: 99USD</span><br> this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract"><a
+                                    href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a><span>
+                </td>
+
+                <td><span data-toggle="tooltip" data-placement="bottom" data-html="true"
+                          title="@Herris<br>+420 602 372 591<br>heris@saymedia.com">Alle Heris</span></td>
+
+                <td>Mar 06, 2014 18:02:02</td>
+                <td><i class="fa fa-star-o" data-toggle="tooltip" data-placement="top" title="set as featured"></i></td>
+                <td><span data-toggle="tooltip" data-placement="top" title="delete"><i class="fa fa-trash-o" data-toggle="page-open" data-animation="1" data-page-target=".pt-page-1"></i></span>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
+                <td><i class="fa fa-adjust" data-toggle="tooltip" data-placement="top" title="in proggres"></i></td>
+                <td><i class="fa fa-circle random-color-2" data-toggle="tooltip" data-placement="top" title="private"></i>
+                </td>
+                <td><span data-toggle="tooltip" data-placement="bottom" data-html="true"
+                          title="original: 2566px x 1900px</br>author: Ansel Adams</br> shutterstock, 10x used "><img
+                        class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></span></td>
+
+                <td>
+                            <span data-toggle="tooltip" data-placement="bottom"
+                                  title="this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract"><a
+                                    href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a><span>
+                </td>
+
+                <td><span data-toggle="tooltip" data-placement="bottom" data-html="true"
+                          title="@Herris<br>+420 602 372 591<br>heris@saymedia.com">Alle Heris</span></td>
+
+                <td>Mar 06, 2014 18:02:02</td>
+                <td><i class="fa fa-star-o" data-toggle="tooltip" data-placement="top" title="set as featured"></i></td>
+                <td><span data-toggle="tooltip" data-placement="top" title="delete"><i class="fa fa-trash-o" data-toggle="page-open" data-animation="1" data-page-target=".pt-page-1"></i></span>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td><i class="fa fa-file-text-o " data-toggle="tooltip" data-placement="top" title="article"></i></td>
+                <td><i class="fa fa-check-circle" data-toggle="tooltip" data-placement="top" title="ready"></i></td>
+                <td><i class="fa fa-circle random-color-1" data-toggle="tooltip" data-placement="top" title="published"></i>
+                </td>
+                <td><span data-toggle="tooltip" data-placement="bottom" data-html="true"
+                          title="original: 2566px x 1900px</br>author: Ansel Adams</br> shutterstock, 10x used "><img
+                        class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></span></td>
+
+                <td>
+                            <span data-toggle="tooltip" data-placement="bottom"
+                                  title="this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract"><a
+                                    href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a><span>
+                </td>
+
+                <td><span data-toggle="tooltip" data-placement="bottom" data-html="true"
+                          title="@Herris<br>+420 602 372 591<br>heris@saymedia.com">Alle Heris</span></td>
+
+                <td>Mar 06, 2014 18:02:02</td>
+                <td><i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="featured from: 2014-05-03"></i></td>
+                <td><span data-toggle="tooltip" data-placement="top" title="delete"><i class="fa fa-trash-o" data-toggle="page-open" data-animation="1" data-page-target=".pt-page-1"></i></span>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td><i class="fa fa-user " data-toggle="tooltip" data-placement="top" title="person"></i></td>
+                <td><i class="fa fa-check-circle" data-toggle="tooltip" data-placement="top" title="ready"></i></td>
+                <td><i class="fa fa-circle random-color-1" data-toggle="tooltip" data-placement="top" title="published"></i>
+                </td>
+                <td><span data-toggle="tooltip" data-placement="bottom" data-html="true"
+                          title="original: 2566px x 1900px</br>author: Ansel Adams</br> shutterstock, 10x used "><img
+                        class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></span></td>
+
+                <td>
+                            <span data-toggle="tooltip" data-placement="bottom"
+                                  title="this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract"><a
+                                    href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a><span>
+                </td>
+
+                <td><span data-toggle="tooltip" data-placement="bottom" data-html="true"
+                          title="@Herris<br>+420 602 372 591<br>heris@saymedia.com">Alle Heris</span></td>
+
+                <td>Mar 06, 2014 18:02:02</td>
+                <td><i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="featured from: 2014-05-03"></i></td>
+                <td><span data-toggle="tooltip" data-placement="top" title="delete"><i class="fa fa-trash-o" data-toggle="page-open" data-animation="1" data-page-target=".pt-page-1"></i></span>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
+                <td><i class="fa fa-adjust" data-toggle="tooltip" data-placement="top" title="in proggres"></i></td>
+                <td><i class="fa fa-circle random-color-2" data-toggle="tooltip" data-placement="top" title="private"></i>
+                </td>
+                <td><span data-toggle="tooltip" data-placement="bottom" data-html="true"
+                          title="original: 2566px x 1900px</br>author: Ansel Adams</br> shutterstock, 10x used "><img
+                        class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></span></td>
+
+                <td>
+                            <span data-toggle="tooltip" data-placement="bottom"
+                                  title="this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract"><a
+                                    href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a><span>
+                </td>
+
+                <td><span data-toggle="tooltip" data-placement="bottom" data-html="true"
+                          title="@Herris<br>+420 602 372 591<br>heris@saymedia.com">Alle Heris</span></td>
+
+                <td>Mar 06, 2014 18:02:02</td>
+                <td><i class="fa fa-star-o" data-toggle="tooltip" data-placement="top" title="set as featured"></i></td>
+                <td><span data-toggle="tooltip" data-placement="top" title="delete"><i class="fa fa-trash-o" data-toggle="page-open" data-animation="1" data-page-target=".pt-page-1"></i></span>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
+                <td><i class="fa fa-circle-o" data-toggle="tooltip" data-placement="top" title="not ready"></i></td>
+                <td><i class="fa fa-circle random-color-2" data-toggle="tooltip" data-placement="top" title="private"></i>
+                </td>
+                <td><span data-toggle="tooltip" data-placement="bottom" data-html="true"
+                          title="original: 2566px x 1900px</br>author: Ansel Adams</br> shutterstock, 10x used "><img
+                        class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></span></td>
+
+                <td>
+                            <span data-toggle="tooltip" data-placement="bottom" data-html="true"
+                                  title="<span style='color: yellow;'>Price: 99USD</span><br> this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract"><a
+                                    href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a><span>
+                </td>
+
+                <td><span data-toggle="tooltip" data-placement="bottom" data-html="true"
+                          title="@Herris<br>+420 602 372 591<br>heris@saymedia.com">Alle Heris</span></td>
+
+                <td>Mar 06, 2014 18:02:02</td>
+                <td><i class="fa fa-star-o" data-toggle="tooltip" data-placement="top" title="set as featured"></i></td>
+                <td><span data-toggle="tooltip" data-placement="top" title="delete"><i class="fa fa-trash-o" data-toggle="page-open" data-animation="1" data-page-target=".pt-page-1"></i></span>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
+                <td><i class="fa fa-adjust" data-toggle="tooltip" data-placement="top" title="in proggres"></i></td>
+                <td><i class="fa fa-circle random-color-2" data-toggle="tooltip" data-placement="top" title="private"></i>
+                </td>
+                <td><span data-toggle="tooltip" data-placement="bottom" data-html="true"
+                          title="original: 2566px x 1900px</br>author: Ansel Adams</br> shutterstock, 10x used "><img
+                        class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></span></td>
+
+                <td>
+                            <span data-toggle="tooltip" data-placement="bottom"
+                                  title="this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract"><a
+                                    href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a><span>
+                </td>
+
+                <td><span data-toggle="tooltip" data-placement="bottom" data-html="true"
+                          title="@Herris<br>+420 602 372 591<br>heris@saymedia.com">Alle Heris</span></td>
+
+                <td>Mar 06, 2014 18:02:02</td>
+                <td><i class="fa fa-star-o" data-toggle="tooltip" data-placement="top" title="set as featured"></i></td>
+                <td><span data-toggle="tooltip" data-placement="top" title="delete"><i class="fa fa-trash-o" data-toggle="page-open" data-animation="1" data-page-target=".pt-page-1"></i></span>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td><i class="fa fa-file-text-o " data-toggle="tooltip" data-placement="top" title="article"></i></td>
+                <td><i class="fa fa-check-circle" data-toggle="tooltip" data-placement="top" title="ready"></i></td>
+                <td><i class="fa fa-circle random-color-1" data-toggle="tooltip" data-placement="top" title="published"></i>
+                </td>
+                <td><span data-toggle="tooltip" data-placement="bottom" data-html="true"
+                          title="original: 2566px x 1900px</br>author: Ansel Adams</br> shutterstock, 10x used "><img
+                        class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></span></td>
+
+                <td>
+                            <span data-toggle="tooltip" data-placement="bottom"
+                                  title="this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract"><a
+                                    href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a><span>
+                </td>
+
+                <td><span data-toggle="tooltip" data-placement="bottom" data-html="true"
+                          title="@Herris<br>+420 602 372 591<br>heris@saymedia.com">Alle Heris</span></td>
+
+                <td>Mar 06, 2014 18:02:02</td>
+                <td><i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="featured from: 2014-05-03"></i></td>
+                <td><span data-toggle="tooltip" data-placement="top" title="delete"><i class="fa fa-trash-o" data-toggle="page-open" data-animation="1" data-page-target=".pt-page-1"></i></span>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td><i class="fa fa-user " data-toggle="tooltip" data-placement="top" title="person"></i></td>
+                <td><i class="fa fa-check-circle" data-toggle="tooltip" data-placement="top" title="ready"></i></td>
+                <td><i class="fa fa-circle random-color-1" data-toggle="tooltip" data-placement="top" title="published"></i>
+                </td>
+                <td><span data-toggle="tooltip" data-placement="bottom" data-html="true"
+                          title="original: 2566px x 1900px</br>author: Ansel Adams</br> shutterstock, 10x used "><img
+                        class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></span></td>
+
+                <td>
+                            <span data-toggle="tooltip" data-placement="bottom"
+                                  title="this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract"><a
+                                    href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a><span>
+                </td>
+
+                <td><span data-toggle="tooltip" data-placement="bottom" data-html="true"
+                          title="@Herris<br>+420 602 372 591<br>heris@saymedia.com">Alle Heris</span></td>
+
+                <td>Mar 06, 2014 18:02:02</td>
+                <td><i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="featured from: 2014-05-03"></i></td>
+                <td><span data-toggle="tooltip" data-placement="top" title="delete"><i class="fa fa-trash-o" data-toggle="page-open" data-animation="1" data-page-target=".pt-page-1"></i></span>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td><i class="fa fa-shopping-cart" data-toggle="tooltip" data-placement="top" title="product"></i></td>
+                <td><i class="fa fa-adjust" data-toggle="tooltip" data-placement="top" title="in proggres"></i></td>
+                <td><i class="fa fa-circle random-color-2" data-toggle="tooltip" data-placement="top" title="private"></i>
+                </td>
+                <td><span data-toggle="tooltip" data-placement="bottom" data-html="true"
+                          title="original: 2566px x 1900px</br>author: Ansel Adams</br> shutterstock, 10x used "><img
+                        class="thumbnail" src="assets/images/image.jpg" class="img-responsive" alt="Image"></span></td>
+
+                <td>
+                            <span data-toggle="tooltip" data-placement="bottom"
+                                  title="this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract this is abstract, abstract, abstract"><a
+                                    href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a><span>
+                </td>
+
+                <td><span data-toggle="tooltip" data-placement="bottom" data-html="true"
+                          title="@Herris<br>+420 602 372 591<br>heris@saymedia.com">Alle Heris</span></td>
+
+                <td>Mar 06, 2014 18:02:02</td>
+                <td><i class="fa fa-star-o" data-toggle="tooltip" data-placement="top" title="set as featured"></i></td>
+                <td><span data-toggle="tooltip" data-placement="top" title="delete"><i class="fa fa-trash-o" data-toggle="page-open" data-animation="1" data-page-target=".pt-page-1"></i></span>
+                </td>
+
+            </tr>
+
+            </tbody>
+        </table>
+    </div> <!-- page 0 content end -->
+    </div> <!-- end base page 0-->
+
+    <div class="pt-page pt-page-1">
+        <!-- delete modal-->
+        <div class="modal-body">
+            <form role="form">
+
+                <div class="modal-body-content">
+
+                    <div class="modal--hed">Are you sure you want to DELETE this item? You cannot undo this
+                        action.
+                    </div>
+                    <div class="modal--copy">
+                        <div><i class="fa fa-shopping-cart"></i></div>
+                        <div>I Decree Your Thread Open! Anne-Marie</div>
+                        <div>
+                            <div><i class="fa fa-circle"></i>Draft</div>
+                            <div><i class="fa fa-circle"></i>Unpublished</div>
+                        </div>
+
+                        <div class="row modal--confirm">
+                            <div class="form-group">
+                                <label for="iConfirm">If so, type DELETE in the field below.</label>
+                                <input id="iConfirm" class="form-control" type="text"
+                                       placeholder="type DELETE here"/>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button type="button" class="btn btn-default" data-toggle="page-close">Cancel</button>
+                <button type="button" class="btn btn-primary" data-toggle="page-close">Delete</button>
+
+            </form>
+        </div>
     </div>
 </div>
 
 
 
-<!-- temp controls-->
 
-
-<div class="container" style="position: absolute; z-index: 10000; bottom: 0; left: 0">
-
-    <div class="row">
-        <a data-toggle="modal" href="#" data-target="#modal-content-delete">Click me !</a>
-    </div>
-    <!-- tmp offcanavas menu buttons -->
-    <div class="row">
-        <div class="col-sm-8">
-            <button type="submit" data-toggle="offcanvas" data-target=".offcanavas-menu-left" data-canvas="body">open
-                offcanavas left
-            </button>
-            <button type="submit" data-toggle="offcanvas" data-target=".offcanavas-menu-top" data-canvas="body">open
-                offcanavas top
-            </button>
-            <button type="submit" data-toggle="offcanvas" data-target=".offcanavas-menu-bottom" data-canvas="body">open
-                offcanavas bottom
-            </button>
-            <button class="right" type="submit" data-toggle="offcanvas" data-target=".offcanavas-menu-right"
-                    data-canvas="body">open offcanavas right
-            </button>
-        </div>
-    </div>
-
-</div>
-
-
-<!-- offcanavas containers -->
-
-<!-- left offcanvas menu  -->
-<div class="offcanavas-menu-left offcanavas-menu offcanvas">
-    <div class="m-offcanavas-menu mm-side">
+<!-- offcanavas menu -->
+<div class="oc-page">
+    <div class="oc-menu">
         <div class="m-author">Marci</div>
         <ul class="">
             <li><a href="#" title="Create content">Create content</a></li>
@@ -428,21 +451,19 @@
         </ul>
     </div>
 </div>
+<div class="oc-overlay"></div>
 
-<div class="offcanavas-menu-right offcanavas-menu offcanvas">right offside menu</div>
-<div class="offcanavas-menu-bottom offcanavas-menu offcanvas">bottom offside menu</div>
-<div class="offcanavas-menu-top offcanavas-menu offcanvas">top offside menu</div>
 
 <!-- link required scripts -->
-
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="assets/js/jquery.tinyinc.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js"></script>
-<script src="bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
 
+<script src="assets/js/lorem/lorem.js"></script>
+<script src="assets/js/layer-transitions/js/layertransitions.js"></script>
+<script src="test/modalmanager.js"></script>
 <script src="assets/app.js"></script>
 
- <!-- end page container-->
+
 </body>
 </html>

@@ -1,12 +1,8 @@
-@import "../bower_components/bourbon/dist/bourbon";
-
 .pt-perspective {
     @include transition(all 0.2s); // offcanavas
 }
 
 .pt-page {
-
-
     p {
         margin-bottom: 40px;
     }
@@ -34,55 +30,17 @@
         bottom: 50%;
         //bottom: 0;
     }
-
 }
+
 
 .pt-page-0 {
     overflow: auto;
 }
 
-.pt-page-1 {
-    // fullscreen modal - not scrollable
-    background-color: #eef;
-}
 
-.pt-page-2 {
-    // overlay not scrollable with interactive BG
 
-    background-color: transparent;
-    height: 500px;
-    bottom: 0;
-    top: auto;
-    overflow: auto;
-    .page-overlay {
-        overflow: hidden;
-    }
-}
+// offcanavas
 
-.pt-page-3 {
-    // modal with not with no bg interaction
-    background-color: transparent;
-
-    .page-overlay {
-        background-color: rgba(255, 0, 0, .5);
-    }
-}
-
-.pt-page-4 {
-    background-color: pink;
-}
-
-.pt-page-5 {
-    background-color: darkseagreen;
-}
-
-.pt-page-6 {
-    background-color: palevioletred;
-}
-
-.pt-page-7 {
-    background-color: coral;
-}
 
 // ------ offcanavas
 
@@ -128,7 +86,6 @@
     z-index: -1;
     opacity: 0;
     background-color: #fff;
-
 }
 
 .oc-visible {
