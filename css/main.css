@@ -22,6 +22,60 @@
     padding: 1.2em;
     font-size: 20px; }
 
+.m-content-edit {
+  margin-top: 30px; }
+  .m-content-edit .navbar, .m-content-edit .navbar-collapse {
+    background-color: transparent;
+    border: 0;
+    background-image: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-weight: bold; }
+    .m-content-edit .navbar .navbar-nav, .m-content-edit .navbar .navbar-text, .m-content-edit .navbar .navbar-nav > li > a, .m-content-edit .navbar-collapse .navbar-nav, .m-content-edit .navbar-collapse .navbar-text, .m-content-edit .navbar-collapse .navbar-nav > li > a {
+      color: #888; }
+    .m-content-edit .navbar .navbar-nav > .active > a, .m-content-edit .navbar-collapse .navbar-nav > .active > a {
+      background-color: transparent;
+      background-image: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      background-color: #a5e9fd; }
+  .m-content-edit .navbar-collapse {
+    border-bottom: 3px solid #ccc; }
+  .m-content-edit .m-content-edit--main {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 40px; }
+    .m-content-edit .m-content-edit--main .row {
+      font-family: georgia, serif;
+      border-bottom: 2px solid #eee;
+      padding: 20px 0;
+      font-size: 18px; }
+      .m-content-edit .m-content-edit--main .row.dashed {
+        border-bottom-style: dashed; }
+      .m-content-edit .m-content-edit--main .row input, .m-content-edit .m-content-edit--main .row textarea {
+        color: #666;
+        width: 100%;
+        height: auto;
+        border: 0;
+        outline: none; }
+        .m-content-edit .m-content-edit--main .row input:focus, .m-content-edit .m-content-edit--main .row textarea:focus {
+          outline: none;
+          color: #000; }
+      .m-content-edit .m-content-edit--main .row .title {
+        font-size: 48px; }
+      .m-content-edit .m-content-edit--main .row .abstract {
+        font-size: 28px;
+        font-style: italic; }
+      .m-content-edit .m-content-edit--main .row .content {
+        font-size: 18px; }
+    .m-content-edit .m-content-edit--main .m-label {
+      text-transform: uppercase;
+      color: #ccc;
+      font-weight: bold;
+      font-family: 'helvetica neue', Helvetica, Arial;
+      font-size: 13px; }
+
 .pt-perspective {
   -webkit-transition: all 0.2s;
   transition: all 0.2s; }
@@ -292,4 +346,7 @@ body {
 
 .random-color-2 {
   color: #9c0000; }
+
+.m-content-edit .container {
+  background-color: #fff; }
 /*# sourceMappingURL=main.css.map */

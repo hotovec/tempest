@@ -1,5 +1,7 @@
 @import "../bower_components/bourbon/dist/bourbon";
 @import "module-offcanavas-menu";
+@import "module_content";
+
 @import "layers";
 
 
@@ -261,4 +263,8 @@ body {
 
 .random-color-2 {
     color: #9c0000;
+}
+
+.m-content-edit .container {
+    background-color: #fff;
 }
