@@ -29,6 +29,7 @@ $(function () {
         }
     });
 
+
     // assign close layer to elements
     $("[data-layer='dimmis']").click(function () {
         var el = $(this);

@@ -3,6 +3,9 @@
 }
 
 .pt-layer {
+
+    //z-index: 2000;
+
     p {
         margin-bottom: 40px;
     }
@@ -32,6 +35,9 @@
     }
 }
 
+.pt-layer-open {
+    z-index: 2000;
+}
 
 .pt-layer-0 {
     overflow: auto;
@@ -57,7 +63,7 @@
     left: 0;
     //right: 0;
 
-    z-index: 1000;
+    z-index: 5000;
 
     transform: translateX(-300px);
 
@@ -68,8 +74,7 @@
         bottom: 0;
 
         position: fixed;
-        background-color: yellowgreen;
-
+        background-color: #808080;
     }
 
 

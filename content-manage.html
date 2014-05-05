@@ -27,101 +27,102 @@
 <body>
 
 <!-- main pages -->
-<div id="pt-main" class="pt-perspective">
-    <div class="pt-layer pt-layer-0 m-content m-content-manage">
-        <!-- navbar -->
-        <div class="container">
-            <nav class="navbar navbar-main" role="navigation">
+<div id="pt-main" class="pt-perspective m-content m-content-manage">
 
-                <a class="navbar-brand" href="#" data-layer="offcanavas" style="float: left; ">XOV</a>
+<!-- navbar -->
+<nav class="navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+        <a class="navbar-brand" href="#" data-layer="offcanavas" style="float: left; ">XOV</a>
 
-                <div class="search-tags">
-                    <div class="search-field">
-                        <div id="searchOptionsButton" class="search-button"><i class="fa fa-angle-down"></i> <i
-                                class="fa fa-search"></i></div>
-                        <input class="search" type="text" name="" id="mytags" placeholder="presets"
-                               value="Articles,Products,Ready for Edit,Last Week" data-role="tagsinput">
-                    </div>
-                    <div class="search-tags--options hide">
+        <div class="search-tags">
+            <div class="search-field">
+                <div id="searchOptionsButton" class="search-button"><i class="fa fa-angle-down"></i> <i
+                        class="fa fa-search"></i></div>
+                <input class="search" type="text" name="" id="mytags" placeholder="presets"
+                       value="Articles,Products,Ready for Edit,Last Week" data-role="tagsinput">
+            </div>
+            <div class="search-tags--options hide">
 
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <div><i class="fa fa-star"></i> starred</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                                <h4>content type</h4>
-
-                                <div><i class="fa fa-file-text-o"></i> article</div>
-                                <div><i class="fa fa-shopping-cart"></i> product</div>
-                                <div><i class="fa fa-user-md"></i> author profile</div>
-                                <div><i class="fa fa-user"></i> person</div>
-                                <div><i class="fa fa-file"></i> basic page</div>
-                                <div><i class="fa fa-bar-chart-o"></i> data</div>
-                                <div><i class="fa fa-link"></i> link</div>
-                                <div><i class="fa fa-tag"></i> rich term</div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                                <h4>Authoring status</h4>
-
-                                <div><i class="fa fa-circle-o"></i> draft</div>
-                                <div><i class="fa fa-adjust"></i> ready for edit</div>
-                                <div><i class="fa fa-circle"></i> complete</div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                                <h4>Publication status</h4>
-
-                                <div><i class="fa fa-circle color-unpublished"></i> unpublished</div>
-                                <div><i class="fa fa-circle color-scheduled"></i> scheduled</div>
-                                <div><i class="fa fa-circle color-published"></i> published</div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                                <h4>Date range</h4>
-
-                                <div class="input-group">
-                                    <input type="text" class="form-control">
-
-                                    <div class="input-group-btn">
-                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i
-                                                class="fa fa-calendar"></i></button>
-                                        <ul class="dropdown-menu pull-right">
-                                            <li><a href="#">add calednar here</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">Separated link</a></li>
-                                        </ul>
-                                    </div>
-                                    <!-- /btn-group -->
-                                </div>
-                                <!-- /input-group -->
-
-                            </div>
-
-                        </div>
-
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div><i class="fa fa-star"></i> starred</div>
                     </div>
                 </div>
-            </nav>
-        </div>
-        <!-- navbar end-->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <h4>content type</h4>
 
+                        <div><i class="fa fa-file-text-o"></i> article</div>
+                        <div><i class="fa fa-shopping-cart"></i> product</div>
+                        <div><i class="fa fa-user-md"></i> author profile</div>
+                        <div><i class="fa fa-user"></i> person</div>
+                        <div><i class="fa fa-file"></i> basic page</div>
+                        <div><i class="fa fa-bar-chart-o"></i> data</div>
+                        <div><i class="fa fa-link"></i> link</div>
+                        <div><i class="fa fa-tag"></i> rich term</div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <h4>Authoring status</h4>
+
+                        <div><i class="fa fa-circle-o"></i> draft</div>
+                        <div><i class="fa fa-adjust"></i> ready for edit</div>
+                        <div><i class="fa fa-circle"></i> complete</div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <h4>Publication status</h4>
+
+                        <div><i class="fa fa-circle color-unpublished"></i> unpublished</div>
+                        <div><i class="fa fa-circle color-scheduled"></i> scheduled</div>
+                        <div><i class="fa fa-circle color-published"></i> published</div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <h4>Date range</h4>
+
+                        <div class="input-group">
+                            <input type="text" class="form-control">
+
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i
+                                        class="fa fa-calendar"></i></button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="#">add calednar here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                            <!-- /btn-group -->
+                        </div>
+                        <!-- /input-group -->
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row content-management-presets">
+            <div class="col-sm-12">
+                <div id="filter-pillbox" class="pillbox navbar">
+                    <button type="button" class="btn btn-default">Default <i class="fa fa-times-circle"></i></button>
+                    <button type="button" class="btn btn-success">Success <i class="fa fa-times-circle"></i></button>
+                    <button type="button" class="btn btn-info">Info <i class="fa fa-times-circle"></i></button>
+                    <button type="button" class="btn btn-warning">Warning <i class="fa fa-times-circle"></i></button>
+                    <button type="button" class="btn btn-danger">Danger <i class="fa fa-times-circle"></i></button>
+                    <!-- add new filter button-->
+                    <button type="button" class="btn btn-primary">Add new filter <i class="fa fa-plus-circle"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- navbar end-->
+
+    <div class="pt-layer pt-layer-0 has-navbar m-content m-content-manage">
         <!-- page 0 content -->
         <div class="container">
         <!-- filters / tags -->
-            <div class="row content-management-presets">
-                <div class="col-sm-12">
-                    <div id="filter-pillbox" class="pillbox">
-                        <button type="button" class="btn btn-default">Default <i class="fa fa-times-circle"></i></button>
-                        <button type="button" class="btn btn-success">Success <i class="fa fa-times-circle"></i></button>
-                        <button type="button" class="btn btn-info">Info <i class="fa fa-times-circle"></i></button>
-                        <button type="button" class="btn btn-warning">Warning <i class="fa fa-times-circle"></i></button>
-                        <button type="button" class="btn btn-danger">Danger <i class="fa fa-times-circle"></i></button>
-                        <!-- add new filter button-->
-                        <button type="button" class="btn btn-primary">Add new filter <i class="fa fa-plus-circle"></i></button>
-                    </div>
-                </div>
-            </div>
-
 
         <!-- content table - list -->
 
@@ -392,7 +393,7 @@
         </table>
     </div> <!-- page 0 content end -->
     </div> <!-- end base page 0-->
-    <div class="pt-layer pt-layer-1 m-content-manage modal-delete">
+    <div class="pt-layer pt-layer-1 m-content-manage m-modal mm-full modal-delete">
         <!-- delete modal-->
         <div class="modal-body">
             <form role="form">
@@ -406,8 +407,8 @@
                         <div><i class="fa fa-shopping-cart"></i></div>
                         <div>I Decree Your Thread Open! Anne-Marie</div>
                         <div>
-                            <div><i class="fa fa-circle"></i>Draft</div>
-                            <div><i class="fa fa-circle"></i>Unpublished</div>
+                            <div><i class="fa fa-circle"></i> Draft</div>
+                            <div><i class="fa fa-circle"></i> Unpublished</div>
                         </div>
 
                         <div class="row modal--confirm">
@@ -419,23 +420,82 @@
                     </div>
 
                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-layer="dimmis">Cancel</button>
+                    <button type="button" class="btn btn-action" data-layer="dimmis">Delete</button>
+                    <div class="help">ESC to close</div>
+                </div>
 
-                <button type="button" class="btn btn-default" data-layer="dimmis">Cancel</button>
-                <button type="button" class="btn btn-primary" data-layer="dimmis">Delete</button>
-                <div>ESC to close</div>
 
             </form>
         </div>
     </div>
+    <div class="pt-layer pt-layer-6 m-modal mm-full modal-content-create">
+    <!-- layer content-->
+    <div class="modal-body">
+        <form role="form">
+
+            <div class="modal-body-content center">
+                <div class="modal--hed">What would you like to create?</div>
+                <div class="m-content-add-grid">
+                    <div class="m-content-add-cell">
+                        <i class="fa fa-file-text"></i><h1>Article</h1>
+                    </div>
+                    <div class="m-content-add-cell">
+                        <i class="fa fa-shopping-cart"></i><h1>Product</h1>
+                    </div>
+                    <div class="m-content-add-cell">
+                        <i class="fa fa-key"></i><h1>Vocabulary</h1>
+                    </div>
+                    <div class="m-content-add-cell">
+                        <i class="fa fa-user"></i><h1>Author Profile</h1>
+                    </div>
+                    <div class="m-content-add-cell">
+                        <i class="fa fa-male"></i><h1>Person</h1>
+                    </div>
+                    <div class="m-content-add-cell">
+                        <i class="fa fa-file"></i><h1>Basic Page</h1>
+                    </div>
+
+                    <div class="m-content-add-cell">
+                        <i class="fa fa-bar-chart-o"></i><h1>Data</h1>
+                    </div>
+
+                    <div class="m-content-add-cell">
+                        <i class="fa fa-link"></i><h1>Int/Ext link</h1>
+                    </div>
+
+                    <div class="m-content-add-cell">
+                        <i class="fa fa-tag"></i><h1>Rich term</h1>
+                    </div>
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-cancel" data-layer="dimmis-all">cancel</button>
+
+            </div>
+
+        </form>
+    </div>
+    <!-- end of layer content-->
+</div>
 </div>
 
 <!-- offcanavas menu -->
 <div class="oc-layer">
-    <div class="oc-menu">
+    <div class="oc-menu m-offcanavas-menu">
         <div class="m-author">Marci</div>
         <ul class="">
-            <li><a href="#" title="Create content">Create content</a></li>
-            <li><a href="#" title="Manage content">Manage content</a></li>
+            <li><span data-layer="open" data-animation="1" data-layer-target=".modal-content-create" title="Create content">Create content</span></li>
+            <li><a href="content-manage.html" title="Manage content">Manage content</a></li>
             <li><a href="#" title="Manage vocabularies">Manage vocabularies</a></li>
             <li><a href="#" title="Site programming">Site programming</a></li>
             <li><a href="#" title="Manage Users">Manage Users</a></li>

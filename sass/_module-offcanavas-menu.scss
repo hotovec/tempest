@@ -13,10 +13,12 @@
         margin: 0;
         padding: 0;
 
-        li a {
+        li a, span {
             display: block;
             line-height: 1.2em;
             padding: 1em;
+            color: #fff;
+            cursor: pointer;
         }
     }
 
