@@ -2,7 +2,7 @@
     @include transition(all 0.2s); // offcanavas
 }
 
-.pt-page {
+.pt-layer {
     p {
         margin-bottom: 40px;
     }
@@ -33,7 +33,7 @@
 }
 
 
-.pt-page-0 {
+.pt-layer-0 {
     overflow: auto;
 }
 
@@ -44,7 +44,7 @@
 
 // ------ offcanavas
 
-.oc-page {
+.oc-layer {
 
     pointer-events:none;
     visibility: hidden;
@@ -89,7 +89,7 @@
 }
 
 .oc-visible {
-    .oc-page {
+    .oc-layer {
         visibility: visible;
         pointer-events:auto;
         transform: translateX(0px);

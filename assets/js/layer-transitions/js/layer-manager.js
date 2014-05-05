@@ -16,10 +16,10 @@ $(function () {
     // init Layer transitions
 
     // asign layer transitions to elements
-    $("[data-toggle='page-open']").click(function () {
+    $("[data-layer='open']").click(function () {
         var el = $(this);
         var targetPage = null;
-        if (targetPage = el.data('page-target')) {
+        if (targetPage = el.data('layer-target')) {
 
             var animationType = 1; // default
             if (animationType = el.data("animation")) {
@@ -30,7 +30,7 @@ $(function () {
     });
 
     // assign close layer to elements
-    $("[data-toggle='page-close']").click(function () {
+    $("[data-layer='dimmis']").click(function () {
         var el = $(this);
         LayerTransitions.closeLastPage();
     });
@@ -56,7 +56,7 @@ $(function () {
 
     /// offcanavas
 
-    $("[data-toggle='offcanavas-open']").click(function() {
+    $("[data-layer='offcanavas']").click(function() {
       LayerTransitions.showOffcanvas();
     });
 

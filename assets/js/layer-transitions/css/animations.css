@@ -312,15 +312,15 @@
 /* scale and fade */
 
 .pt-page-scaleDown {
-	-webkit-animation: scaleDown .7s ease both;
-	-moz-animation: scaleDown .7s ease both;
-	animation: scaleDown .7s ease both;
+	-webkit-animation: scaleDown .1s ease both;
+	-moz-animation: scaleDown .1s ease both;
+	animation: scaleDown .1s ease both;
 }
 
 .pt-page-scaleUp {
-	-webkit-animation: scaleUp .7s ease both;
-	-moz-animation: scaleUp .7s ease both;
-	animation: scaleUp .7s ease both;
+	-webkit-animation: scaleUp .2s ease both;
+	-moz-animation: scaleUp .2s ease both;
+	animation: scaleUp .2s ease both;
 }
 
 .pt-page-scaleUpDown {

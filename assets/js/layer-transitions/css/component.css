@@ -9,7 +9,7 @@ html, body { height: 100%; }
 	perspective: 1200px;
 }
 
-.pt-page {
+.pt-layer {
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -28,10 +28,10 @@ html, body { height: 100%; }
 	transform-style: preserve-3d;
 }
 
-.pt-page-current,
-.pt-page-open,
-.pt-page-main,
-.no-js .pt-page {
+.pt-layer-current,
+.pt-layer-open,
+.pt-layer-main,
+.no-js .pt-layer {
 	visibility: visible;
 	z-index: 1;
 }
@@ -39,12 +39,12 @@ html, body { height: 100%; }
 .no-js body {
 	overflow: auto;
 }
-
-.pt-page-ontop {
+.pt-page-ontop,
+.pt-layer-ontop {
 	z-index: 999;
 }
 
-.pt-page {
+.pt-layer {
     background-color: #eee;
 }
 
@@ -132,7 +132,7 @@ html, body { height: 100%; }
 }
 
 @media screen and (max-width: 47.4375em) {
-	.pt-page h1 {
+	.pt-layer h1 {
 		font-size: 3em;
 	}
 

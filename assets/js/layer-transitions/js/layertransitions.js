@@ -9,7 +9,7 @@ var LayerTransitions = (function() {
 
 	var $main = $( '#pt-main' ),
         $offcanavasParent = $( 'body' ),
-		$pages = $main.children( 'div.pt-page' ),
+		$pages = $main.children( 'div.pt-layer' ),
 		animcursor = 1,
 		pagesCount = $pages.length,
 		current = 0,
@@ -41,7 +41,7 @@ var LayerTransitions = (function() {
 			$page.data( 'originalClassList', $page.attr( 'class' ) );
 		} );
 
-		$pages.eq( current ).addClass( 'pt-page-main' );
+		$pages.eq( current ).addClass( 'pt-layer-main' );
 		//$pages.eq( current ).addClass( 'pt-page-current' );
 
 	}
@@ -103,7 +103,7 @@ var LayerTransitions = (function() {
         //$outpage.attr( 'class', $outpage.data( 'originalClassList' ) );
 
         //remove animation class
-        $page.attr( 'class', $page.data( 'originalClassList' ) + ' pt-page-single' );
+        $page.attr( 'class', $page.data( 'originalClassList' ) + ' pt-layer-single' );
         console.log("history:"  + history.length);
 
         isAnimating = false;
@@ -119,35 +119,10 @@ var LayerTransitions = (function() {
 
         isAnimating = true;
 
-        var $currPage = $($targetPage).addClass( 'pt-page-open' ),
+        var $currPage = $($targetPage).addClass( 'pt-layer-open' ),
             outClass = '', inClass = '';
 
-        /*switch( animation ) {
-
-            case 1:
-                inClass = 'pt-page-moveFromRight';
-                outClass = 'pt-page-moveToRight';
-                break;
-            case 2:
-                inClass = 'pt-page-moveFromBottom';
-                outClass = 'pt-page-moveToBottom';
-                break;
-            case 3:
-                inClass = 'pt-page-moveFromLeft';
-                outClass = 'pt-page-moveToLeft';
-                break;
-            case 4:
-                inClass = 'pt-page-moveFromTop';
-                outClass = 'pt-page-moveToTop';
-                break;
-            default:
-                inClass = 'pt-page-moveFromBottom';
-                outClass = 'pt-page-moveToBottom';
-                break;
-        }*/
-
         var animationType = getAnimationType(animation);
-
 
         $currPage.outClass = animationType.outClass;
         $currPage.inClass = animationType.inClass;
@@ -180,7 +155,7 @@ var LayerTransitions = (function() {
         //$outpage.attr( 'class', $outpage.data( 'originalClassList' ) );
 
         //remove animation class
-        $page.attr( 'class', $page.data( 'originalClassList' ) + ' pt-page-open pt-page-single' );
+        $page.attr( 'class', $page.data( 'originalClassList' ) + ' pt-layer-open pt-layer-single' );
         isAnimating = false;
     }
 
@@ -193,8 +168,8 @@ var LayerTransitions = (function() {
         switch( $animation ) {
 
             case 1:
-                inClass = 'pt-page-moveFromRight';
-                outClass = 'pt-page-moveToRight';
+                inClass = 'pt-page-scaleUp';
+                outClass = 'pt-page-scaleDown';
                 break;
             case 2:
                 inClass = 'pt-page-moveFromBottom';
