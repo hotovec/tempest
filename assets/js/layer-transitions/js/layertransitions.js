@@ -72,7 +72,7 @@ var LayerTransitions = (function() {
         $('.oc-overlay').click = null;
     }
 
-    function closeLastPage() {
+    function closeLastPage() { // go
 
         if(isOffcanavasEnabled == true) {
             return;
@@ -81,6 +81,35 @@ var LayerTransitions = (function() {
         $pageToClose = history.pop();
         console.log("close current page" + $pageToClose + $pageToClose.outClass);
 
+        outClass = $pageToClose.outClass;
+
+        $pageToClose.addClass( outClass ).on( animEndEventName, function() {
+            $pageToClose.off( animEndEventName );
+            endCurrPage = true;
+            if( endCurrPage ) {
+                onCloseSinglePageEndAnimation( $pageToClose );
+            }
+        } );
+    }
+
+    function closeAllPages() {
+
+        console.log("closeALL");
+
+        if(isOffcanavasEnabled == true) {
+            return;
+        }
+
+        $pageToClose = history.pop();
+
+        // dimiss all opened layers
+        for(var p = 0; p < history.length; p++ ) {
+            var tPage = history[p];
+            tPage.removeClass('pt-layer-open');
+            tPage.removeClass('pt-layer-single');
+        }
+
+        // dimiss current opened layer with animation
         outClass = $pageToClose.outClass;
 
         $pageToClose.addClass( outClass ).on( animEndEventName, function() {
@@ -453,6 +482,7 @@ var LayerTransitions = (function() {
 		init : init,
         showSinglePage : showSinglePage,
         closeLastPage : closeLastPage,
+        closeAllPages : closeAllPages,
         getAnimationType : getAnimationType,
         showOffcanvas: showOffcanvas,
         closeOffcanavas: closeOffcanavas,
