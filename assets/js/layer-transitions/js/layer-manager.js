@@ -35,6 +35,11 @@ $(function () {
         LayerTransitions.closeLastPage();
     });
 
+    $("[data-layer='dimmis-all']").click(function () {
+        var el = $(this);
+        LayerTransitions.closeAllPages();
+    });
+
     // assign ESC to close elements
     $(document).keyup(function(e) {
         // todo - check history if we can close
