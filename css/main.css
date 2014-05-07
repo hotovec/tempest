@@ -122,6 +122,9 @@
   .m-content .m-content-add-cell h1 {
     font-size: 30px; }
 
+.m-content.m-content-manage .container {
+  background-color: transparent; }
+
 .m-content-edit .navbar, .m-content-edit .navbar-collapse {
   background-color: transparent;
   border: 0;
@@ -253,6 +256,130 @@
     font-size: 20px;
     color: #333; }
 
+.m-records {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .m-records .style-switch {
+    position: absolute; }
+  .m-records.list-view .record-header, .m-records.list-view .record {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 0px rgba(0, 0, 0, 0.1); }
+    .m-records.list-view .record-header .record-base, .m-records.list-view .record .record-base {
+      display: table-row;
+      width: 100%;
+      padding: 10px 16px; }
+    .m-records.list-view .record-header .record-meta, .m-records.list-view .record .record-meta {
+      border-top: 3px dashed #eee;
+      padding: 20px;
+      color: #999; }
+    .m-records.list-view .record-header.mm-collapsed .record-meta, .m-records.list-view .record.mm-collapsed .record-meta {
+      display: none; }
+    .m-records.list-view .record-header.record-header .cell, .m-records.list-view .record.record-header .cell {
+      font-weight: bold;
+      width: auto;
+      text-align: center;
+      background-color: transparent; }
+      .m-records.list-view .record-header.record-header .cell.cell-title, .m-records.list-view .record-header.record-header .cell.cell-author, .m-records.list-view .record-header.record-header .cell.cell-date, .m-records.list-view .record.record-header .cell.cell-title, .m-records.list-view .record.record-header .cell.cell-author, .m-records.list-view .record.record-header .cell.cell-date {
+        cursor: pointer; }
+      .m-records.list-view .record-header.record-header .cell.cell-title, .m-records.list-view .record.record-header .cell.cell-title {
+        width: 420px; }
+      .m-records.list-view .record-header.record-header .cell.cell-switch, .m-records.list-view .record.record-header .cell.cell-switch {
+        width: 80px;
+        padding: 0; }
+        .m-records.list-view .record-header.record-header .cell.cell-switch button, .m-records.list-view .record.record-header .cell.cell-switch button {
+          margin: 0;
+          padding: 2px 10px; }
+    .m-records.list-view .record-header .cell, .m-records.list-view .record .cell {
+      display: table-cell;
+      padding: 4px 8px; }
+      .m-records.list-view .record-header .cell.cell-check, .m-records.list-view .record-header .cell.cell-info, .m-records.list-view .record .cell.cell-check, .m-records.list-view .record .cell.cell-info {
+        width: 25px; }
+      .m-records.list-view .record-header .cell.cell-info, .m-records.list-view .record .cell.cell-info {
+        width: 25px;
+        cursor: pointer; }
+      .m-records.list-view .record-header .cell.cell-title, .m-records.list-view .record .cell.cell-title {
+        width: 500px; }
+      .m-records.list-view .record-header .cell.cell-author, .m-records.list-view .record .cell.cell-author {
+        width: 180px; }
+      .m-records.list-view .record-header .cell.cell-date, .m-records.list-view .record .cell.cell-date {
+        width: 180px; }
+      .m-records.list-view .record-header .cell.cell-actions, .m-records.list-view .record .cell.cell-actions {
+        width: 100px; }
+        .m-records.list-view .record-header .cell.cell-actions span, .m-records.list-view .record .cell.cell-actions span {
+          display: inline-block;
+          padding: 6px; }
+      .m-records.list-view .record-header .cell label, .m-records.list-view .record .cell label {
+        display: block;
+        text-transform: uppercase;
+        font-size: 12px; }
+      .m-records.list-view .record-header .cell .avatar, .m-records.list-view .record .cell .avatar {
+        width: 50px;
+        height: 50px;
+        margin-right: 5px;
+        border-radius: 50%;
+        background-color: #eee; }
+  .m-records.list-view .record-header {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  .m-records.tile-view .record {
+    background-color: #fff;
+    margin-bottom: 30px;
+    width: 262px;
+    height: 400px;
+    overflow: hidden;
+    float: left;
+    margin-right: 30px; }
+    .m-records.tile-view .record:nth-of-type(4n) {
+      margin-right: 0; }
+    .m-records.tile-view .record .record-base {
+      display: block; }
+    .m-records.tile-view .record .record-meta {
+      display: none; }
+  .m-records.tile-view .cell {
+    display: block; }
+    .m-records.tile-view .cell.cell-check, .m-records.tile-view .cell.cell-info {
+      display: inline;
+      padding: 6px; }
+    .m-records.tile-view .cell.cell-info {
+      width: 25px;
+      cursor: pointer;
+      float: right; }
+    .m-records.tile-view .cell.cell-title {
+      font-size: 18px; }
+      .m-records.tile-view .cell.cell-title a {
+        display: block;
+        width: 100%;
+        padding: 10px; }
+    .m-records.tile-view .cell.cell-author {
+      font-size: 12px; }
+    .m-records.tile-view .cell.cell-date {
+      font-size: 12px;
+      display: inline; }
+    .m-records.tile-view .cell.cell-actions {
+      text-align: center; }
+      .m-records.tile-view .cell.cell-actions span {
+        display: inline-block;
+        padding: 6px; }
+    .m-records.tile-view .cell label {
+      display: block;
+      text-transform: uppercase;
+      font-size: 12px; }
+    .m-records.tile-view .cell .avatar {
+      width: 100%;
+      height: 200px;
+      background-color: #eee; }
+  .m-records.tile-view .record-header {
+    padding-bottom: 50px; }
+    .m-records.tile-view .record-header .titles {
+      display: none; }
+
 .pt-perspective {
   -webkit-transition: all 0.2s;
   transition: all 0.2s; }
@@ -343,9 +470,6 @@
 
 .color-unpublished {
   color: darkred; }
-
-body {
-  background-color: #efefef; }
 
 .navbar-fixed-top {
   z-index: 500; }
