@@ -105,7 +105,7 @@
         <div class="row content-management-presets">
             <div class="col-sm-12">
                 <div id="filter-pillbox" class="pillbox navbar">
-                    <button type="button" class="btn btn-default">Default <i class="fa fa-times-circle"></i></button>
+                    <button type="button" class="add-filter" class="btn btn-default">Default <i class="fa fa-times-circle"></i></button>
                     <button type="button" class="btn btn-success">Success <i class="fa fa-times-circle"></i></button>
                     <button type="button" class="btn btn-info">Info <i class="fa fa-times-circle"></i></button>
                     <button type="button" class="btn btn-warning">Warning <i class="fa fa-times-circle"></i></button>

@@ -272,8 +272,7 @@
     box-shadow: 0 2px 0px rgba(0, 0, 0, 0.1); }
     .m-records.list-view .record-header .record-base, .m-records.list-view .record .record-base {
       display: table-row;
-      width: 100%;
-      padding: 10px 16px; }
+      width: 100%; }
     .m-records.list-view .record-header .record-meta, .m-records.list-view .record .record-meta {
       border-top: 3px dashed #eee;
       padding: 20px;
@@ -297,7 +296,7 @@
           padding: 2px 10px; }
     .m-records.list-view .record-header .cell, .m-records.list-view .record .cell {
       display: table-cell;
-      padding: 4px 8px; }
+      padding: 8px 8px; }
       .m-records.list-view .record-header .cell.cell-check, .m-records.list-view .record-header .cell.cell-info, .m-records.list-view .record .cell.cell-check, .m-records.list-view .record .cell.cell-info {
         width: 25px; }
       .m-records.list-view .record-header .cell.cell-info, .m-records.list-view .record .cell.cell-info {
