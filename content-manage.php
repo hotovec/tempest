@@ -299,6 +299,16 @@
             $('#records').addClass('list-view');
             $('#records').removeClass('tile-view');
         });
+        $('.cell-info').click(function(){
+            var el = $(this).parent().parent();
+            if(el.hasClass('mm-collapsed')) {
+                el.removeClass('mm-collapsed');
+            } else {
+                el.addClass('mm-collapsed');
+            }
+
+
+        });
 
     });
 
