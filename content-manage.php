@@ -86,6 +86,8 @@
 
     $(function () {
 
+
+        // switch display mode
         recordstyle = "list-view";
         $('#btnSwitchToTile').click(function(){
             console.log('cc');
@@ -98,6 +100,8 @@
             $('#records').addClass('list-view');
             $('#records').removeClass('tile-view');
         });
+
+        // collapse - expand records
         $('.cell-info').click(function(){
             var el = $(this).parent().parent();
             if(el.hasClass('mm-collapsed')) {
@@ -105,8 +109,13 @@
             } else {
                 el.addClass('mm-collapsed');
             }
+        });
 
-
+        // filter interactions
+        $("[data-toggle='filter-add']").click(function () {
+            var el = $(this);
+            var filterValue = el.data('filter-name');
+            $('#searchtags').tagsinput('add', filterValue);
         });
 
     });
