@@ -156,8 +156,9 @@ body.oc-visible .pt-perspective {
   .m-nav-brand:hover {
     background-color: #000; }
 
-.disabled.navbar-fixed-top {
-  z-index: 500; }
+.m-content .navbar.navbar-fixed-top {
+  z-index: 500;
+  background-color: #eee; }
 
 .disabled.has-navbar {
   padding-top: 50px; }

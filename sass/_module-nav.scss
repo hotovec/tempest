@@ -23,10 +23,11 @@
 }
 
 
-// this need to be clean
+// this need to be clean and reorder
 //
-.disabled.navbar-fixed-top {
+.m-content .navbar.navbar-fixed-top {
     z-index: 500;
+    background-color: #eee; // page bg color should be here
 }
 
 .disabled.has-navbar {
