@@ -32,3 +32,48 @@
     }
 
 }
+
+
+/* not finished left, right, top, bottom offcanvas mods
+.offcanavas-menu {
+    position: fixed;
+    overflow: hidden;
+    width: 300px;
+    background-color: darkgray;
+    z-index: 1000;
+
+    &.offcanavas-menu-right {
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        left: auto;
+    }
+    &.offcanavas-menu-left {
+        left: 0;
+        top: 0;
+        bottom: 0;
+
+        right: auto;
+    }
+    &.offcanavas-menu-top {
+        height: 300px;
+        width: auto;
+
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: auto;
+    }
+    &.offcanavas-menu-bottom {
+        height: 300px;
+        width: auto;
+
+        left: 0;
+        top: auto;
+        bottom: 0;
+        right: 0;
+    }
+
+}
+*/

@@ -8,13 +8,15 @@ $zindex-nav-brand: $zindex-navbar + 1;
 $zindex-opened-layer: 2000;
 $zindex-offcanavas: 5000;
 
+// colors
+
 
 @import "module-layers"; // layer base settings
-
 @import "module-offcanavas-menu"; // offcanavas menu styles
 
 @import "module-nav";
-@import "search-tags";
+@import "module-search-tags";
+@import "module-panels";
 
 @import "module-content";
 @import "module-content-edit";
@@ -24,8 +26,7 @@ $zindex-offcanavas: 5000;
 @import "module-records";
 
 
-
-
+// dev and temp overrides
 
 
 .color-scheduled {
@@ -38,101 +39,6 @@ $zindex-offcanavas: 5000;
     color: darkred;
 }
 
-
-.navbar-fixed-top {
-    z-index: 500;
-}
-
-.has-navbar {
-    padding-top: 50px;
-}
-
-.pillbox.navbar {
-    padding: 20px;
-    padding-left: 80px;
-    padding-bottom: 0px;
-}
-
-.panel.panel-login {
-    position: absolute;
-    margin: auto;
-
-    width: 600px;
-    height: 300px;
-
-    left: 0;
-    right: 0;
-    bottom: 60%;
-    top: 40%;
-
-    text-align: center;
-}
-
-
-
-.table {
-    &.content-management_list {
-        td {
-            vertical-align: middle;
-        }
-
-        .thumbnail {
-            // reset bootstrap .thumbnail
-            height: 60px;
-
-            margin: 0;
-            border: none;
-            border-image: none;
-            padding: 0;
-            border-radius: 0;
-
-        }
-    }
-}
-
-
-
-.offcanavas-menu {
-    position: fixed;
-    overflow: hidden;
-    width: 300px;
-    background-color: darkgray;
-    z-index: 1000;
-
-    &.offcanavas-menu-right {
-        right: 0;
-        top: 0;
-        bottom: 0;
-
-        left: auto;
-    }
-    &.offcanavas-menu-left {
-        left: 0;
-        top: 0;
-        bottom: 0;
-
-        right: auto;
-    }
-    &.offcanavas-menu-top {
-        height: 300px;
-        width: auto;
-
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: auto;
-    }
-    &.offcanavas-menu-bottom {
-        height: 300px;
-        width: auto;
-
-        left: 0;
-        top: auto;
-        bottom: 0;
-        right: 0;
-    }
-
-}
 
 
 .random-color-1 {
