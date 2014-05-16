@@ -21,3 +21,20 @@
     }
 
 }
+
+
+// this need to be clean
+//
+.disabled.navbar-fixed-top {
+    z-index: 500;
+}
+
+.disabled.has-navbar {
+    padding-top: 50px;
+}
+
+.pillbox.navbar {
+    padding: 20px;
+    padding-left: 80px;
+    padding-bottom: 0px;
+}
