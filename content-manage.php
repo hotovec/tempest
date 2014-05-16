@@ -1,6 +1,6 @@
 <?php include("templates/html-header.php"); ?>
 
-<!-- layer manager wprapper -->
+<!-- layer manager wprapper also moved by offcanavas -->
 <div id="pt-main" class="pt-perspective m-content m-content-manage">
 
     <!-- brand logo-->
@@ -80,11 +80,12 @@
 <!-- link required scripts + app.js global scripts-->
 <?php include("templates/html-scripts-global.php"); ?>
 
-<!-- custom page scripts-->
+<!-- custom page scripts -->
 <script>
     // colapsible elements
 
     $(function () {
+
         recordstyle = "list-view";
         $('#btnSwitchToTile').click(function(){
             console.log('cc');
