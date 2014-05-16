@@ -1,4 +1,4 @@
-<div class="pt-layer pt-layer-7 m-modal mm-full modal-media-library">
+<div class="pt-layer modal-media-library">
     <!-- layer content-->
     <div class="modal-body">
         <form role="form">

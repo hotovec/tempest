@@ -47,7 +47,7 @@
     </div><!-- /.container-fluid -->
 </nav>
 <!-- navbar end-->
-    <div class="pt-layer pt-layer-0 has-navbar">
+    <div class="pt-layer scrollable has-navbar">
 
 
         <!-- page 0 content -->
@@ -170,7 +170,7 @@
         </div> <!-- page 0 content end -->
     </div> <!-- end base page 0-->
 
-    <div class="pt-layer pt-layer-1 m-modal mm-full modal-delete">
+    <div class="pt-layer pt-layer-1 modal-fullscreen modal-delete">
         <!-- layer content-->
         <div class="modal-body">
             <form role="form">
@@ -208,7 +208,7 @@
         </div>
         <!-- end of layer content-->
     </div>
-    <div class="pt-layer pt-layer-2 m-modal mm-full modal-publish">
+    <div class="pt-layer pt-layer-2 modal-fullscreen modal-publish">
         <!-- layer content-->
         <div class="modal-body">
             <form role="form">
@@ -229,7 +229,7 @@
         </div>
         <!-- end of layer content-->
     </div>
-    <div class="pt-layer pt-layer-3 m-modal mm-full modal-schedule">
+    <div class="pt-layer pt-layer-3 modal-fullscreen modal-schedule">
         <!-- layer content-->
         <div class="modal-body">
             <form role="form">
@@ -255,7 +255,7 @@
         </div>
         <!-- end of layer content-->
     </div>
-    <div class="pt-layer pt-layer-4 m-modal mm-full modal-scheduled">
+    <div class="pt-layer pt-layer-4 modal-fullscreen modal-scheduled">
         <!-- layer content-->
         <div class="modal-body">
             <form role="form">
@@ -278,7 +278,7 @@
         </div>
         <!-- end of layer content-->
     </div>
-    <div class="pt-layer pt-layer-5 m-modal mm-full modal-published">
+    <div class="pt-layer pt-layer-5 modal-fullscreen modal-published">
         <!-- layer content-->
         <div class="modal-body">
             <form role="form">

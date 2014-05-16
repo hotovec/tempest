@@ -13,7 +13,7 @@
     <!-- content in layers -->
 
     <!-- first(default) content layer-->
-    <div class="pt-layer xpt-layer-0 has-navbar m-content m-content-manage">
+    <div class="pt-layer scrollable has-navbar m-content m-content-manage">
         <div class="container">
             <!-- filters / tags -->
 
@@ -59,7 +59,7 @@
     </div>
 
     <!-- delete modal layer -->
-    <div class="pt-layer pt-layer-1 m-content-manage m-modal mm-full modal-delete">
+    <div class="pt-layer pt-layer-1 m-content-manage modal-fullscreen modal-delete">
         <?php include("templates/modal-content--delete.php"); ?>
     </div>
 

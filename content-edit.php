@@ -48,7 +48,7 @@
     </div><!-- /.container-fluid -->
 </nav>
 <!-- navbar end-->
-    <div class="pt-layer pt-layer-0 has-navbar">
+    <div class="pt-layer scrollable has-navbar">
 
 
         <!-- page 0 content -->
@@ -59,7 +59,7 @@
                 <div class="m-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     ARTICLE TITLE
                 </div>
-                <div class="title col-xs-9 col-sm-9">
+                <div class="title col-xs-9 col-sm-9 autoresize">
                     <textarea name="" id="" cols="30" rows="3">The Caffeinated, Cruelty-Free Eye Cream That Makes It Easier To Pretend I Slept Well</textarea>
                 </div>
             </div>
@@ -68,7 +68,7 @@
                 <div class="m-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     ABSTRACT
                 </div>
-                <div class="abstract col-xs-9 col-sm-7">
+                <div class="abstract col-xs-9 col-sm-7 autoresize">
                     <textarea name="" id="" cols="30">I don't drink coffee, but putting it on my face is another story.</textarea>
                 </div>
             </div>
@@ -77,7 +77,7 @@
                 <div class="m-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     CONTENT
                 </div>
-                <div class="content col-xs-9 col-sm-7">
+                <div class="content col-xs-9 col-sm-7 autoresize">
                     <textarea name="" id="" cols="60" rows="10">My idea of beauty is simple: be healthy, and beauty is pretty much taken care of. That starts with lots of water, a good diet, exercise, laughing a bunch, avoiding things that I know mess up my face, and getting a solid eight every night. Hours of sleep, you guys. Heavens!
                     </textarea>
                 </div>
@@ -96,7 +96,7 @@
                 <div class="m-label col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     Promo Title
                 </div>
-                <div class="promo-title col-xs-9 col-sm-7">
+                <div class="promo-title col-xs-9 col-sm-7 autoresize">
                     <textarea name="" id="" cols="30" rows="3">The Caffeinated, Cruelty-Free Eye Cream That Makes It Easier To Pretend I Slept Well</textarea>
 
                 </div>
@@ -171,7 +171,7 @@
         </div> <!-- page 0 content end -->
     </div> <!-- end base page 0-->
 
-    <div class="pt-layer pt-layer-1 m-modal mm-full modal-delete">
+    <div class="pt-layer pt-layer-1 modal-fullscreen modal-delete">
         <!-- layer content-->
         <div class="modal-body">
             <form role="form">
@@ -206,7 +206,7 @@
         </div>
         <!-- end of layer content-->
     </div>
-    <div class="pt-layer pt-layer-2 m-modal mm-full modal-publish">
+    <div class="pt-layer pt-layer-2 modal-fullscreen modal-publish">
         <!-- layer content-->
         <div class="modal-body">
             <form role="form">
@@ -227,7 +227,7 @@
         </div>
         <!-- end of layer content-->
     </div>
-    <div class="pt-layer pt-layer-3 m-modal mm-full modal-schedule">
+    <div class="pt-layer pt-layer-3 modal-fullscreen modal-schedule">
         <!-- layer content-->
         <div class="modal-body">
             <form role="form">
@@ -253,7 +253,7 @@
         </div>
         <!-- end of layer content-->
     </div>
-    <div class="pt-layer pt-layer-4 m-modal mm-full modal-scheduled">
+    <div class="pt-layer pt-layer-4 modal-fullscreen modal-scheduled">
         <!-- layer content-->
         <div class="modal-body">
             <form role="form">
@@ -276,7 +276,7 @@
         </div>
         <!-- end of layer content-->
     </div>
-    <div class="pt-layer m-modal mm-full modal-published">
+    <div class="pt-layer modal-fullscreen modal-published">
         <!-- layer content-->
         <div class="modal-body">
             <form role="form">
@@ -315,6 +315,9 @@
     $(function () {
        // LayerTransitions.showSinglePage(2, '.modal-media-library');
     });
+
+
+
 </script>
 
 <?php include("templates/html-footer.php"); ?>

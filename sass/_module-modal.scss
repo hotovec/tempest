@@ -1,23 +1,4 @@
-
-.m-modal {}
-
-.m-modal.modal-media-library {
-    width: 900px;
-    overflow: hidden;
-
-
-    .modal-body-content {
-        width: auto;
-        //display: none;
-    }
-
-    .modal-footer {
-        background-color: #fff;
-    }
-}
-
-.m-modal.mm-full {
-
+@mixin modal-fullscreen() {
     background-color: white;
     width: 100%;
     height: 100%;
@@ -97,5 +78,26 @@
         margin-top: 20px;
         font-size: 20px;
         color: #333;
+    }
+}
+
+.m-modal {}
+
+.modal-fullscreen {
+    @include modal-fullscreen();
+}
+
+.modal-media-library {
+
+    @include modal-fullscreen();
+
+    overflow: hidden;
+
+    .modal-body-content {
+        width: auto;
+    }
+
+    .modal-footer {
+        background-color: #fff;
     }
 }

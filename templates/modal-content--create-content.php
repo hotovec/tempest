@@ -1,4 +1,4 @@
-<div class="pt-layer m-modal mm-full modal-content-create">
+<div class="pt-layer modal-fullscreen modal-content-create">
 <div class="modal-body">
     <div class="modal-body-content center">
 
