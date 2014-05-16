@@ -1,71 +1,68 @@
 <div class="modal-body">
     <div class="modal-body-content center">
 
-                <div class="modal--hed">What would you like to create?</div>
-                <div class="m-content-add-grid">
-                    <div class="m-content-add-cell">
-                        <a href="../content-create-article.html"><i class="fa fa-file-text"></i>
+        <div class="modal--hed">What would you like to create?</div>
 
-                            <h1>Article</h1></a>
-                    </div>
+        <div class="m-content-add-grid">
+            <div class="m-content-add-cell">
+                <a href="../content-create-article.html"><i class="fa fa-file-text"></i>
 
-                    <div class="m-content-add-cell">
-                        <a href="content-create-product.html"><i class="fa fa-shopping-cart"></i>
-
-                            <h1>Product</h1></a>
-                    </div>
-
-                    <div class="m-content-add-cell">
-                        <a href="content-create-vocabulary.html"><i class="fa fa-key"></i>
-
-                            <h1>Vocabulary</h1></a>
-                    </div>
-
-                    <div class="m-content-add-cell">
-                        <a href="content-create-profile.html"><i class="fa fa-user"></i>
-
-                            <h1>Author Profile</h1></a>
-                    </div>
-
-                    <div class="m-content-add-cell">
-                        <a href="content-create-person.html"><i class="fa fa-male"></i>
-
-                            <h1>Person</h1></a>
-                    </div>
-
-                    <div class="m-content-add-cell">
-                        <a href="content-create-page.html"><i class="fa fa-file"></i>
-
-                            <h1>Basic Page</h1></a>
-                    </div>
-
-                    <div class="m-content-add-cell">
-                        <a href="content-create-data.html"><i class="fa fa-bar-chart-o"></i>
-
-                            <h1>Data</h1></a>
-                    </div>
-
-                    <div class="m-content-add-cell">
-                        <a href="content-create-link.html"><i class="fa fa-link"></i>
-
-                            <h1>Int/Ext link</h1></a>
-                    </div>
-
-                    <div class="m-content-add-cell">
-                        <a href="content-create-richterm.html"><i class="fa fa-tag"></i>
-
-                            <h1>Rich term</h1></a>
-                    </div>
-                </div>
+                    <h1>Article</h1></a>
             </div>
 
-            <div class="modal-footer">
-                <button type="button" class="btn btn-cancel" data-layer="dimmis-all">cancel</button>
+            <div class="m-content-add-cell">
+                <a href="content-create-product.html"><i class="fa fa-shopping-cart"></i>
 
+                    <h1>Product</h1></a>
             </div>
-</div>
-<div class="modal-footer">
-    <button type="button" class="btn btn-cancel" data-layer="dimmis-all">cancel</button>
-</div>
+
+            <div class="m-content-add-cell">
+                <a href="content-create-vocabulary.html"><i class="fa fa-key"></i>
+
+                    <h1>Vocabulary</h1></a>
+            </div>
+
+            <div class="m-content-add-cell">
+                <a href="content-create-profile.html"><i class="fa fa-user"></i>
+
+                    <h1>Author Profile</h1></a>
+            </div>
+
+            <div class="m-content-add-cell">
+                <a href="content-create-person.html"><i class="fa fa-male"></i>
+
+                    <h1>Person</h1></a>
+            </div>
+
+            <div class="m-content-add-cell">
+                <a href="content-create-page.html"><i class="fa fa-file"></i>
+
+                    <h1>Basic Page</h1></a>
+            </div>
+
+            <div class="m-content-add-cell">
+                <a href="content-create-data.html"><i class="fa fa-bar-chart-o"></i>
+
+                    <h1>Data</h1></a>
+            </div>
+
+            <div class="m-content-add-cell">
+                <a href="content-create-link.html"><i class="fa fa-link"></i>
+
+                    <h1>Int/Ext link</h1></a>
+            </div>
+
+            <div class="m-content-add-cell">
+                <a href="content-create-richterm.html"><i class="fa fa-tag"></i>
+
+                    <h1>Rich term</h1></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-cancel" data-layer="dimmis-all">cancel</button>
+    </div>
+
 </div>
 
