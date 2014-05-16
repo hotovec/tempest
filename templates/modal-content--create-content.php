@@ -1,8 +1,10 @@
+<div class="modal-body">
+    <div class="modal-body-content center">
 
                 <div class="modal--hed">What would you like to create?</div>
                 <div class="m-content-add-grid">
                     <div class="m-content-add-cell">
-                        <a href="content-create-article.html"><i class="fa fa-file-text"></i>
+                        <a href="../content-create-article.html"><i class="fa fa-file-text"></i>
 
                             <h1>Article</h1></a>
                     </div>
@@ -61,4 +63,9 @@
                 <button type="button" class="btn btn-cancel" data-layer="dimmis-all">cancel</button>
 
             </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-cancel" data-layer="dimmis-all">cancel</button>
+</div>
+</div>
 

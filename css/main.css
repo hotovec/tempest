@@ -24,6 +24,21 @@
     padding: 1.2em;
     font-size: 20px; }
 
+.m-nav-brand {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 600;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #9c0000;
+  color: #fff; }
+  .m-nav-brand:hover {
+    background-color: #000; }
+
 /* search tags */
 .search-tags {
   position: relative;
@@ -277,8 +292,6 @@
       border-top: 3px dashed #eee;
       padding: 20px;
       color: #999; }
-    .m-records.list-view .record-header.mm-collapsed .record-meta, .m-records.list-view .record.mm-collapsed .record-meta {
-      display: none; }
     .m-records.list-view .record-header.record-header .cell, .m-records.list-view .record.record-header .cell {
       font-weight: bold;
       width: auto;
@@ -300,6 +313,7 @@
       .m-records.list-view .record-header .cell.cell-check, .m-records.list-view .record-header .cell.cell-info, .m-records.list-view .record .cell.cell-check, .m-records.list-view .record .cell.cell-info {
         width: 25px; }
       .m-records.list-view .record-header .cell.cell-info, .m-records.list-view .record .cell.cell-info {
+        color: #666;
         width: 25px;
         cursor: pointer; }
       .m-records.list-view .record-header .cell.cell-title, .m-records.list-view .record .cell.cell-title {
@@ -323,6 +337,10 @@
         margin-right: 5px;
         border-radius: 50%;
         background-color: #eee; }
+    .m-records.list-view .record-header.mm-collapsed .cell-info, .m-records.list-view .record.mm-collapsed .cell-info {
+      color: #4da76f; }
+    .m-records.list-view .record-header.mm-collapsed .record-meta, .m-records.list-view .record.mm-collapsed .record-meta {
+      display: none; }
   .m-records.list-view .record-header {
     background-color: transparent;
     -webkit-box-shadow: none;

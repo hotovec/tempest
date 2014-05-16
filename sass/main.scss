@@ -1,5 +1,6 @@
 @import "../bower_components/bourbon/dist/bourbon";
 @import "module-offcanavas-menu";
+@import "module-nav";
 @import "search-tags";
 @import "module-content";
 @import "module-content-edit";
@@ -10,6 +11,12 @@
 @import "layers";
 
 
+// z-index definitions
+$zindex-base: 0;
+$zindex-navbar: 500;
+$zindex-nav-brand: $zindex-navbar + 1;
+$zindex-offcanavas-overlay : 500;
+$zindex-offcanavas: $zindex-offcanavas-overlay + 1;
 
 
 

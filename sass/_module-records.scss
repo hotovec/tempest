@@ -27,12 +27,6 @@
                 color: #999;
             }
 
-            &.mm-collapsed {
-                .record-meta {
-                    display: none;
-                }
-            }
-
             &.record-header {
                 .cell {
                     font-weight: bold;
@@ -80,6 +74,9 @@
                 }
 
                 &.cell-info {
+
+                    color: #666;
+
                     width: 25px;
                     cursor: pointer;
                 }
@@ -127,6 +124,16 @@
                     margin-right: $size / 10;
                     border-radius: 50%;
                     background-color: #eee;
+                }
+            }
+
+            &.mm-collapsed {
+                .cell-info {
+                    color: #4da76f;
+                }
+
+                .record-meta {
+                    display: none;
                 }
             }
 
