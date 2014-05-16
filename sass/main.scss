@@ -1,22 +1,27 @@
 @import "../bower_components/bourbon/dist/bourbon";
-@import "module-offcanavas-menu";
-@import "module-nav";
-@import "search-tags";
-@import "module-content";
-@import "module-content-edit";
-@import "module-image-picker";
-@import "module-modal";
-@import "module-records";
-
-@import "layers";
-
 
 // z-index definitions
 $zindex-base: 0;
 $zindex-navbar: 500;
 $zindex-nav-brand: $zindex-navbar + 1;
-$zindex-offcanavas-overlay : 500;
-$zindex-offcanavas: $zindex-offcanavas-overlay + 1;
+
+$zindex-opened-layer: 2000;
+$zindex-offcanavas: 5000;
+
+
+@import "module-layers"; // layer base settings
+
+@import "module-offcanavas-menu"; // offcanavas menu styles
+
+@import "module-nav";
+@import "search-tags";
+
+@import "module-content";
+@import "module-content-edit";
+@import "module-image-picker";
+
+@import "module-modal";
+@import "module-records";
 
 
 
@@ -34,14 +39,10 @@ $zindex-offcanavas: $zindex-offcanavas-overlay + 1;
 }
 
 
-
-body {
-    //background-color: #efefef;
-}
-
 .navbar-fixed-top {
     z-index: 500;
 }
+
 .has-navbar {
     padding-top: 50px;
 }
@@ -51,8 +52,6 @@ body {
     padding-left: 80px;
     padding-bottom: 0px;
 }
-
-
 
 .panel.panel-login {
     position: absolute;
