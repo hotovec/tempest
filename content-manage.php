@@ -61,14 +61,10 @@
     <!-- delete modal layer -->
     <div class="pt-layer pt-layer-1 m-content-manage m-modal mm-full modal-delete">
         <?php include("templates/modal-content--delete.php"); ?>
-
     </div>
 
 
-    <!-- create content layer-->
-    <div class="pt-layer m-modal mm-full modal-content-create">
-        <?php include("templates/modal-content--create-content.php"); ?>
-    </div>
+    <?php include("templates/modal-content--create-content.php"); ?>
 
     <div class="pt-layer m-reload ">
         <div style="background-color: white; width: 100%; height: 100%;">fafasf</div>

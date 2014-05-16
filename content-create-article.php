@@ -1,30 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>tempest</title>
-
-    <link rel="stylesheet" media="screen" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" media="screen" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
-
-    <!-- font awesome-->
-    <link rel="stylesheet" media="screen" href="assets/font-awesome/css/font-awesome.min.css">
-
-    <!-- editable tags input-->
-    <link rel="stylesheet" href="bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
-
-    <link rel="stylesheet" type="text/css" href="assets/js/layer-transitions/css/component.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/js/layer-transitions/css/animations.css"/>
-
-
-    <!-- custom overide compiled by codekit -->
-    <link rel="stylesheet" media="screen" href="css/main.css">
-
-    <script src="bower_components/requirejs/require.js"></script>
-    <script src="assets/js/layer-transitions/js/modernizr.custom.js"></script>
-
-</head>
-<body class="">
+<?php include("templates/html-header.php"); ?>
 
 <!-- main pages -->
 <div id="pt-main" class="pt-perspective m-content m-content-edit">
@@ -327,99 +301,20 @@
         </div>
         <!-- end of layer content-->
     </div>
-    <div class="pt-layer pt-layer-6 m-modal mm-full modal-content-create">
-    <!-- layer content-->
-    <div class="modal-body">
-        <form role="form">
 
-            <div class="modal-body-content center">
-                <div class="inc:inc-modal-create-content.html">Create content modal</div>
-            </div>
+    <?php include("templates/media-library.php"); ?>
 
-            <div class="modal-footer">
-                <button type="button" class="btn btn-cancel" data-layer="dimmis-all">cancel</button>
+    <?php include("templates/modal-content--create-content.php"); ?>
 
-            </div>
-
-        </form>
-    </div>
-    <!-- end of layer content-->
-</div>
-<div class="pt-layer pt-layer-7 m-modal mm-full modal-media-library">
-    <!-- layer content-->
-    <div class="modal-body">
-        <form role="form">
-
-            <div class="modal-body-content center">
-                <div class="modal--hed">Media library</div>
-
-                <div class="row">
-                    <input class="search" type="text" name="" id="mytags" placeholder="filter"
-                           value="fashion,red," data-role="tagsinput">
-                </div>
-
-                <div class="m-image-picker">
-                    <img data-layer="dimmis" src="assets/images/tmp-images/img-01.jpg" alt=""/>
-                    <img data-layer="dimmis" src="assets/images/tmp-images/img-02.jpg" alt=""/>
-                    <img data-layer="dimmis" src="assets/images/tmp-images/img-03.jpg" alt=""/>
-                    <img data-layer="dimmis" src="assets/images/tmp-images/img-04.jpg" alt=""/>
-                    <img data-layer="dimmis" src="assets/images/tmp-images/img-05.jpg" alt=""/>
-                    <img data-layer="dimmis" src="assets/images/tmp-images/img-06.jpg" alt=""/>
-                    <img data-layer="dimmis" src="assets/images/tmp-images/img-07.jpg" alt=""/>
-                    <img data-layer="dimmis" src="assets/images/tmp-images/img-08.jpg" alt=""/>
-                    <img data-layer="dimmis" src="assets/images/tmp-images/img-09.jpg" alt=""/>
-                    <img data-layer="dimmis" src="assets/images/tmp-images/img-10.jpg" alt=""/>
-                    <img data-layer="dimmis" src="assets/images/tmp-images/img-11.jpg" alt=""/>
-                    <img data-layer="dimmis" src="assets/images/tmp-images/img-12.jpg" alt=""/>
-                    <img data-layer="dimmis" src="assets/images/tmp-images/img-13.jpg" alt=""/>
-                    <img data-layer="dimmis" src="assets/images/tmp-images/img-14.jpg" alt=""/>
-                    <img data-layer="dimmis" src="assets/images/tmp-images/img-15.jpg" alt=""/>
-                    <img data-layer="dimmis" src="assets/images/tmp-images/img-16.jpg" alt=""/>
-                </div>
-
-            </div>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-cancel" data-layer="dimmis">close</button>
-
-            </div>
-
-        </form>
-    </div>
-    <!-- end of layer content-->
-</div>
 </div>
 
 <!-- offcanavas menu -->
-<div class="oc-layer">
-    <div class="oc-menu m-offcanavas-menu">
-        <div class="m-author">Marci</div>
-        <ul class="">
-            <li><span data-layer="open" data-animation="1" data-layer-target=".modal-content-create" title="Create content">Create content</span></li>
-            <li><a href="content-manage.php" title="Manage content">Manage content</a></li>
-            <li><a href="#" title="Manage vocabularies">Manage vocabularies</a></li>
-            <li><a href="#" title="Site programming">Site programming</a></li>
-            <li><a href="#" title="Manage Users">Manage Users</a></li>
-            <li><a href="#" title="Switch site">Switch site</a></li>
-            <li><a href="#" title="logout" class="actionLogout">logout</a></li>
-        </ul>
-    </div>
-</div>
-<div class="oc-overlay"></div>
+<?php include("templates/html-offcanavas-menu.php"); ?>
+
 
 
 <!-- link required scripts -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js"></script>
-<script src="assets/js/jquery.tinyinc.js"></script>
-
-<script src="assets/js/layer-transitions/js/layertransitions.js"></script>
-<script src="assets/js/layer-transitions/js/layer-manager.js"></script>
-
-<script src="assets/js/lorem/lorem.js"></script>
-
-<script src="assets/app.js"></script>
+<?php include("templates/html-scripts-global.php"); ?>
 
 <script>
     $(function () {
@@ -428,5 +323,4 @@
 
 </script>
 
-</body>
-</html>
+<?php include("templates/html-footer.php"); ?>
