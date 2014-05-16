@@ -29,7 +29,6 @@ $(function () {
         }
     });
 
-
     // assign close layer to elements
     $("[data-layer='dimmis']").click(function () {
         var el = $(this);
@@ -40,6 +39,23 @@ $(function () {
         var el = $(this);
         LayerTransitions.closeAllPages();
     });
+
+
+    // manage transition before page reload
+    // this is fake for pages with refresh
+    // rough and proto
+
+    $("a[data-reload-transition]").click(function(e) {
+        e.preventDefault();
+        var el = $(this);
+        var animationType = 1; // default
+        window.setTimeout(function() {
+            window.location.href = el.attr("href");;
+        }, 100);
+
+        LayerTransitions.showSinglePage(animationType, ".m-reload");
+    });
+
 
     // assign ESC to close elements
     $(document).keyup(function(e) {

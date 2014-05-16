@@ -13,7 +13,7 @@
     <!-- content in layers -->
 
     <!-- first(default) content layer-->
-    <div class="pt-layer pt-layer-0 has-navbar m-content m-content-manage">
+    <div class="pt-layer xpt-layer-0 has-navbar m-content m-content-manage">
         <div class="container">
             <!-- filters / tags -->
 
@@ -61,6 +61,7 @@
     <!-- delete modal layer -->
     <div class="pt-layer pt-layer-1 m-content-manage m-modal mm-full modal-delete">
         <?php include("templates/modal-content--delete.php"); ?>
+
     </div>
 
 
@@ -69,7 +70,14 @@
         <?php include("templates/modal-content--create-content.php"); ?>
     </div>
 
+    <div class="pt-layer m-reload ">
+        <div style="background-color: white; width: 100%; height: 100%;">fafasf</div>
+    </div>
+
+
 </div> <!-- end of layer manager #pt-main wrapper -->
+
+
 
 
 

@@ -6,7 +6,7 @@
             <div class="cell cell-info"><i class="fa fa-info-circle"></i></div>
             <div class="cell cell-title">
                 <img class="avatar" src="assets/images/image.jpg" alt=""/>
-                <a href="content-edit.html">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a>
+                <a data-animation="1" href="content-edit.php">I’m Almost 24 And I Can’t Stop Buying Cute Things With ... </a>
             </div>
             <div class="cell cell-author">fasdfasfd fa dfa sd</div>
             <div class="cell cell-date"> Mar 16, 2014 at 18:02</div>

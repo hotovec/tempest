@@ -1,33 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>tempest</title>
-
-    <link rel="stylesheet" media="screen" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" media="screen" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
-
-    <!-- font awesome-->
-    <link rel="stylesheet" media="screen" href="assets/font-awesome/css/font-awesome.min.css">
-
-    <!-- editable tags input-->
-    <link rel="stylesheet" href="bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
-
-    <link rel="stylesheet" type="text/css" href="assets/js/layer-transitions/css/component.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/js/layer-transitions/css/animations.css"/>
-
-
-    <!-- custom overide compiled by codekit -->
-    <link rel="stylesheet" media="screen" href="css/main.css">
-
-    <script src="bower_components/requirejs/require.js"></script>
-    <script src="assets/js/layer-transitions/js/modernizr.custom.js"></script>
-
-</head>
-<body class="">
+<?php include("templates/html-header.php"); ?>
 
 <!-- main pages -->
 <div id="pt-main" class="pt-perspective m-content m-content-edit">
+
 <!-- navbar -->
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -223,12 +198,9 @@
                 </div>
 
                 <div class="modal-footer">
-                <button type="button" class="btn btn-cancel" data-layer="dimmis">Cancel</button>
-                <button type="button" class="btn btn-action" data-layer="dimmis">Delete</button>
-
-
+                    <button type="button" class="btn btn-cancel" data-layer="dimmis">Cancel</button>
+                    <button type="button" class="btn btn-action" data-layer="dimmis">Delete</button>
                 </div>
-
 
             </form>
         </div>
@@ -327,18 +299,11 @@
         </div>
         <!-- end of layer content-->
     </div>
+
 <div class="pt-layer m-modal mm-full modal-content-create">
-    <!-- layer content-->
-    <div class="modal-body">
-            <div class="modal-body-content center">
-                <div class="inc:inc-modal-create-content.html">Create content modal</div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-cancel" data-layer="dimmis-all">cancel</button>
-            </div>
-    </div>
-    <!-- end of layer content-->
+    <?php include("templates/modal-content--create-content.php"); ?>
 </div>
+
 <div class="pt-layer pt-layer-7 m-modal mm-full modal-media-library">
     <!-- layer content-->
     <div class="modal-body">
@@ -385,34 +350,10 @@
 </div>
 
 <!-- offcanavas menu -->
-<div class="oc-layer">
-    <div class="oc-menu m-offcanavas-menu">
-        <div class="m-author">Marci</div>
-        <ul class="">
-            <li><span data-layer="open" data-animation="1" data-layer-target=".modal-content-create" title="Create content">Create content</span></li>
-            <li><a href="content-manage.php" title="Manage content">Manage content</a></li>
-            <li><a href="#" title="Manage vocabularies">Manage vocabularies</a></li>
-            <li><a href="#" title="Site programming">Site programming</a></li>
-            <li><a href="#" title="Manage Users">Manage Users</a></li>
-            <li><a href="#" title="Switch site">Switch site</a></li>
-            <li><a href="#" title="logout" class="actionLogout">logout</a></li>
-        </ul>
-    </div>
-</div>
-<div class="oc-overlay"></div>
+<?php include("templates/html-offcanavas-menu.php"); ?>
 
 
-<!-- link required scripts -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js"></script>
-<script src="assets/js/jquery.tinyinc.js"></script>
-<script src="assets/js/layer-transitions/js/layertransitions.js"></script>
-<script src="assets/js/layer-transitions/js/layer-manager.js"></script>
-
-<script src="assets/js/lorem/lorem.js"></script>
-
-<script src="assets/app.js"></script>
+<?php include("templates/html-scripts-global.php"); ?>
 
 <script>
     $(function () {
@@ -420,5 +361,4 @@
     });
 </script>
 
-</body>
-</html>
+<?php include("templates/html-footer.php"); ?>

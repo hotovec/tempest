@@ -20,7 +20,11 @@
         }
     }
 
-    .navbar-collapse { border-bottom: 3px solid #ccc;}
+    .has-navbar {
+        padding-top: 80px;
+    }
+
+    //.navbar-collapse { border-bottom: 3px solid #ccc;}
 
     .container {
         background-color: #fff;

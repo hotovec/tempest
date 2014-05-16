@@ -294,8 +294,8 @@ body.oc-visible .pt-perspective {
     -webkit-box-shadow: none;
     box-shadow: none;
     background-color: #a5e9fd; }
-.m-content-edit .navbar-collapse {
-  border-bottom: 3px solid #ccc; }
+.m-content-edit .has-navbar {
+  padding-top: 80px; }
 .m-content-edit .container {
   background-color: #fff; }
 .m-content-edit .m-content-edit--main {
