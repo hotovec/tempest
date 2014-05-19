@@ -33,7 +33,7 @@ var LayerTransitions = (function() {
 
 		// support css animations
 		support = Modernizr.cssanimations;
-	
+
 	function init() {
 
 		$pages.each( function() {
@@ -42,7 +42,7 @@ var LayerTransitions = (function() {
 		} );
 
 		$pages.eq( current ).addClass( 'pt-layer-main' );
-		//$pages.eq( current ).addClass( 'pt-page-current' );
+		$pages.eq( current ).addClass( 'pt-layer-open' );
 
 	}
 
@@ -74,22 +74,40 @@ var LayerTransitions = (function() {
 
     function closeLastPage() { // go
 
-        if(isOffcanavasEnabled == true) {
+        if (isOffcanavasEnabled == true) {
             return;
         }
 
         $pageToClose = history.pop();
-        console.log("close current page" + $pageToClose + $pageToClose.outClass);
+        console.log("close current page:" + $pageToClose + " - " + $pageToClose.outClass + " - " + $pageToClose.opentype);
 
-        outClass = $pageToClose.outClass;
+        //if ($pageToClose.opentype == 'normal') {
+            console.log ("close by normal");
+            outClass = $pageToClose.outClass;
 
-        $pageToClose.addClass( outClass ).on( animEndEventName, function() {
-            $pageToClose.off( animEndEventName );
-            endCurrPage = true;
-            if( endCurrPage ) {
-                onCloseSinglePageEndAnimation( $pageToClose );
+            $pageToClose.addClass(outClass).on(animEndEventName, function () {
+                $pageToClose.off(animEndEventName);
+                endCurrPage = true;
+                if (endCurrPage) {
+                    onCloseSinglePageEndAnimation($pageToClose);
+                }
+            });
+
+       /* }
+
+        if ($pageToClose.opentype == 'transition') {
+
+            console.log ("close by transition");
+            $targetPage = null;
+            if(history.length) {
+                $targetPage = history[history.length - 1];
+            } else {
+                $targetPage = history[0];
             }
-        } );
+            nextPage(1, $targetPage);
+
+        }*/
+
     }
 
     function closeAllPages() {
@@ -161,6 +179,7 @@ var LayerTransitions = (function() {
 
         $currPage.outClass = animationType.outClass;
         $currPage.inClass = animationType.inClass;
+        $currPage.opentype = 'normal';
 
             $currPage.addClass( $currPage.inClass ).on( animEndEventName, function() {
             $currPage.off( animEndEventName );
@@ -480,11 +499,119 @@ var LayerTransitions = (function() {
         return data;
     }
 
+    // double page transitions
+    //
 
+
+    function nextPage( animation, $targetPage ) {
+
+        if( isAnimating ) {
+            return false;
+        }
+
+        isAnimating = true;
+
+        var $currPage = null;
+
+        if(lastSinglePage) {
+            console.log("lsp: " + lastSinglePage);
+            $currPage = lastSinglePage;
+        } else {
+            console.log("not lsp use index 0 ");
+            $currPage = $pages.eq( current );
+        }
+
+
+        var $nextPage = $($targetPage).addClass( 'pt-layer-open' ),
+            outClass = '', inClass = '';
+
+
+
+
+        switch( animation ) {
+
+            case 1:
+                outClass = 'pt-page-moveToLeft';
+                inClass = 'pt-page-moveFromRight';
+                break;
+            case 2:
+                outClass = 'pt-page-moveToRight';
+                inClass = 'pt-page-moveFromLeft';
+                break;
+            case 3:
+                outClass = 'pt-page-moveToTop';
+                inClass = 'pt-page-moveFromBottom';
+                break;
+            case 4:
+                outClass = 'pt-page-moveToBottom';
+                inClass = 'pt-page-moveFromTop';
+                break;
+            case 5:
+                outClass = 'pt-page-fade';
+                inClass = 'pt-page-moveFromRight pt-page-ontop';
+                break;
+
+        }
+
+        $currPage.outClass = outClass;
+        $currPage.inClass = inClass;
+
+        $nextPage.outClass = outClass;
+        $nextPage.inClass = inClass;
+        $nextPage.opentype = 'transition';
+
+
+        $currPage.addClass( outClass ).on( animEndEventName, function() {
+            $currPage.off( animEndEventName );
+            endCurrPage = true;
+            if( endNextPage ) {
+                onEndAnimation( $currPage, $nextPage );
+            }
+        } );
+
+        $nextPage.addClass( inClass ).on( animEndEventName, function() {
+            $nextPage.off( animEndEventName );
+            endNextPage = true;
+            if( endCurrPage ) {
+                onEndAnimation( $currPage, $nextPage );
+            }
+        } );
+
+       /* if( !support ) {
+            onEndAnimation( $currPage, $nextPage );
+        }*/
+
+    }
+
+    function onEndAnimation( $outpage, $inpage ) {
+        lastSinglePage = $inpage;
+        //history.push($inpage);
+
+        endCurrPage = false;
+        endNextPage = false;
+        resetPage( $outpage, $inpage );
+        isAnimating = false;
+
+        for (var h=0; h<history.length; h++) {
+            console.log("hist["+ h +"]" + history[h].opentype);
+        }
+
+    }
+
+    function resetPage( $outpage, $inpage ) {
+        $outpage.attr( 'class', $outpage.data( 'originalClassList' ) );
+        $inpage.attr( 'class', $inpage.data( 'originalClassList' ) + ' pt-layer-open' );
+    }
+
+
+
+
+
+    // main
 
 	init();
 
-	return { 
+	return {
 		init : init,
         showSinglePage : showSinglePage,
         closeLastPage : closeLastPage,
@@ -494,6 +621,7 @@ var LayerTransitions = (function() {
         closeOffcanavas: closeOffcanavas,
         isOffcanavas: isOffcanavas,
         isOpenedAnyPage: isOpenedAnyPage,
+        nextPage: nextPage,
 	};
 
 })();

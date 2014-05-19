@@ -142,10 +142,10 @@ body.oc-visible .pt-perspective {
 }
 */
 .m-nav-brand {
-  position: absolute;
+  position: fixed;
   top: 20px;
   left: 20px;
-  z-index: 501;
+  z-index: 2010;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -157,7 +157,7 @@ body.oc-visible .pt-perspective {
     background-color: #000; }
 
 .m-content .navbar.navbar-fixed-top {
-  z-index: 500;
+  z-index: 2001;
   background-color: #eee; }
 
 .disabled.has-navbar {

@@ -29,6 +29,19 @@ $(function () {
         }
     });
 
+    $("[data-layer='transition']").click(function () {
+        var el = $(this);
+        var targetPage = null;
+        if (targetPage = el.data('layer-target')) {
+
+            var animationType = 1; // default
+            if (animationType = el.data("animation")) {
+                console.log("custom anim:" + animationType)
+            }
+            LayerTransitions.nextPage(animationType, targetPage);
+        }
+    });
+
     // assign close layer to elements
     $("[data-layer='dimmis']").click(function () {
         var el = $(this);
@@ -81,6 +94,10 @@ $(function () {
     $("[data-layer='offcanavas']").click(function() {
       LayerTransitions.showOffcanvas();
     });
+
+
+    //
+
 
 
 
