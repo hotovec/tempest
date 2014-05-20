@@ -169,23 +169,29 @@ body.oc-visible .pt-perspective {
   -webkit-box-shadow: none;
   box-shadow: none; }
   .bootstrap-tagsinput .tag {
-    border-radius: 30px; }
+    border-radius: 30px;
+    text-transform: uppercase; }
 
 /* search tags */
 .search-tags {
   font-family: georgia, serif;
   font-size: 1.1em;
   -webkit-fontsmoothing: antialiased;
+  z-index: 1000;
   position: relative;
   padding: 0;
+  padding-bottom: 48px;
   margin-top: 8px;
-  border-bottom: 2px solid #ccc;
   font-size: 100%; }
   .search-tags .search-field {
-    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: auto;
+    height: 48px;
     font-weight: normal;
     line-height: 40px;
-    font-size: 18px; }
+    font-size: 18px;
+    border-bottom: 2px solid #ccc; }
     .search-tags .search-field .bootstrap-tagsinput .tag {
       padding: 0 12px;
       height: 36px;
@@ -202,6 +208,24 @@ body.oc-visible .pt-perspective {
     line-height: 2.5em;
     border-radius: 2px;
     padding: 0 8px; }
+  .search-tags .search-tags--options {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    width: auto;
+    left: -10px;
+    right: -10px;
+    top: -2px;
+    background-color: #fff;
+    padding: 30px;
+    padding-top: 60px; }
+    .search-tags .search-tags--options h4 {
+      color: #888; }
+    .search-tags .search-tags--options .fa {
+      width: 20px;
+      text-align: center;
+      font-size: 20px; }
 
 .search-button {
   position: absolute;
@@ -217,31 +241,11 @@ body.oc-visible .pt-perspective {
   text-align: center;
   cursor: pointer; }
 
-.search-tags--options {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  position: absolute;
-  top: 40px;
-  width: auto;
-  left: -1px;
-  right: -1px;
-  border: 1px solid #ccc;
-  height: 300px;
-  z-index: 1000;
-  background-color: #fff;
-  padding: 30px; }
-  .search-tags--options h4 {
-    color: #888; }
-  .search-tags--options .fa {
-    width: 20px;
-    text-align: center;
-    font-size: 20px; }
-
 .m-pillbox {
   padding-top: 16px; }
   .m-pillbox .btn {
-    border-radius: 20px; }
+    border-radius: 20px;
+    text-transform: uppercase; }
 
 .panel.panel-login {
   position: absolute;
