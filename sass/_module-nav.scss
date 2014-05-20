@@ -3,9 +3,12 @@
 }
 
 .m-nav-brand {
-    position: fixed;
-    top: 20px;
-    left: 20px;
+    //position: fixed;
+    //top: 20px;
+    //left: 20px;
+
+    display: inline-block;
+
     z-index: $zindex-opened-layer + 10;
 
     box-sizing: border-box;
@@ -23,6 +26,8 @@
 }
 
 
+
+
 // this need to be clean and reorder
 //
 .m-content .navbar.navbar-fixed-top {
@@ -30,12 +35,3 @@
     background-color: #eee; // page bg color should be here
 }
 
-.disabled.has-navbar {
-    padding-top: 50px;
-}
-
-.pillbox.navbar {
-    padding: 20px;
-    padding-left: 80px;
-    padding-bottom: 0px;
-}

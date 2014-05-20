@@ -1,3 +1,6 @@
+.container {
+  background-color: pink; }
+
 .pt-perspective {
   -webkit-transition: all 0.2s;
   transition: all 0.2s; }
@@ -142,9 +145,7 @@ body.oc-visible .pt-perspective {
 }
 */
 .m-nav-brand {
-  position: fixed;
-  top: 20px;
-  left: 20px;
+  display: inline-block;
   z-index: 2010;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -160,20 +161,11 @@ body.oc-visible .pt-perspective {
   z-index: 2001;
   background-color: #eee; }
 
-.disabled.has-navbar {
-  padding-top: 50px; }
-
-.pillbox.navbar {
-  padding: 20px;
-  padding-left: 80px;
-  padding-bottom: 0px; }
-
 /* search tags */
 .search-tags {
   position: relative;
   padding: 0;
   margin-top: 8px;
-  margin-left: 80px;
   background-color: #fff;
   border: 1px solid #ccc;
   height: 52px;
@@ -234,6 +226,9 @@ body.oc-visible .pt-perspective {
   cursor: pointer; }
 
 /* end search tags */
+.m-pillbox {
+  padding-top: 16px; }
+
 .panel.panel-login {
   position: absolute;
   margin: auto;
@@ -604,4 +599,8 @@ body.oc-visible .pt-perspective {
 
 .random-color-2 {
   color: #9c0000; }
+
+.dbg {
+  min-height: 50px;
+  background-color: orange; }
 /*# sourceMappingURL=main.css.map */

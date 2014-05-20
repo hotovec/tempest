@@ -1,8 +1,8 @@
 <?php include("templates/html-header.php"); ?>
 
 <div>two page transitions:
-    <button data-layer="transition" data-animation="3" data-layer-target=".modal-content-create">Open by transition</button>
-    <button data-layer="transition" data-animation="4" data-layer-target=".pt-layer-main">close by transition</button>
+    <button data-layer="transition" data-animation="1" data-layer-target=".modal-content-create">Open by transition</button>
+    <button data-layer="transition" data-animation="2" data-layer-target=".pt-layer-main">close by transition</button>
 </div>
 
 <!-- layer manager wprapper also moved by offcanavas -->
@@ -10,17 +10,27 @@
 
     <!-- content in layers -->
 
+
+
     <!-- first(default) content layer-->
-    <div class="pt-layer pt-layer-main scrollable has-navbar m-content m-content-manage">
+    <div class="pt-layer pt-layer-main scrollable -has-navbar m-content m-content-manage">
+
         <div class="container">
 
-            <div style="min-height: 200px; position: fixed ">
-                <!-- brand logo-->
-                <?php include("templates/brand.php"); ?>
+            <!-- brand logo-->
+            <?php include("templates/brand.php"); ?>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1>
+                        Manage content library
+                    </h1>
+                </div>
+            </div>
 
                 <!-- navbar -->
                 <?php include("templates/navbar.php"); ?>
-            </div>
+
 
 
 

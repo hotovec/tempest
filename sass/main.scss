@@ -10,12 +10,18 @@ $zindex-offcanavas: 5000;
 
 // colors
 
+.container {
+    background-color: pink;
+}
+
 
 @import "module-layers"; // layer base settings
 @import "module-offcanavas-menu"; // offcanavas menu styles
 
 @import "module-nav";
 @import "module-search-tags";
+@import "module-pillbox";
+
 @import "module-panels";
 
 @import "module-content";
@@ -49,3 +55,7 @@ $zindex-offcanavas: 5000;
     color: #9c0000;
 }
 
+.dbg {
+    min-height: 50px;
+    background-color: orange;
+}

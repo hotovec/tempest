@@ -1,7 +1,8 @@
-<nav class="navbar navbar-fixed-top" role="navigation">
-    <div class="container">
+<nav class="navbar" role="navigation">
 
-        <div class="search-tags">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="search-tags">
 
             <!-- search field-->
             <div class="search-field">
@@ -83,13 +84,16 @@
             <!-- expandable search options : end-->
 
         </div>
-    </div>
+            </div>
+        </div>
 
-    <div class="container">
+
+
         <div class="row">
+
             <div class="col-sm-12">
 
-                <div id="filter-pillbox" class="pillbox navbar">
+                <div id="filter-pillbox" class="m-pillbox">
                     <button data-toggle="filter-add" data-filter-name="Success" type="button" class="btn btn-success">Success <i class="fa fa-times-circle"></i></button>
                     <button data-toggle="filter-add" data-filter-name="Info" type="button" class="btn btn-info">Info <i class="fa fa-times-circle"></i></button>
                     <button data-toggle="filter-add" data-filter-name="Warning" type="button" class="btn btn-warning">Warning <i class="fa fa-times-circle"></i></button>
@@ -101,5 +105,5 @@
 
             </div>
         </div>
-    </div>
+
 </nav>
