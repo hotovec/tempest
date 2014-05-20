@@ -14,6 +14,18 @@ $zindex-offcanavas: 5000;
     background-color: pink;
 }
 
+@mixin m-font-georgia(){
+    font-family: georgia, serif;
+    font-size: 1.1em;
+    -webkit-fontsmoothing: antialiased;
+}
+@mixin m-font-helvetica(){
+    font-family: 'helvetica neue', Helvetica, Arial;
+    font-size: 1.1em;
+    -webkit-fontsmoothing: antialiased;
+}
+
+
 
 @import "module-layers"; // layer base settings
 @import "module-offcanavas-menu"; // offcanavas menu styles

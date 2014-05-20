@@ -13,8 +13,7 @@
                 </div>
 
                 <input class="search" type="text" name="" id="searchtags"
-                    placeholder="presets"
-                    value="Articles,Products,Ready for Edit,Last Week"
+                    placeholder="Search for content"
                     data-role="tagsinput">
 
             </div>
