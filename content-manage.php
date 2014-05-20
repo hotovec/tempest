@@ -1,9 +1,5 @@
 <?php include("templates/html-header.php"); ?>
 
-<div>two page transitions:
-    <button data-layer="transition" data-animation="1" data-layer-target=".modal-content-create">Open by transition</button>
-    <button data-layer="transition" data-animation="2" data-layer-target=".pt-layer-main">close by transition</button>
-</div>
 
 <!-- layer manager wprapper also moved by offcanavas -->
 <div id="pt-main" class="pt-perspective m-content m-content-manage">
@@ -91,6 +87,10 @@
 </div> <!-- end of layer manager #pt-main wrapper -->
 
 
+<div>two page transitions:
+    <button data-layer="transition" data-animation="1" data-layer-target=".modal-content-create">Open by transition</button>
+    <button data-layer="transition" data-animation="2" data-layer-target=".pt-layer-main">close by transition</button>
+</div>
 
 
 
