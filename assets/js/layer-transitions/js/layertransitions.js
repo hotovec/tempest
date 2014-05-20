@@ -46,10 +46,38 @@ var LayerTransitions = (function() {
 
 	}
 
-    function showOffcanvas() {
+    function showOffcanvas(direction) {
+
         isOffcanavasEnabled = true;
         console.log("show offcanavas");
+
         $offcanavasParent.addClass('oc-visible');
+
+        $offcanavasParent.removeClass('oc-right');
+        $offcanavasParent.removeClass('oc-left');
+        $offcanavasParent.removeClass('oc-bottom');
+        $offcanavasParent.removeClass('oc-top');
+
+        $ocClass = 'oc-left';
+        switch (direction) {
+            case 'left':
+                $ocClass = 'oc-left';
+                break;
+           case 'right':
+                $ocClass = 'oc-right';
+                break;
+           case 'top':
+                $ocClass = 'oc-top';
+                break;
+           case 'bottom':
+                $ocClass = 'oc-bottom';
+                break;
+
+        }
+
+        $offcanavasParent.addClass($ocClass);
+
+
         $('.oc-overlay').click(function() {
             closeOffcanavas();
         })
@@ -68,6 +96,10 @@ var LayerTransitions = (function() {
 
     function closeOffcanavas() {
         isOffcanavasEnabled = false;
+        $offcanavasParent.removeClass('oc-right');
+        $offcanavasParent.removeClass('oc-left');
+        $offcanavasParent.removeClass('oc-bottom');
+        $offcanavasParent.removeClass('oc-top');
         $offcanavasParent.removeClass('oc-visible');
         $('.oc-overlay').click = null;
     }

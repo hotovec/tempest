@@ -44,33 +44,66 @@
 // offcanavas layers and overlay
 
 // offcanavas layer
-.oc-layer {
+@mixin oc-layer() {
     pointer-events:none;
+    background-color: #808080;
     visibility: hidden;
 
-    position: absolute;
+    position: fixed;
     height: auto;
+    overflow: hidden;
+
+    z-index: $zindex-offcanavas;
+
+    @include transition(all 0.2s);
+}
+
+.oc-layer-left {
+    @include oc-layer();
+
     width: 300px;
     top: 0;
     bottom: 0;
     left: 0;
 
-    z-index: $zindex-offcanavas;
-
     transform: translateX(-300px);
-
-    .oc-menu {
-        height: auto;
-        width: 300px;
-        top: 0;
-        bottom: 0;
-
-        position: fixed;
-        background-color: #808080;
-    }
-
-    @include transition(all 0.2s);
 }
+
+.oc-layer-right {
+    @include oc-layer();
+
+    width: 300px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    transform: translateX(300px);
+}
+
+.oc-layer-top {
+    @include oc-layer();
+
+    height: 300px;
+    top: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+
+    transform: translateY(-300px);
+}
+
+.oc-layer-bottom {
+    @include oc-layer();
+
+    height: 300px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+
+    transform: translateY(300px);
+}
+
 
 // offcanavas overlay
 .oc-overlay {
@@ -86,21 +119,81 @@
 
 // handling ofcanavas opening thru the body
 body.oc-visible {
-    .oc-layer {
-        visibility: visible;
-        pointer-events:auto;
-        transform: translateX(0px);
-        @include transition(all 0.3s);
 
-    }
     .oc-overlay {
         z-index: auto;
         opacity: .7;
         @include transition(opacity .3s);
     }
 
-    .pt-perspective {
-        transform: translateX(300px);
-        @include transition(all 0.3s);
+    &.oc-left {
+        // default
+        .oc-layer-left {
+            visibility: visible;
+            pointer-events:auto;
+            transform: translateX(0px);
+            @include transition(all 0.3s);
+
+        }
+
+        .pt-perspective {
+            transform: translateX(300px);
+            @include transition(all 0.3s);
+        }
+
     }
+
+    &.oc-right {
+        // default
+        .oc-layer-right {
+            visibility: visible;
+            pointer-events:auto;
+            transform: translateX(0px);
+            @include transition(all 0.3s);
+
+        }
+
+
+        .pt-perspective {
+            transform: translateX(-300px);
+            @include transition(all 0.3s);
+        }
+
+    }
+
+    &.oc-top {
+        // default
+        .oc-layer-top {
+            visibility: visible;
+            pointer-events:auto;
+            transform: translateY(0px);
+            @include transition(all 0.3s);
+
+        }
+
+
+        .pt-perspective {
+            transform: translateY(300px);
+            @include transition(all 0.3s);
+        }
+
+    }
+
+    &.oc-bottom {
+        // default
+        .oc-layer-bottom {
+            visibility: visible;
+            pointer-events:auto;
+            transform: translateY(0px);
+            @include transition(all 0.3s);
+
+        }
+
+        .pt-perspective {
+            transform: translateY(-300px);
+            @include transition(all 0.3s);
+        }
+
+    }
+
 }

@@ -22,28 +22,79 @@
 .scrollable {
   overflow: auto; }
 
-.oc-layer {
+.oc-layer-left {
   pointer-events: none;
+  background-color: #808080;
   visibility: hidden;
-  position: absolute;
+  position: fixed;
   height: auto;
+  overflow: hidden;
+  z-index: 5000;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   width: 300px;
   top: 0;
   bottom: 0;
   left: 0;
-  z-index: 5000;
   -webkit-transform: translateX(-300px);
   -ms-transform: translateX(-300px);
-  transform: translateX(-300px);
+  transform: translateX(-300px); }
+
+.oc-layer-right {
+  pointer-events: none;
+  background-color: #808080;
+  visibility: hidden;
+  position: fixed;
+  height: auto;
+  overflow: hidden;
+  z-index: 5000;
   -webkit-transition: all 0.2s;
-  transition: all 0.2s; }
-  .oc-layer .oc-menu {
-    height: auto;
-    width: 300px;
-    top: 0;
-    bottom: 0;
-    position: fixed;
-    background-color: #808080; }
+  transition: all 0.2s;
+  width: 300px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translateX(300px);
+  -ms-transform: translateX(300px);
+  transform: translateX(300px); }
+
+.oc-layer-top {
+  pointer-events: none;
+  background-color: #808080;
+  visibility: hidden;
+  position: fixed;
+  height: auto;
+  overflow: hidden;
+  z-index: 5000;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  height: 300px;
+  top: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  -webkit-transform: translateY(-300px);
+  -ms-transform: translateY(-300px);
+  transform: translateY(-300px); }
+
+.oc-layer-bottom {
+  pointer-events: none;
+  background-color: #808080;
+  visibility: hidden;
+  position: fixed;
+  height: auto;
+  overflow: hidden;
+  z-index: 5000;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  height: 300px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  -webkit-transform: translateY(300px);
+  -ms-transform: translateY(300px);
+  transform: translateY(300px); }
 
 .oc-overlay {
   position: absolute;
@@ -55,7 +106,12 @@
   opacity: 0;
   background-color: #fff; }
 
-body.oc-visible .oc-layer {
+body.oc-visible .oc-overlay {
+  z-index: auto;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s; }
+body.oc-visible.oc-left .oc-layer-left {
   visibility: visible;
   pointer-events: auto;
   -webkit-transform: translateX(0px);
@@ -63,15 +119,52 @@ body.oc-visible .oc-layer {
   transform: translateX(0px);
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }
-body.oc-visible .oc-overlay {
-  z-index: auto;
-  opacity: 0.7;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s; }
-body.oc-visible .pt-perspective {
+body.oc-visible.oc-left .pt-perspective {
   -webkit-transform: translateX(300px);
   -ms-transform: translateX(300px);
   transform: translateX(300px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+body.oc-visible.oc-right .oc-layer-right {
+  visibility: visible;
+  pointer-events: auto;
+  -webkit-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+body.oc-visible.oc-right .pt-perspective {
+  -webkit-transform: translateX(-300px);
+  -ms-transform: translateX(-300px);
+  transform: translateX(-300px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+body.oc-visible.oc-top .oc-layer-top {
+  visibility: visible;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+body.oc-visible.oc-top .pt-perspective {
+  -webkit-transform: translateY(300px);
+  -ms-transform: translateY(300px);
+  transform: translateY(300px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+body.oc-visible.oc-bottom .oc-layer-bottom {
+  visibility: visible;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+body.oc-visible.oc-bottom .pt-perspective {
+  -webkit-transform: translateY(-300px);
+  -ms-transform: translateY(-300px);
+  transform: translateY(-300px);
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }
 

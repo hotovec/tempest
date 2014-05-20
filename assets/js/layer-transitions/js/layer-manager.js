@@ -92,7 +92,20 @@ $(function () {
     /// offcanavas
 
     $("[data-layer='offcanavas']").click(function() {
-      LayerTransitions.showOffcanvas();
+        LayerTransitions.showOffcanvas("left");
+    });
+
+    $("[data-layer='offcanavas-left']").click(function() {
+      LayerTransitions.showOffcanvas("left");
+    });
+    $("[data-layer='offcanavas-right']").click(function() {
+        LayerTransitions.showOffcanvas("right");
+    });
+    $("[data-layer='offcanavas-top']").click(function() {
+        LayerTransitions.showOffcanvas("top");
+    });
+    $("[data-layer='offcanavas-bottom']").click(function() {
+        LayerTransitions.showOffcanvas("bottom");
     });
 
 
