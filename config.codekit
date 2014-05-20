@@ -1793,6 +1793,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/bootstrap-sass-official\/vendor\/assets\/stylesheets\/css\/bootstrap.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bootstrap-sass-official\/vendor\/assets\/stylesheets\/css\/bootstrap.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/bower_components\/bootstrap-tagsinput\/dist\/bootstrap-tagsinput-angular.js": {
 		"fileType": 64,
 		"ignore": 0,

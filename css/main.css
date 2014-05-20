@@ -228,6 +228,8 @@ body.oc-visible .pt-perspective {
 /* end search tags */
 .m-pillbox {
   padding-top: 16px; }
+  .m-pillbox .btn {
+    border-radius: 20px; }
 
 .panel.panel-login {
   position: absolute;
