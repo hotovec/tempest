@@ -157,25 +157,24 @@
 
         <p></p>
 
-        <p> 1) everything is wrapped by</p>
+        <p> <strong>1) everything is wrapped by</strong></p>
 
-        <pre> <?php echo htmlentities('<div id="pt-main" class="pt-perspective ...other classes .... ">') ?></pre>
+        <pre><?php echo htmlentities('<div id="pt-main" class="pt-perspective ...other classes .... ">') ?></pre>
         <p>required: #pt-main, .pt-perspective (for transitions and layermanager is looking for layers there) </p>
 
         <p></p>
 
-        <p> 2) you can add unlimited amount of layers</p>
+        <p> <strong>2) you can add unlimited amount of layers</strong></p>
 
-        <pre> <?php echo htmlentities('<div class="pt-layer pt-layer-0 ...other classes ...."> ... </div>') ?></pre>
+        <pre><?php echo htmlentities('<div class="pt-layer pt-layer-0 ...other classes ...."> ... </div>') ?></pre>
         <p> required: .pt-layer</p>
 
         <p>every .pt-layer can be managed by layer manager, other classes pt-layer-0 can be used for layer targeting or styling, it can be various </p>
 
         <p></p>
 
-        <p> 3) how to open some layer and chose transition (can be placed arbitrary on any kind of element) </p>
-           <pre>
-               <?php echo htmlentities('<span data-layer="open" data-animation="1" data-layer-target=".modal-content-create" title="Create content">Create content</span>') ?>
+        <p> <strong>3) how to open some layer and chose transition (can be placed arbitrary on any kind of element)</strong> </p>
+           <pre><?php echo htmlentities('<span data-layer="open" data-animation="1" data-layer-target=".modal-content-create" title="Create content">Create content</span>') ?>
            </pre>
         <p>attributes: </p>
 
@@ -187,53 +186,52 @@
 
         <p></p>
 
-        <p>4) there is simple history, so you can close layer one by one and they are closing from last to first.
-            it works like "Back"</p>
+        <p><strong>4) there is simple history, so you can close layer one by one and they are closing from last to first.
+            it works like "Back"</strong></p>
 
-        <pre> <?php echo htmlentities('<button type="button" class="btn btn-action" data-layer="dimmis">Delete</button>') ?></pre>
+        <pre><?php echo htmlentities('<button type="button" class="btn btn-action" data-layer="dimmis">Delete</button>') ?></pre>
         <p>put data-layer="dimmis" to some element </p>
 
         <p></p>
-        5) sometimes happen you need open several layers. And you need close them all at once.
+        <p><strong>5) sometimes happen you need open several layers. And you need close them all at once.</strong></p>
 
-           <pre>
-               <?php echo htmlentities('<button type="button" class="btn btn-action" data-layer="dimmis-all">Delete</button>') ?>
+           <pre><?php echo htmlentities('<button type="button" class="btn btn-action" data-layer="dimmis-all">Delete</button>') ?>
            </pre>
         <p> put data-layer="dimmis-all" to some element</p>
 
         <p></p>
 
-        <p>6) z-sorting is done by markup order, so the last layer will be on the top of others </p>
+        <p><strong>6) z-sorting is done by markup order, so the last layer will be on the top of others</strong> </p>
 
         <p></p>
 
-        <p>8) layer can contain whatever you want. It is only holder of some content.
-            Its size, behavior (modal/overlay) is set by your css. I had several modals/overlays type, but it
+        <p><strong>8) layer can contain whatever you want. It is only holder of some content.</strong></p>
+            <p>Its size, behavior (modal/overlay) is set by your css. I had several modals/overlays type, but it
             is what I need clean. </p>
 
         <p></p>
 
-        <p>9) the part of layer manager is offcanavas menu.
-            it handles opening menu, offseting layers and handle cases when you open need open layer and menu is opened.
+        <p><strong>9) the part of layer manager is offcanavas menu.</strong></p>
+            <p>it handles opening menu, offseting layers and handle cases when you open need open layer and menu is opened.
             so the menu is automatically closed and layer is opened</p>
 
         <p></p>
 
-        <p>10) check the /assets/js/layer-transitions/js/layertransitions.js line 197
-            there are pairs of in/out animations and their numbers.
+        <p><strong>10) check the /assets/js/layer-transitions/js/layertransitions.js</strong> <br />line 197
+            there are pairs of in/out animations and their numbers.<br />
             You can easily add/remove/edit combination. It such like as "presets".</p>
 
         <p></p>
 
-        <p>11) all transitions are done by css classes you can find them in
-            /assets/js/layer-transitions/css/animations </p>
+        <p><strong>11) all transitions are done by css classes you can find them in
+            /assets/js/layer-transitions/css/animations</strong> </p>
 
-        <p>so you can use them by your own JS. Layer manager only manage the:
-            - data atributes
-            - animation end event
-            - history
-            - interaction with offcanvas
-            - animation (in/out) grouped to one number</p>
+        <p>so you can use them by your own JS. Layer manager only manage the:<br />
+            - data atributes <br />
+            - animation end event<br />
+            - history<br />
+            - interaction with offcanvas<br />
+            - animation (in/out) grouped to one number<br /></p>
 
 
         <h2>dummy content</h2>
