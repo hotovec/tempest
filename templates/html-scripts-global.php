@@ -3,6 +3,7 @@
 <!-- bootstrap components -->
 <script src="/bootstrap-sass-official/vendor/assets/javascripts/bootstrap.js"></script>
 <script src="/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
+<script src="/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
 <script src="/bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js"></script>
 
 
