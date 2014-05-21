@@ -136,6 +136,7 @@
 
                 <p>open left offcanvas container
                     <button data-layer="offcanavas" data-offcanavas-target=".mm-custom-pane-1"> Open left canavas</button>
+                    <button data-layer="offcanavas" data-offcanavas-target=".mm-custom-pane-1-second-content"> Open secondary left canavas</button>
                 </p>
                 <p>try different offcanvases
                     <button data-layer="offcanavas" data-offcanavas-target=".mm-custom-pane-2"> Open right canavas</button>
@@ -407,6 +408,36 @@
             <button data-layer="offcanavas" data-offcanavas-target=".mm-custom-pane-2">Right one</button>
 
             </p>
+        <p>
+            or different  left offcanvas
+
+        </p>
+        <p>
+            <button data-layer="offcanavas" data-offcanavas-target=".mm-custom-pane-1-second-content">Secondary left</button>
+
+        </p>
+    </div>
+</div>
+
+<div class="mm-custom-pane-1-second-content" data-offcanavas-pane="left">
+    <div class="oc-menu m-offcanavas-menu">
+        <div class="m-author">left canavas 2</div>
+        <p>
+            you can open different offcanvas from here
+
+        </p>
+        <p>
+            <button data-layer="offcanavas" data-offcanavas-target=".mm-custom-pane-2">Right one</button>
+
+        </p>
+        <p>
+            or different  left offcanvas
+
+        </p>
+        <p>
+            <button data-layer="offcanavas" data-offcanavas-target=".mm-custom-pane-1">Primary left</button>
+
+        </p>
     </div>
 </div>
 
@@ -415,6 +446,14 @@
         <div class="m-author">right canavas</div>
         <p>
             <button data-layer="offcanavas" data-offcanavas-target=".mm-custom-pane-3">Top one</button>
+
+        </p>
+        <p>
+            or different  left offcanvas
+
+        </p>
+        <p>
+            <button data-layer="offcanavas" data-offcanavas-target=".mm-custom-pane-1-second-content">Secondary left</button>
 
         </p>
     </div>
