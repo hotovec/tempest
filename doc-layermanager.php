@@ -151,6 +151,91 @@
             </div>
         </div>
 
+        <h2>old docs</h2>
+
+        <p> here is how the layer management is working (copy of mail to Adrian)</p>
+
+        <p></p>
+
+        <p> 1) everything is wrapped by</p>
+
+        <pre> <?php echo htmlentities('<div id="pt-main" class="pt-perspective ...other classes .... ">') ?></pre>
+        <p>required: #pt-main, .pt-perspective (for transitions and layermanager is looking for layers there) </p>
+
+        <p></p>
+
+        <p> 2) you can add unlimited amount of layers</p>
+
+        <pre> <?php echo htmlentities('<div class="pt-layer pt-layer-0 ...other classes ...."> ... </div>') ?></pre>
+        <p> required: .pt-layer</p>
+
+        <p>every .pt-layer can be managed by layer manager, other classes pt-layer-0 can be used for layer targeting or styling, it can be various </p>
+
+        <p></p>
+
+        <p> 3) how to open some layer and chose transition (can be placed arbitrary on any kind of element) </p>
+           <pre>
+               <?php echo htmlentities('<span data-layer="open" data-animation="1" data-layer-target=".modal-content-create" title="Create content">Create content</span>') ?>
+           </pre>
+        <p>attributes: </p>
+
+        <p> data-layer="open" .. this element will open some layer</p>
+
+        <p> data-animation="1" .. this is id of animations, it contains which transition will be called (in/out) </p>
+
+        <p>data-layer-target=".selector" .. this is same as jquery selector, which .pt-layer you need open, it will work also with "#idselector". It needs to be pointed to container with .pt-layer </p>
+
+        <p></p>
+
+        <p>4) there is simple history, so you can close layer one by one and they are closing from last to first.
+            it works like "Back"</p>
+
+        <pre> <?php echo htmlentities('<button type="button" class="btn btn-action" data-layer="dimmis">Delete</button>') ?></pre>
+        <p>put data-layer="dimmis" to some element </p>
+
+        <p></p>
+        5) sometimes happen you need open several layers. And you need close them all at once.
+
+           <pre>
+               <?php echo htmlentities('<button type="button" class="btn btn-action" data-layer="dimmis-all">Delete</button>') ?>
+           </pre>
+        <p> put data-layer="dimmis-all" to some element</p>
+
+        <p></p>
+
+        <p>6) z-sorting is done by markup order, so the last layer will be on the top of others </p>
+
+        <p></p>
+
+        <p>8) layer can contain whatever you want. It is only holder of some content.
+            Its size, behavior (modal/overlay) is set by your css. I had several modals/overlays type, but it
+            is what I need clean. </p>
+
+        <p></p>
+
+        <p>9) the part of layer manager is offcanavas menu.
+            it handles opening menu, offseting layers and handle cases when you open need open layer and menu is opened.
+            so the menu is automatically closed and layer is opened</p>
+
+        <p></p>
+
+        <p>10) check the /assets/js/layer-transitions/js/layertransitions.js line 197
+            there are pairs of in/out animations and their numbers.
+            You can easily add/remove/edit combination. It such like as "presets".</p>
+
+        <p></p>
+
+        <p>11) all transitions are done by css classes you can find them in
+            /assets/js/layer-transitions/css/animations </p>
+
+        <p>so you can use them by your own JS. Layer manager only manage the:
+            - data atributes
+            - animation end event
+            - history
+            - interaction with offcanvas
+            - animation (in/out) grouped to one number</p>
+
+
         <h2>dummy content</h2>
 
         <div class="row">
