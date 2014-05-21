@@ -19,6 +19,7 @@ var LayerTransitions = (function() {
 		endNextPage = false,
 
         lastSinglePage = null,
+        lastOffcanavasPage = null,
         history = [],
 
 		animEndEventNames = {
@@ -46,17 +47,19 @@ var LayerTransitions = (function() {
 
 	}
 
-    function showOffcanvas(direction) {
+    function showOffcanvas(target, direction) {
+
+        if(lastOffcanavasPage) {
+            lastOffcanavasPage.removeClass('oc-current');
+        }
 
         isOffcanavasEnabled = true;
         console.log("show offcanavas");
 
+
         $offcanavasParent.addClass('oc-visible');
 
-        $offcanavasParent.removeClass('oc-right');
-        $offcanavasParent.removeClass('oc-left');
-        $offcanavasParent.removeClass('oc-bottom');
-        $offcanavasParent.removeClass('oc-top');
+        resetOffcanvasDirectionBodyClases();
 
         $ocClass = 'oc-left';
         switch (direction) {
@@ -76,11 +79,31 @@ var LayerTransitions = (function() {
         }
 
         $offcanavasParent.addClass($ocClass);
-
+        target.addClass("oc-current");
+        lastOffcanavasPage = target;
 
         $('.oc-overlay').click(function() {
             closeOffcanavas();
         })
+    }
+
+    function closeOffcanavas() {
+        isOffcanavasEnabled = false;
+        resetOffcanvasDirectionBodyClases();
+        $offcanavasParent.removeClass('oc-visible');
+
+        if(lastOffcanavasPage) {
+            lastOffcanavasPage.removeClass('oc-current');
+        }
+
+        $('.oc-overlay').click = null;
+    }
+
+    function resetOffcanvasDirectionBodyClases() {
+        $offcanavasParent.removeClass('oc-right');
+        $offcanavasParent.removeClass('oc-left');
+        $offcanavasParent.removeClass('oc-bottom');
+        $offcanavasParent.removeClass('oc-top');
     }
 
     function isOffcanavas() {
@@ -94,15 +117,7 @@ var LayerTransitions = (function() {
         return false
     }
 
-    function closeOffcanavas() {
-        isOffcanavasEnabled = false;
-        $offcanavasParent.removeClass('oc-right');
-        $offcanavasParent.removeClass('oc-left');
-        $offcanavasParent.removeClass('oc-bottom');
-        $offcanavasParent.removeClass('oc-top');
-        $offcanavasParent.removeClass('oc-visible');
-        $('.oc-overlay').click = null;
-    }
+
 
     function closeLastPage() { // go
 

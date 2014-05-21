@@ -22,7 +22,7 @@
 .scrollable {
   overflow: auto; }
 
-.oc-layer-left {
+*[data-offcanavas-pane] {
   pointer-events: none;
   background-color: #808080;
   visibility: hidden;
@@ -31,7 +31,9 @@
   overflow: hidden;
   z-index: 5000;
   -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  transition: all 0.2s; }
+
+.oc-layer-left {
   width: 300px;
   top: 0;
   bottom: 0;
@@ -41,15 +43,6 @@
   transform: translateX(-300px); }
 
 .oc-layer-right {
-  pointer-events: none;
-  background-color: #808080;
-  visibility: hidden;
-  position: fixed;
-  height: auto;
-  overflow: hidden;
-  z-index: 5000;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
   width: 300px;
   top: 0;
   bottom: 0;
@@ -59,15 +52,6 @@
   transform: translateX(300px); }
 
 .oc-layer-top {
-  pointer-events: none;
-  background-color: #808080;
-  visibility: hidden;
-  position: fixed;
-  height: auto;
-  overflow: hidden;
-  z-index: 5000;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
   height: 300px;
   top: 0;
   right: 0;
@@ -78,15 +62,6 @@
   transform: translateY(-300px); }
 
 .oc-layer-bottom {
-  pointer-events: none;
-  background-color: #808080;
-  visibility: hidden;
-  position: fixed;
-  height: auto;
-  overflow: hidden;
-  z-index: 5000;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
   height: 300px;
   bottom: 0;
   right: 0;
@@ -111,62 +86,36 @@ body.oc-visible .oc-overlay {
   opacity: 0.7;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s; }
-body.oc-visible.oc-left .oc-layer-left {
+body.oc-visible.oc-left .oc-current, body.oc-visible.oc-right .oc-current, body.oc-visible.oc-top .oc-current, body.oc-visible.oc-bottom .oc-current {
   visibility: visible;
   pointer-events: auto;
   -webkit-transform: translateX(0px);
   -ms-transform: translateX(0px);
   transform: translateX(0px);
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+body.oc-visible.oc-left .pt-perspective, body.oc-visible.oc-right .pt-perspective, body.oc-visible.oc-top .pt-perspective, body.oc-visible.oc-bottom .pt-perspective {
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }
 body.oc-visible.oc-left .pt-perspective {
   -webkit-transform: translateX(300px);
   -ms-transform: translateX(300px);
-  transform: translateX(300px);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s; }
-body.oc-visible.oc-right .oc-layer-right {
-  visibility: visible;
-  pointer-events: auto;
-  -webkit-transform: translateX(0px);
-  -ms-transform: translateX(0px);
-  transform: translateX(0px);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s; }
+  transform: translateX(300px); }
 body.oc-visible.oc-right .pt-perspective {
   -webkit-transform: translateX(-300px);
   -ms-transform: translateX(-300px);
-  transform: translateX(-300px);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s; }
-body.oc-visible.oc-top .oc-layer-top {
-  visibility: visible;
-  pointer-events: auto;
-  -webkit-transform: translateY(0px);
-  -ms-transform: translateY(0px);
-  transform: translateY(0px);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s; }
+  transform: translateX(-300px); }
 body.oc-visible.oc-top .pt-perspective {
   -webkit-transform: translateY(300px);
   -ms-transform: translateY(300px);
-  transform: translateY(300px);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s; }
-body.oc-visible.oc-bottom .oc-layer-bottom {
-  visibility: visible;
-  pointer-events: auto;
-  -webkit-transform: translateY(0px);
-  -ms-transform: translateY(0px);
-  transform: translateY(0px);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s; }
+  transform: translateY(300px); }
 body.oc-visible.oc-bottom .pt-perspective {
   -webkit-transform: translateY(-300px);
   -ms-transform: translateY(-300px);
-  transform: translateY(-300px);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s; }
+  transform: translateY(-300px); }
 
 .m-offcanavas-menu {
   -webkit-box-sizing: border-box;

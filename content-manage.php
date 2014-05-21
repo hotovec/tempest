@@ -1,5 +1,14 @@
 <?php include("templates/html-header.php"); ?>
 
+<div class="text-center">
+    <button data-layer="offcanavas" data-offcanavas-target=".mm-custom-pane">OC-L</button>
+    <button data-layer="offcanavas" data-offcanavas-target=".mm-custom-pane-1">OC-L1</button>
+    <button data-layer="offcanavas" data-offcanavas-target=".mm-custom-pane-2">OC-L2</button>
+    <button data-layer="offcanavas" data-offcanavas-target=".mm-custom-pane-3">OC-R</button>
+    <button data-layer="offcanavas" data-offcanavas-target=".mm-custom-pane-4">OC-T</button>
+    <button data-layer="offcanavas" data-offcanavas-target=".mm-custom-pane-5">OC-B</button>
+</div>
+
 
 <!-- layer manager wprapper also moved by offcanavas -->
 <div id="pt-main" class="pt-perspective m-content m-content-manage">

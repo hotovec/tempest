@@ -58,8 +58,11 @@
     @include transition(all 0.2s);
 }
 
-.oc-layer-left {
+*[data-offcanavas-pane] {
     @include oc-layer();
+}
+
+.oc-layer-left {
 
     width: 300px;
     top: 0;
@@ -70,7 +73,6 @@
 }
 
 .oc-layer-right {
-    @include oc-layer();
 
     width: 300px;
     top: 0;
@@ -81,7 +83,6 @@
 }
 
 .oc-layer-top {
-    @include oc-layer();
 
     height: 300px;
     top: 0;
@@ -93,7 +94,6 @@
 }
 
 .oc-layer-bottom {
-    @include oc-layer();
 
     height: 300px;
     bottom: 0;
@@ -103,6 +103,8 @@
 
     transform: translateY(300px);
 }
+
+
 
 
 // offcanavas overlay
@@ -126,74 +128,47 @@ body.oc-visible {
         @include transition(opacity .3s);
     }
 
-    &.oc-left {
-        // default
-        .oc-layer-left {
+    &.oc-left,
+    &.oc-right,
+    &.oc-top,
+    &.oc-bottom
+    {
+        .oc-current {
             visibility: visible;
             pointer-events:auto;
             transform: translateX(0px);
+            transform: translateY(0px);
             @include transition(all 0.3s);
-
         }
+        .pt-perspective {
+            @include transition(all 0.3s);
+        }
+    }
 
+    &.oc-left {
         .pt-perspective {
             transform: translateX(300px);
-            @include transition(all 0.3s);
         }
-
     }
 
     &.oc-right {
-        // default
-        .oc-layer-right {
-            visibility: visible;
-            pointer-events:auto;
-            transform: translateX(0px);
-            @include transition(all 0.3s);
-
-        }
-
-
         .pt-perspective {
             transform: translateX(-300px);
-            @include transition(all 0.3s);
         }
 
     }
 
     &.oc-top {
-        // default
-        .oc-layer-top {
-            visibility: visible;
-            pointer-events:auto;
-            transform: translateY(0px);
-            @include transition(all 0.3s);
-
-        }
-
-
         .pt-perspective {
             transform: translateY(300px);
-            @include transition(all 0.3s);
         }
 
     }
 
     &.oc-bottom {
-        // default
-        .oc-layer-bottom {
-            visibility: visible;
-            pointer-events:auto;
-            transform: translateY(0px);
-            @include transition(all 0.3s);
-
-        }
-
         .pt-perspective {
             transform: translateY(-300px);
-            @include transition(all 0.3s);
         }
-
     }
 
 }

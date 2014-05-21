@@ -91,25 +91,80 @@ $(function () {
 
     /// offcanavas
 
+    // traverse thru offcanvas elements and add clasess
+
+    $("[data-offcanavas-pane]").each( function() {
+        var el = $(this);
+        var tmpPane = null;
+        var ocPaneClass = '';
+        if (tmpPane = el.data('offcanavas-pane')) {
+            switch(tmpPane) {
+                case 'left':
+                    ocPaneClass = 'oc-layer-left';
+                    break;
+                case 'right':
+                    ocPaneClass = 'oc-layer-right';
+                    break;
+                case 'top':
+                    ocPaneClass = 'oc-layer-top';
+                    break;
+                case 'bottom':
+                    ocPaneClass = 'oc-layer-bottom';
+                    break;
+            }
+        }
+
+        el.addClass(ocPaneClass);
+    });
+
+
+    // assign offcanavas open
+
     $("[data-layer='offcanavas']").click(function() {
-        LayerTransitions.showOffcanvas("left");
-    });
+        var el = $(this);
 
-    $("[data-layer='offcanavas-left']").click(function() {
-      LayerTransitions.showOffcanvas("left");
-    });
-    $("[data-layer='offcanavas-right']").click(function() {
-        LayerTransitions.showOffcanvas("right");
-    });
-    $("[data-layer='offcanavas-top']").click(function() {
-        LayerTransitions.showOffcanvas("top");
-    });
-    $("[data-layer='offcanavas-bottom']").click(function() {
-        LayerTransitions.showOffcanvas("bottom");
-    });
+        var offcanavasTarget = null;
+        var offcanavasTargetPane = null;
+        var offcanvasTargetSelector;
 
+        // check dependencies
+        // check if target is declared
+        var err = false;
+        if (offcanvasTargetSelector = el.data('offcanavas-target')) {
 
-    //
+            // check if target exist
+            offcanavasTarget = $(offcanvasTargetSelector);
+            if (offcanavasTarget.length) {
+
+                //check which pane will target use (left, right, bottom, top)
+                if (offcanavasTargetPane = offcanavasTarget.data('offcanavas-pane')) {
+
+                    console.log("target width:" + offcanavasTarget.width());
+                    //LayerTransitions.showOffcanvas("left");
+
+                    console.log("show offcanvas: " + offcanvasTargetSelector + " in " +offcanavasTargetPane);
+                    LayerTransitions.showOffcanvas(offcanavasTarget, offcanavasTargetPane);
+
+                } else {
+                    err = true;
+                    console.warn('target has no offcanavas pane defined');
+                }
+
+            } else {
+                err = true;
+                console.warn('not defined target for data-offcanavas-target="' + offcanvasTargetSelector + '"');
+            }
+
+        } else {
+            err = true;
+            console.warn('not defined "data-offcanavas-target"');
+        }
+
+        if(err) {
+            return;
+        }
+
+    });
 
 
 
