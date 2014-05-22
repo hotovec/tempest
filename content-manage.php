@@ -1,15 +1,5 @@
 <?php include("templates/html-header.php"); ?>
 
-<div class="text-center">
-    <button data-layer="offcanavas" data-offcanavas-target=".mm-custom-pane">OC-L</button>
-    <button data-layer="offcanavas" data-offcanavas-target=".mm-custom-pane-1">OC-L1</button>
-    <button data-layer="offcanavas" data-offcanavas-target=".mm-custom-pane-2">OC-L2</button>
-    <button data-layer="offcanavas" data-offcanavas-target=".mm-custom-pane-3">OC-R</button>
-    <button data-layer="offcanavas" data-offcanavas-target=".mm-custom-pane-4">OC-T</button>
-    <button data-layer="offcanavas" data-offcanavas-target=".mm-custom-pane-5">OC-B</button>
-</div>
-
-
 <!-- layer manager wprapper also moved by offcanavas -->
 <div id="pt-main" class="pt-perspective m-content m-content-manage">
 
@@ -40,9 +30,9 @@
 
 
             <!-- content table - list -->
-            <div id="records" class="m-records list-view">
+            <div id="records" class="m-records tile-view">
                 <!-- records header -->
-                <div class="record-header">
+                <section class="record-header">
                     <div class="style-switch" >
                         <div class="btn-group">
                             <button type="button" id="btnSwitchToList" class="btn btn-default"><i class="fa fa-th-list"></i></button>
@@ -58,7 +48,7 @@
                         <div class="cell cell-date"><span data-toggle="tooltip" data-placement="bottom" title="order by date">last modified <i class="fa fa-angle-down"></i></span></div>
                         <div class="cell cell-actions"></div>
                     </div>
-                </div>
+                </section>
 
                 <?php
                 // generate records
