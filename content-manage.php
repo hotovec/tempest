@@ -5,8 +5,6 @@
 
     <!-- content in layers -->
 
-
-
     <!-- first(default) content layer-->
     <div class="pt-layer pt-layer-main scrollable -has-navbar m-content m-content-manage">
 
@@ -25,9 +23,6 @@
 
                 <!-- navbar -->
                 <?php include("templates/navbar.php"); ?>
-
-
-
 
             <!-- content table - list -->
             <div id="records" class="m-records tile-view">
